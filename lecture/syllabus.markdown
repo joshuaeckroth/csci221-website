@@ -3,108 +3,47 @@ title: Syllabus
 layout: default
 ---
 
-> It goes against the grain of modern education to teach [students] to
-> program. What fun is there in making plans, acquiring discipline in
-> organizing thoughts, devoting attention to detail and learning to be
-> self-critical? -- *Alan J. Perlis, Epigrams on Programming*
+This class is about C++ and modern software development.
 
 ## Grading
 
-- Homeworks: 40% (8 of them)
+- Homeworks: 30% (8 of them)
 
-- Quizzes: 30% (8 of them)
+- Group project 1: 10%
 
-- Carmen quizzes: 10% (16 of them)
+- Group project 2: 20%
 
-- Final exam: 20% (Wed, March 14, 3:30-5:18pm, same room as lectures)
+- Blackboard quizzes: 10% (9 of them)
 
-You can see your grades on Carmen.
+- Midterm exam: 15%
 
-## Quizzes & exams
+- Final exam: 15% (Monday, December 8, 1pm-3pm)
 
-There is no midterm, per se. The quizzes, collectively, are your
-midterm (so to speak). Quizzes occur every Thursday; they are short
-(we still have lecture on Thursdays, a quiz should only take at most
-20 minutes), and are designed to reinforce the topics.
+Homework may be turned in late, up to the day of the final exam. Late
+work is penalized. The maximum grade for late work is 60%.
 
-The final exam will look like several quizzes all in one test. So the
-format will be just like the quizzes. Obviously, the final exam is
-"cumulative" (covers everything we learn in the course).
+## Honor code
 
-## Carmen quizzes
+I am strongly in agreement with the [Stetson University Honor
+Code](http://www.stetson.edu/honorsystem/). Any form of cheating is
+not acceptable, will not be tolerated, and could lead to dismissal
+from the University. This includes plagiarism of any sort on quizzes,
+exams, or on projects. So please, do not cheat!
 
-There are also required quizzes on Carmen. These are short and mostly
-test small details. You can take a Carmen quiz as many times as you'd
-like, any time you'd like.
+## Academic success center
 
-## Homeworks
-
-Homeworks are always due on a Monday, by 11:00pm. Your homework
-should be sent to me by email:
-[joshuaeckroth@gmail.com](mailto:joshuaeckroth@gmail.com) (attach your
-files; do not paste into Microsoft Word, just literally attach `.cpp`
-and `.h` files).
-
-This material will be challenging. Consider the class like a math or
-physics class. It will require a lot of thinking, staring at the
-problem, planning a solution with pen & paper, etc. It's almost
-impossible to fake your way through it. There are always many ways to
-"solve" a programming problem, but there is an obvious difference
-between code that shows you understand your solution and code that
-shows you just tried every possibility. You will be graded higher if
-your solution is incomplete but intelligent, than if your solution is
-just a mess. Additionally, code that actually works (even if it's
-incomplete) is much better than code that has errors.
-
-Most students say that programming assignments take longer than they
-expected. Trivial bugs in your code can cause you to waste hours
-attempting to fix your program. The last 10% of the work takes 90% of
-the time. And so on. So start early!
-
-> **Hofstadter's Law** "It always takes longer than you expect, even when you
-> take into account Hofstadter's Law." --
-> *G&ouml;del, Escher, Bach: An eternal golden braid*
-
-Or if you prefer,
-
-> **Murphy's law of Programming** "The sooner you start coding your program,
-> the longer it is going to take." -- *The computer contradictionary*
-
-## Text book
-
-The book is not required, but you may find it highly useful. I
-generally follow the book's organization, and most homeworks are
-straight from the book.  Probably any edition would be fine; I use the
-7th edition.
-
-[Walter Savitch, Problem Solving with C++, 7th Edition](http://www.amazon.com/Problem-Solving-7th-Walter-Savitch/dp/0321531345/ref=pd_sim_b_4)
-
-## Academic misconduct policy
-
-This course is designed for individual work.
-
-The only work required of you outside of class is homework assignments
-and Carmen quizzes. Obviously, there is no tolerance for cheating
-(looking at others' work) during in-class quizzes, Carmen quizzes, or
-the final exam. However, you may participate in a reasonable amount of
-collaboration over homeworks. Collaboration is limited to: discussing
-how to approach the solution, or how to solve small coding problems;
-looking at the Internet for information about general topics, not
-solutions to the particulars of the homework assignment. It is
-considered academic misconduct if you copy significant portions of
-code from anyone (the Internet included). Your solutions should not
-bear an uncanny resemblance to anyone else's code. It should be clear
-to you what I mean by this; do not test the limits of this (fairly
-liberal) policy. Violators will be referred to the OSU Committee on
-Academic Misconduct (COAM).
-
-## Disability statement
-
-Any student who feels he or she may need an accommodation based on the
-impact of a disability should contact me privately to discuss your
-specific needs. Please contact the Office for Disability Services at
-614-292-3307 in room 150 Pomerene Hall to coordinate reasonable
-accommodations for students with documented disabilities.
+If a student anticipates barriers related to the format or
+requirements of a course, she or he should meet with the course
+instructor to discuss ways to ensure full participation. If
+disability-related accommodations are necessary, please register with
+the Academic Success Center (822- 7127;
+[www.stetson.edu/asc](http://www.stetson.edu/asc)) and notify the
+course instructor of your eligibility for reasonable
+accommodations. The student, course instructor, and the Academic
+Success Center will plan how best to coordinate accommodations. The
+Academic Success Center is located at 209 E Bert Fish Drive, and can
+be contacted using the email address
+[asc@stetson.edu](mailto:asc@stetson.edu).
 
 ## Some inspiration
 
@@ -135,4 +74,6 @@ accommodations for students with documented disabilities.
 > technical in nature, (and which we have come to accept) and replaces
 > it with something deep, which will make a real difference to all of
 > us that inhabit the earth. -- Christopher Alexander, from the
-> Foreword to *Patterns of Software* by Richard P. Gabriel
+> Foreword to
+> [Patterns of Software](http://www.dreamsongs.com/Files/PatternsOfSoftware.pdf)
+> by Richard P. Gabriel
