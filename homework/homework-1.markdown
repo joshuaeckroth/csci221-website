@@ -3,54 +3,83 @@ title: Homework 1
 layout: default
 ---
 
-From the book, page 176, question 8.
+Program a simple text-based version of the Numberwang game. See the
+example execution below to see how it works.
 
-Write a program that scores a blackjack hand. In blackjack, a player receives
-from two to five cards. The cards 2 through 10 are scored as 2 through 10
-points each. The face cards--jack, queen, and king--are scored as 10 points.
-The goal is to come as close to a score of 21 as possible without going over
-21. Hence, any score over 21 is called "busted." The ace can count as either 1
-or 11, whichever is better for the user. For example, an ace and a 10 can be
-scored as either 11 or 21. Since 21 is a better score, this hand is scored as
-21. An ace and two 8s can be scored as either 17 or 27. Since 27 is a "busted"
-score, this hand is scored as 17.
+Skills needed to complete this assignment:
 
-The user is asked how many cards she or he has, and the user responds with one
-of the integers `2`, `3`, `4`, or `5`. The user is then asked for the card
-values. Card values are 2 through 10, jack, queen, king, and ace. A good way to
-handle input is to use the type `char` so that the card input 2, for example,
-is read as the character `'2'`, rather than as the number 2. Input the values 2
-through 9 as the characters `'2'` through `'9'`. Input the values 10, jack,
-queen, king, and ace as the characters `'t'`, `'j'`, `'q'`, `'k'`, and `'a'`.
-(Of course, the user does not type in the single quotes.) Be sure to allow
-upper- as well as lowercase letters as input. You can assume the user provides
-correct input (so you do not have to check for bogus inputs like `'z'` or
-whatever).
+- [Linux](/lecture/linux.html), [git](/lecture/git.html)
 
-After reading in the values, the program should convert them from character
-values to numeric card scores, taking special care for aces. The output is
-either a number between 2 and 21 (inclusive) or the word "Busted." You are
-likely to have one or more long multiway branches that uses a `switch`
-statement or nested `if-else` statement. Your program should include a loop
-that lets the user repeat this calculation until the user says she or he is
-done. Don't forget the loop!
+- [Java vs. C++](/lecture/java-vs-cpp.html),
+  [primitive types](/lecture/types-and-classes.html)
 
-Here is an example of how to get a `char` input and check its value:
+## Requirements
 
-{% highlight cpp %}
-char c;
-cout << "Enter a card (2-9, t, j, q, k or a): ";
-cin >> c;
+- Create one file, called `numberwang.cpp` or `main.cpp` or whatever.
 
-switch(c)
-{
-    case 't': case 'T':
-        score += 10;
-        break;
-    case '2':
-        score += 2;
-        break;
-    // etc.
-}
-{% endhighlight %}
+- Compile with the command: `g++ -o numberwang numerwang.cpp` or `g++ -o numerwang main.cpp`
+
+- Ask for two players' names. These are `string` variables. Use `cout`
+  and `cin` (and `endl` for newlines). Use these players' names
+  throughout the program, as shown below.
+
+- Ask for the number of rounds. Loop for this many rounds.
+
+- During each round, switch back-and-forth among each player to get
+  their number guess. When their number is Numberwang, say so, and
+  move on to the next round.
+
+- Each round alternates the player who goes first in that round. (And
+  players alternate within the round.)
+
+- After the rounds are complete, report the players' final
+  scores. Indicate which player won by stating "P1 pulls ahead
+  with..." as shown below. Of course, use the actual player's name.
+
+- Create one `main()` function, and one `numberwang(int)` function
+  (which returns a `bool` type, i.e., `true` or `false`). You can
+  create more functions if you feel so inspired.
+
+Be sure to create a repository on BitBucket and add me (your
+instructor) as a viewer. Tag your final submitted version with the tag
+"v1.0" (without quotes). If you forget to tag a commit with "v1.0",
+your work will be considered late.
+
+## Example execution
+
+Underlined text indicates the players providing input from the keyboard.
+
+<pre>
+Hello, and welcome to Numberwang, the maths quiz that simply everyone
+is talking about!
+
+What is player 1's name? <u>Tracy</u>
+
+What is player 2's name? <u>Josh</u>
+
+How many rounds? <u>2</u>
+
+Well, if you're ready, let's play Numberwang!
+
+Round 1, Tracy to play first.
+
+Tracy: <u>14</u>
+Josh: <u>8</u>
+Tracy: <u>9</u>
+Josh: <u>37</u>
+Tracy: <u>99</u>
+
+That's Numberwang!
+
+Round 2, Josh to play first.
+
+Josh: <u>37</u>
+Tracy: <u>11.1</u>
+Josh: <u>87</u>
+
+That's Numberwang!
+
+Final scores: Tracy pulls ahead with 32, and Josh finishes with 13.
+</pre>
+
 

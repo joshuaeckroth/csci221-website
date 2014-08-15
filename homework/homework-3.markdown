@@ -3,57 +3,99 @@ title: Homework 3
 layout: default
 ---
 
-From the book, page 440, question 13.
+Implement John Conway's Game of Life.
 
 Skills needed to complete this assignment:
 
-  - Using [conditionals](/lecture/conditionals.html) and
-    [loops](/lecture/loops.html)
+- [Arrays](/lecture/arrays.html)
 
-  - Writing [functions](/lecture/functions.html)
+## Requirements
 
-  - Storing values in [vectors](/lecture/vectors.html), and
-    representing 2D matrices in 1D vectors
+- Create one file, `life.cpp`, with three functions: `main`,
+  `generation`, `display` (described below). This program should
+  simulate Conway's Game of Life.
+
+- Create a `Makefile` that builds your program.
+
+Be sure to create a repository on BitBucket and add me (your
+instructor) as a viewer. Tag your final submitted version with the tag
+"v1.0" (without quotes). If you forget to tag a commit with "v1.0",
+your work will be considered late.
+
+## Game of Life
 
 The mathematician
 [John Horton Conway](http://en.wikipedia.org/wiki/John_Horton_Conway)
 invented the "Game of Life" (not the board game). Though not a "game"
 in any traditional sense, it provides interesting behavior that is
-specified with only a few rules. This homework asks you to write a
-program that allows you to specify an initial configuration. The
-program follows the rules of LIFE to show the continuing behavior of
-the configuration.
+specified with only a few rules.
 
-LIFE is an organism that lives in a discrete, two-dimensional
+Life is an organism that lives in a discrete, two-dimensional
 world. While this world is actually unlimited, we don't have that
-luxury, so we restrict the world to 80 characters wide by 22 character
-positions high. If you have access to a larger screen, by all means
-use it. It is your choice to make the edges "wrap around" or not.
+luxury, so we restrict the world to a certain width and height (you
+choose). It is your choice to make the edges "wrap around" or not.
 
-This world is a 1D or 2D vector (of `char` or `bool` perhaps) with
-each cell capable of holding one LIFE cell. Generations mark the
-passing of time. Each generation brings births and deaths to the LIFE
-community. The births and deaths follow the following set of rules.
+For this assignment, the world should be represented by a 1D array
+(width*height big). Review the
+[array lecture notes](/lecture/arrays.html) for guidance about how to
+treat a 1D array as a 2D array. The array should have `bool` values,
+indicating a living or dead cell.
 
-  * We define each cell to have eight *neighbor* cells. The neighbors
-    of a cell are the cells directly above, below, to the right, to
-    the left, diagonally above to the right and left, and diagonally
-    below to the right and left. Be careful when checking for
-    neighbors on the edges; you can decide whether an edge cell has
-    alive or dead neighbors beyond the edge.
+The world is updated all at once. Each cell is born, kept alive, kept
+dead, or killed according to simple rules. These rules refer to the
+eight neighbors of the cell, in the previous world. Be sure you have
+two copies of the world: the old one (prior time step), and the one
+that's being modified (current time step).
 
-  * If an occupied cell has zero or one neighbors, it dies of
-    *loneliness*. If an occupied cell has more than three neighbors,
-    it dies of *overcrowding*.
+The neighbors of a cell are the cells directly above, below, to the
+right, to the left, diagonally above to the right and left, and
+diagonally below to the right and left. Be careful when checking for
+neighbors on the edges; you can decide whether an edge cell has alive
+or dead neighbors beyond the edge, or instead that the edges wrap
+around.
 
-  * If an empty cell has exactly three occupied neighbor cells, there
-    is a *birth* of a new cell to replace the empty cell.
+The rules for birth/death are as follows:
 
-  * Births and deaths are instantaneous and occur at the changes of
-    generation. A cell dying for whatever reason may help cause birth,
-    but a new born cell cannot resurrect a cell that is dying, nor
-    will a cell's death prevent the death of another, say, by reducing
-    the local population.
+- If an living cell has zero or one living neighbors, it dies of
+  loneliness. If an living cell has more than three living neighbors,
+  it dies of overcrowding.
+
+- If a dead cell has exactly three living neighbor cells, the dead
+  cell turns into a living cell (birth).
+
+You will "hard code" a starting configuration. The user need not be
+able to specify a different starting configuration, but you can build
+this feature if you want.
+
+## Code design
+
+- Create at least these functions: `main`, `generation` (copies and
+  modifies world for next generation, using the two rules), `display`
+  (prints the world).
+
+- Your `main` function essentially does the following:
+
+  - Sets up the initial world.
+
+  - Loops forever:
+
+    - Calls `generation`
+
+    - Calls `display`
+
+    - Waits for a short time
+
+Use this code to wait for a short time:
+
+{% highlight cpp %}
+#include <unistd.h>
+
+// ...
+
+usleep(800000); // pause 800 ms
+{% endhighlight %}
+
+## Configurations
 
 Examples available from the article <a
 href="http://www.ibiblio.org/lifepatterns/october1970.html">Scientific
@@ -163,58 +205,7 @@ more options).
   </tr>
 </table>
 
-You will "hard code" a starting configuration. The user need not be
-able to provide a different starting configuration (that would just
-complicate your program).
-
-*Suggestions:* Look for stable configurations. That is, look for
-communities that repeat patterns continually. The number of
-configurations in the repetition is called the *period*. There are
-configurations that are fixed, which continue without change. A
-possible project is to find such configurations.
-
-*Hints:* Define a `void` function named `generation` that takes the
-vector we call `world` (call-by-reference or using a pointer), which
-contains the current (or initial) configuration. The function scans
-the vector and modifies the cells, marking the cells with births and
-deaths in accord with the rules listed earlier. This involves
-examining each cell in turn, either killing the cell, letting it live,
-or if the cell is empty, deciding whether a cell should be born. Note
-that the game will not work if your code counts neighbors in the same
-vector it is modifying. A copy of the `world` vector must be created
-before it is modified, and this copy is used to count neighbors, while
-cells are turned on or off in the original vector.
-
-There should be a function `display` that accepts the vector `world`
-and displays the grid on the screen. Some sort of time delay is
-appropriate between calls to `generation` and `display`. To do this,
-your program should generate and display the next generation when you
-press Return/Enter. You are at liberty to automate this (put in a real
-time delay, and not wait for the user to press a key), but automation
-is not necessary for the program.
-
-If you want to "delay" the display of your grid, rather than wait for
-the user to type something and press enter before displaying the next
-grid, then you will need to pause or "sleep" your program somehow. If
-you are using Microsoft Windows, do this:
-
-{% highlight cpp %}
-#include <windows.h>
-
-// ...
-
-Sleep(800); // pause 800 ms
-{% endhighlight %}
-
-On Linux or Mac OS X, do this:
-
-{% highlight cpp %}
-#include <unistd.h>
-
-// ...
-
-usleep(800000); // pause 800 ms
-{% endhighlight %}
+## Extras
 
 Go to
 [http://www.qotile.net/blog/wp/?p=600](http://www.qotile.net/blog/wp/?p=600)
@@ -225,9 +216,6 @@ amount of further information is available here:
 Download <a href="http://golly.sourceforge.net/">Golly</a> (for
 Windows, Mac, Linux) to play with cellular automata and some amazing
 creations by researchers.
-
-Here is an app that generates music based on cellular automata
-principles: [Otmata](http://www.earslap.com/projectslab/otomata).
 
 Cellular automata is serious research; see a
 [list of journals](http://uncomp.uwe.ac.uk/genaro/Cellular_Automata_Repository/Journals.html)

@@ -150,5 +150,21 @@ You entered 123.457
 Notice how the last printout rounded up; the value of "x" inside the
 program has not changed, however.
 
+## File I/O
 
+### good, eof, fail, bad, clear
+
+### get
+
+### getline
+
+### read
+
+### seekg
+
+## Directories
+
+POSIX method (readdir), or Boost?
+
+http://rosettacode.org/wiki/Walk_a_directory/Recursively#C.2B.2B
 
