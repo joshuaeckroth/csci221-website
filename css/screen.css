@@ -61,6 +61,10 @@ pre {
     padding: 15px 0 15px 15px;
 }
 
+pre.simple {
+    border: none;
+}
+
 img {
     display: block;
     margin: 0 auto;
