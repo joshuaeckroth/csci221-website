@@ -312,6 +312,10 @@ int main()
 } 
 {% endhighlight %}
 
+## 2D arrays; and 1D arrays acting as 2D arrays
+
+
+
 ## Frequency of English letters example
 
 {% highlight cpp %}

@@ -3,140 +3,58 @@ title: Homework 6
 layout: default
 ---
 
-From the book, p. 875 q. 9.
+Create a simple MP3 file browser. Document your design with UML.
 
 Skills needed to complete this assignment:
 
-  - Creating classes and using object-oriented program design
-    ([lecture notes (part 1)](/lecture/classes-and-object-orientation.html)
-    and
-    [lecture notes (part 2)](/lecture/classes-and-object-orientation-2.html))
+- [Types and classes](/lecture/types-and-classes.html), particularly
+  working with the string type
 
-  - Using polymorphism ([lecture notes](/lecture/polymorphism.html))
+- [Linked lists](/lecture/linked-lists.html)
 
-  - Splitting code into several files
-    ([lecture notes](/lecture/splitting-code.html))
+- [Input/output](/lecture/input-output.html), particularly working
+  with files
 
-Banks have many different types of accounts often with different rules
-for fees associated with transactions such as withdrawals. Customers
-are allowed to transfer funds between accounts incurring the
-appropriate fees associated with withdrawal of funds from one account.
+- [UML](/lecture/uml.html)
 
-Write a program with a base class for a bank account and two derived
-classes (as described below) representing accounts with different
-rules for withdrawing funds. Also write a function that transfers
-funds from one account (of any type) to another. A transfer is a
-withdrawal from one account and a deposit into the other. Since the
-transfer can be done at any time with any type of account the withdraw
-function in the classes must be virtual. The transfer function utlizes
-polymorphism in order to transfer funds between *any* subclass of
-`BankAccount`. So the transfer function should receive `BankAccount`
-pointers as the "from" and "to" bank accounts.
+## Requirements
 
-Write a main function that creates two accounts (one from
-`MoneyMarketAccount` and one from `CDAccount`) and tests the transfer
-function.
+- Read all MP3 files in the current directory (recursively), and add
+  them to a linked list.
 
-For the classes, create a base class called `BankAccount` that has the name of
-the owner of the account (a `string`) and the balance in the account (a
-`double`) as data members. Include member functions `deposit` and `withdraw`
-(each with a `double` for the amount as an argument) and accessor functions
-`getName` and `getBalance`. `deposit` will add the amount to the balance
-(assuming the deposit amount is nonnegative) and `withdraw` will subtract the
-amount from the balance (assuming the withdraw amount is nonnegative and less
-than or equal to the balance).
+- When reading an MP3 file, read its filename (string), title
+  (string), artist (string), and year (as an integer; see ID3v1 tag
+  specification below).
 
-Also create a class called `MoneyMarketAccount` that is derived from
-`BankAccount`. In a `MoneyMarketAccount` the user gets 2 free withdrawals in a
-given period of time (don't worry about the time; just allow a maximum of 2
-free withdrawals *ever*). After the free withdrawals have been used, a
-withdrawal fee of $1.50 is deducted from the balance per withdrawal. Hence, the
-class must have a data member to keep track of the number of withdrawals. It
-also must override the `withdraw` definition.
+- Each MP3 file should be an instance of an MP3 class.
 
-Finally, create a `CDAccount` class (to model a Certificate of Deposit) derived
-from `BankAccount` which in addition to having the name and balance, also has
-an interest rate. CDs incur penalties for early withdrawal of funds. Assume
-that a withdrawal of funds (any amount) incurs a penalty of 25% of the annual
-interest earned on the account (just assume that the annual interest is equal
-to the interest rate times the current balance). Assume the amount withdrawn
-plus the penalty are deduced from the account balance. Again, the `withdraw`
-function must override the one in the base class.
+- The linked list, containing all MP3 instances, should be managed by
+  an instance of a Database class.
 
-For all three classes, the withdraw function should return a `bool` indicating
-the status (false if amount is negative (that's really a deposit) or
-insufficient funds for the withdrawal to take place). The deposit function
-should return a `bool` as well; deposit should return `false` if the amount to
-deposit is negative (that's really a withdraw). The point of the `bool` return
-values is to indicate success or failure, because these functions may refuse to
-actually withdraw or deposit if conditions aren't right (we don't want to allow
-users of the bank account classes to get away with making a withdraw look like
-a deposit or vice versa). For the purposes of this exercise, do not worry about
-other functions and properties of these accounts (such as when and how interest
-is paid).
+- Provide an interactive search mechanism, which asks whether to
+  search on title or artist or year, and then asks for the search
+  value. The response should be all MP3 files that match the search
+  criteria. For title and artist, check for partial string matches
+  (use the `find` string function). For year, check for exact
+  matches. The Database class should do the search and print the
+  results, but the `main` function should handle the user interaction.
 
-A strategy for finishing this assignment is to work on the `BankAccount` and
-`MoneyMarketAccount` classes first. Then, when those are working, add the
-`CDAccount` class.
+- Construct a UML diagram that shows the MP3 and Database classes,
+  plus their fields and methods, and their relationship.
 
-Here is a diagram of the classes.
+## ID3v1 tag specification
 
-![Bank Account UML diagram](/images/bankaccount-uml.png "Bank Account UML diagram")
+http://id3.org/ID3v1
 
-Note, if you want `balance` not to be `public` in the `BankAccount` class then
-you'll actually need to make it `protected`. This ensures that it will be
-accessible by subclasses but remain private in the subclasses.
+Look at last 128 bytes of the file. It should start with "TAG" (3
+bytes). Use `seekg` on the file, with a negative number. Then:
 
-## Example execution
+- Song Title: 30 characters (i.e., 30 `char`'s, each 1 byte)
+- Artist: 30 characters
+- Album: 30 characters
+- Year: 4 characters
+- Comment: 30 characters
+- Genre: 1 byte
 
-<pre>
-Enter Josh's MoneyMarketAccount balance: 100
-Enter amount to withdraw from Josh: 20
-That worked.
-Josh's new balance: 80
-Enter amount to withdraw from Josh (again): 30
-That worked.
-Josh's new balance: 50
-Enter Tracy's CDAccount balance: 50
-Enter Tracy's CDAccount interest rate: 0.5
-Enter amount to deposit into Tracy's account: 30
-That worked.
-Tracy's new balance: 80
-Enter amount to transfer from Tracy to Josh: 60
-That worked.
-Tracy's new balance: 10
-Josh's new balance: 110
-Enter amount to transfer from Josh to Tracy: 100
-That worked.
-Tracy's new balance: 110
-Josh's new balance: 8.5
-</pre>
+Those fields add up to 125 bytes; plus "TAG", we get 128 bytes.
 
-## Common compiler errors
-
-<pre>
-/tmp/ccJDhhaM.o: In function `BankAccount::BankAccount()':
-CDAccount.cpp:(.text._ZN11BankAccountC2Ev[_ZN11BankAccountC5Ev]+0x13):
-undefined reference to `vtable for BankAccount'
-/tmp/ccJDhhaM.o: In function `BankAccount::~BankAccount()':
-CDAccount.cpp:(.text._ZN11BankAccountD2Ev[_ZN11BankAccountD5Ev]+0x13):
-undefined reference to `vtable for BankAccount'
-</pre>
-
-This means you have `virtual bool withdraw(double amount)` or similar
-in `BankAccount.h` but you forgot to add `= 0` at the end of that. We
-need the `= 0` so that `withdraw()` is a "pure virtual" function.
-
-<pre>
-main.cpp: In function `int main()':
-main.cpp:48:50: error: cannot allocate an object of abstract type `CDAccount'
-CDAccount.h:6:7: note: 
-  because the following virtual functions are pure within `CDAccount':
-BankAccount.h:13:18: note: virtual bool BankAccount::withdraw(double)
-main.cpp:48:15: error:
-  cannot declare variable `acct2' to be of abstract type `CDAccount'
-CDAccount.h:6:7: note: since type `CDAccount' has pure virtual functions
-</pre>
-
-This means you forgot to provide the code for a pure virtual function
-(such as `withdraw()` or `deposit()`) in one of your subclasses.
