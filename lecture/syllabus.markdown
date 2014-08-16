@@ -24,11 +24,11 @@ work is penalized. The maximum grade for late work is 60%.
 
 ## Honor code
 
-I am strongly in agreement with the [Stetson University Honor
-Code](http://www.stetson.edu/honorsystem/). Any form of cheating is
-not acceptable, will not be tolerated, and could lead to dismissal
-from the University. This includes plagiarism of any sort on quizzes,
-exams, or on projects. So please, do not cheat!
+I am strongly in agreement with the
+[Stetson University Honor Code](http://www.stetson.edu/other/honor-system/). Any
+form of cheating is not acceptable, will not be tolerated, and could
+lead to dismissal from the University. This includes plagiarism of any
+sort on quizzes, exams, or on projects. So please, do not cheat!
 
 ## Academic success center
 
