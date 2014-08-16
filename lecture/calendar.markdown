@@ -68,7 +68,7 @@ title: Course calendar
       </td>
     </tr>
     <tr>
-      <td><b>4</b><br/>9/16, 9/18</td>
+      <td><b>4</b><br/>9/18</td>
       <td>
         <a href="/lecture/pointers-symbol-table.html">Pointers and the symbol table</a>
         <br/>
@@ -104,12 +104,8 @@ title: Course calendar
       <td><b>7</b><br/>10/7</td>
       <td>
         <a href="/lecture/input-output.html">Input/output</a> (including files)
-        <br/>
-        <a href="/lecture/uml.html">UML</a>
-        <br/>
-        <a href="/lecture/namespaces.html">Namespaces</a>
       </td>
-      <td>Blackboard quiz 6: I/O, UML, namespaces</td>
+      <td>Blackboard quiz 6: I/O</td>
       <td>
         <a href="/homework/homework-6.html">Homework&nbsp;6</a>
       </td>
@@ -145,11 +141,13 @@ title: Course calendar
     <tr>
       <td><b>10</b><br/>10/28, 10/30</td>
       <td>
-        <a href="/lecture/game-design.html">Game design</a> (text game)
+        <a href="/lecture/uml.html">UML</a>
         <br/>
-        <a href="/lecture/collaboration-with-git.html">Collaboration with git</a>
+        <a href="/lecture/namespaces.html">Namespaces</a>
+        <br/>
+        <a href="/lecture/game-design.html">Game design</a> (text game)
       </td>
-      <td>Blackboard quiz 9: Collaboration with git</td>
+      <td>Blackboard quiz 9: UML, Namespaces, Collaboration with git</td>
       <td>
         Start <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
       </td>
@@ -157,6 +155,8 @@ title: Course calendar
     <tr>
       <td><b>11</b><br/>11/4, 11/6</td>
       <td>
+        <a href="/lecture/collaboration-with-git.html">Collaboration with git</a>
+        <br/>
         <a href="/lecture/dev-methodologies.html">Development methodologies</a>
         <br/>
         <a href="/lecture/testing.html">Testing</a>
@@ -171,7 +171,7 @@ title: Course calendar
     <tr>
       <td><b>12</b><br/>11/11, 11/13</td>
       <td>
-        <a href="/lecture/dev-tools.html">Development tools</a>
+        <a href="/lecture/useful-libraries.html">Useful libraries</a>
       </td>
       <td>no quiz</td>
       <td>
@@ -183,7 +183,7 @@ title: Course calendar
       <td>
         Presentations of mid-project status for group project&nbsp;2
         <br/>
-        <a href="/lecture/useful-libraries.html">Useful libraries</a>
+        <a href="/lecture/dev-tools.html">Development tools</a>
       </td>
       <td>no quiz</td>
       <td>
@@ -193,7 +193,7 @@ title: Course calendar
     <tr>
       <td><b>14</b><br/>11/25</td>
       <td>
-        <a href="/lecture/useful-libraries.html">Useful libraries</a>
+        <a href="/lecture/dev-tools.html">Development tools</a>
       </td>
       <td>no quiz</td>
       <td>
