@@ -59,10 +59,10 @@ Execute these commands (use your own name and email!):
 ## Basic concepts
 
 - **repository**: git stores data about versions in a repository. If
-  you put your files in a folder called, for example, `homework1`, and
+  you put your files in a folder called, for example, `homework0`, and
   next run the `git init` command (described below), then the
   repository will be created in a special hidden folder `.git` inside
-  the `homework1` folder. You can look in this folder if you want;
+  the `homework0` folder. You can look in this folder if you want;
   just don't change anything (except possibly the `config` file, in
   special circumstances).
   
@@ -83,12 +83,12 @@ Execute these commands (use your own name and email!):
 ## Basic workflow
 
 You'll want to do something like this for
-[homework 1](/homework/homework-1.html). Comments are shown after the
+[homework 0](/homework/homework-0.html). Comments are shown after the
 `#` on each line. These commands should work on Linux/Mac OS
 X/Windows, assuming you have installed Git.
 
-    mkdir homework1                       # create a new directory
-    cd homework1                          # go into that directory
+    mkdir homework0                       # create a new directory
+    cd homework0                          # go into that directory
     git init                              # create a new empty git repository
 
     (...create BitBucket repository, send an "invitation" to me...)
