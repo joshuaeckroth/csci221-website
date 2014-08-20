@@ -5,6 +5,14 @@ layout: default
 
 This class is about C++ and modern software development.
 
+## About me
+
+- Joshua Eckroth, [jeckroth@stetson.edu](mailto:jeckroth@stetson.edu)
+
+- Eliz Hall 214-9, 386-740-2519
+
+- Office hours: Mon 10-11am; Tue 12-1pm; Wed 11am-12pm; Thur 12-1pm
+
 ## Grading
 
 - Homeworks: 30% (8 of them)
@@ -21,6 +29,14 @@ This class is about C++ and modern software development.
 
 Homework may be turned in late, up to the day of the final exam. Late
 work is penalized. The maximum grade for late work is 60%.
+
+## Test dates
+
+- Midterm: October 2
+
+- Final exam: December 8, 1-3pm
+
+See the [calendar](/lecture/calendar.html) for more dates.
 
 ## Honor code
 
