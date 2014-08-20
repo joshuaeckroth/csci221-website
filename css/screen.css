@@ -169,7 +169,14 @@ table {
 th, td {
     padding: 10px 14px;
     text-align: left;
+}
+
+th {
     vertical-align: middle;
+}
+
+td {
+    vertical-align: top;
 }
 
 th, thead {

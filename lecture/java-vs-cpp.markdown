@@ -3,6 +3,20 @@ layout: default
 title: Java vs. C++
 ---
 
+The assumption in CSCI221 is that you have prior experience
+programming with Java. This should mean you have seen virtually all
+the features of the Java language that appear on this page. We will
+learn the basics of C++ by looking at the similarities and differences
+with Java.
+
+Also consider:
+
+- [A summary of differences](http://en.wikipedia.org/wiki/Comparison_of_Java_and_C%2B%2B)
+  and
+  [another summary](http://stackoverflow.com/questions/9192309/the-main-difference-between-java-c)
+- [A history of C++](http://www.cplusplus.com/info/history/) as well
+  as a [historical essay by C++'s author](http://www.stroustrup.com/hopl2.pdf)
+
 ## Hello World
 
 <table>
@@ -114,8 +128,8 @@ $ ./hello_world
 
 In both languages, strings are arrays of `char`'s. The `String` class
 is built into Java, so you don't need to do anything special to use
-it. In C++, you must write `#include <string>` at the top of your
-file. Note that `String` is capitalized in Java (like all Java
+it. *In C++, you must write `#include <string>` at the top of your
+file.* Note that `String` is capitalized in Java (like all Java
 classes), while in C++ it is not.
 
 <table>
@@ -358,11 +372,69 @@ string s = my_converter.str();
 
 <tr>
 <td>
+Read from the keyboard:
+<pre class="simple">
+Scanner sc = new Scanner(System.in);
+int i = sc.nextInt();
+float x = sc.nextFloat();
+String line = sc.nextLine();
+</pre>
 </td>
 <td>
+Read from the keyboard:
+<pre class="simple">
+// this needs: #include &lt;iostream&gt;
+// use of strings needs: #include &lt;string&gt;
+
+int i;
+cin >> i;
+float x;
+cin >> x;
+
+// cin with a string gets a word, not a line!
+string word;
+cin >> word;
+
+string line;
+getline(cin, line); // get the whole line
+</pre>
 </td>
 </tr>
 
+<tr>
+<td>
+Print to the console:
+<pre class="simple">
+System.out.println("Hello, world!");
+int x = 5;
+System.out.println("X = " + x);
+// print y with four decimal places
+double y = 4.35;
+System.out.format("Y = %.4f%n", y);
+// print h in hex
+int h = 5038;
+System.out.format("H in hex = %X%n", h);
+</pre>
+</td>
+<td>
+Print to the console:
+<pre class="simple">
+// this needs: #include &lt;iostream&gt;
+// and: #include &lt;iomanip&gt;
+
+cout << "Hello, world!" << endl;
+int x = 5;
+cout << "X = " << x << endl;
+// print y with four decimal places
+double y = 4.35;
+cout << "Y = " << setprecision(4)
+     << fixed << y << endl;
+// print h in hex
+int h = 5038;
+cout << "H in hex = " << hex << h << endl;
+</pre>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -379,8 +451,48 @@ string s = my_converter.str();
 
 <tr>
 <td>
+Write to a file:
+<pre class="simple">
+FileWriter fout = new FileWriter("foo.txt");
+PrintWriter out = new PrintWriter(fout);
+out.println("Hello, world!");
+out.close();
+</pre>
 </td>
 <td>
+Write to a file:
+<pre class="simple">
+// this needs: #include &lt;iostream&gt;
+// and: #include &lt;fstream&gt;
+
+ofstream out;
+out.open("foo.txt");
+out << "Hello, world!" << endl;
+out.close();
+</pre>
+</td>
+</tr>
+
+<tr>
+<td>
+Read from a file:
+<pre class="simple">
+FileReader fin = new FileReader("foo.txt");
+BufferedReader in = new BufferedReader(fin);
+String line = in.readLine();
+int x = Integer.parseInt(line);
+in.close();
+</pre>
+</td>
+<td>
+Read from a file:
+<pre class="simple">
+ifstream in;
+in.open("foo.txt");
+int x;
+in >> x;
+in.close();
+</pre>
 </td>
 </tr>
 
@@ -400,8 +512,32 @@ string s = my_converter.str();
 
 <tr>
 <td>
+<pre class="simple">
+
+
+Math.abs(-15);
+Math.ceil(2.35);
+Math.floor(2.35);
+Math.round(2.35);
+Math.log(2.35);
+Math.max(5, 3);
+Math.min(5, 3);
+Math.pow(5, 3);
+</pre>
 </td>
 <td>
+<pre class="simple">
+// these need: #include &lt;cmath&gt;
+
+abs(-15);
+ceil(2.35);
+floor(2.35);
+round(2.35);
+log(2.35);
+fmax(5, 3);
+fmin(5, 3);
+pow(5, 3);
+</pre>
 </td>
 </tr>
 
@@ -421,8 +557,60 @@ string s = my_converter.str();
 
 <tr>
 <td>
+Define a class. This code must be in a file with the same name as the
+class, i.e., `MyClass.java`.
+<pre class="simple">
+public class MyClass {
+  public int x;
+  private float y;
+
+  public MyClass(int x) {
+    this.x = x;
+    y = 35.25;
+  }
+
+  public float getY() {
+    return y;
+  }
+
+  private void incrementX() {
+    x++;
+  }
+}
 </td>
 <td>
+Typically in C++, we declare the class in a file like `myclass.h` and
+define its methods in a file like `myclass.cpp`.
+<pre class="simple">
+// myclass.h
+
+class MyClass {
+  public:
+    int x;
+    MyClass(int x);
+    float getY();
+    
+  private:
+    float y;
+    void incrementX();
+}
+
+
+
+// myclass.cpp
+#include &lt;myclass.h&gt;
+
+MyClass::MyClass(int x) {
+  this->x = x;
+}
+
+float MyClass::getY() {
+  return y;
+}
+
+void MyClass::incrementX() {
+  x++;
+}
 </td>
 </tr>
 
