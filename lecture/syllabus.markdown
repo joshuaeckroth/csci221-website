@@ -3,6 +3,10 @@ title: Syllabus
 layout: default
 ---
 
+<p>
+<b>CSCI 221 - 01, Fall 2014 &mdash; Software Development I</b><br/>
+</p>
+
 This class is about C++ and modern software development.
 
 ## About me
