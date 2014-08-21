@@ -56,7 +56,7 @@ If a student anticipates barriers related to the format or
 requirements of a course, she or he should meet with the course
 instructor to discuss ways to ensure full participation. If
 disability-related accommodations are necessary, please register with
-the Academic Success Center (822- 7127;
+the Academic Success Center (822-7127;
 [www.stetson.edu/asc](http://www.stetson.edu/asc)) and notify the
 course instructor of your eligibility for reasonable
 accommodations. The student, course instructor, and the Academic
