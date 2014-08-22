@@ -11,7 +11,9 @@ Skills needed to complete this assignment:
 - [Linux](/lecture/linux.html), [git](/lecture/git.html)
 
 - [Java vs. C++](/lecture/java-vs-cpp.html),
-  [primitive types](/lecture/types-and-classes.html)
+[primitive types](/lecture/types-and-classes.html)
+
+Name your BitBucket repository **exactly** `csci221-homework1`.
 
 ## Requirements
 

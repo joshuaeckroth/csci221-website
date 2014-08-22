@@ -17,6 +17,8 @@ Skills needed to complete this assignment:
   [Makefiles](/lecture/makefiles.html),
   [GDB Debugger](/lecture/gdb-debugger.html)
 
+Name your BitBucket repository **exactly** `csci221-homework2`.
+
 ## Task 1: Create a Makefile
 
 ### Requirements

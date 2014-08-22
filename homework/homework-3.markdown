@@ -9,6 +9,8 @@ Skills needed to complete this assignment:
 
 - [Arrays](/lecture/arrays.html)
 
+Name your BitBucket repository **exactly** `csci221-homework3`.
+
 ## Requirements
 
 - Create one file, `life.cpp`, with three functions: `main`,
