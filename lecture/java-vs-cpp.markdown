@@ -15,7 +15,13 @@ Also consider:
   and
   [another summary](http://stackoverflow.com/questions/9192309/the-main-difference-between-java-c)
 - [A history of C++](http://www.cplusplus.com/info/history/) as well
-  as a [historical essay by C++'s author](http://www.stroustrup.com/hopl2.pdf)
+  as a
+  [historical essay by C++'s author](http://www.stroustrup.com/hopl2.pdf)
+
+## A note about completeness
+
+Some techniques not mentioned here, e.g., `if`'s, `for` loops, math
+operations like `+`, `-`, `%`, etc., work the same in Java and C++.
 
 ## Hello World
 
