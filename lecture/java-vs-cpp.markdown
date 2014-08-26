@@ -630,8 +630,160 @@ void MyClass::incrementX() {
 
 <tr>
 <td>
+Cast primitive types:
+<pre class="simple">
+float a = 5.5;
+int b = 3;
+
+int x = (int)a;
+float y = (float)b;
+</pre>
 </td>
 <td>
+Cast primitive types:
+<pre class="simple">
+float a = 5.5;
+int b = 3;
+
+int x = (int)a;
+float y = (float)b;
+</pre>
+</td>
+</tr>
+
+<tr>
+<td>
+Single inheritance:
+<pre class="simple">
+public class A { ... }
+public class B extends A { ...}
+</pre>
+This means that class <code>B</code> inherits all public members
+(variables, methods) of class <code>A</code>. Furthermore, those
+public members of <code>A</code> are <strong>public</strong> in
+<code>B</code>. (Note, I'm ignoring "protected" members and their
+inheritance rules.)
+</td>
+<td>
+Single inheritance:
+<pre class="simple">
+class A { ... }
+class B : public A { ... }
+</pre>
+<p>
+This means that class <code>B</code> inherits all public members
+(variables, methods) of class <code>A</code>. Furthermore, those
+public members of <code>A</code> are <strong>public</strong> in
+<code>B</code>. (Note, I'm ignoring "protected" members and their
+inheritance rules.)
+</p>
+<p>
+Another variant:
+<pre class="simple">
+class A { ... }
+class B : private A { ... }
+</pre>
+</p>
+<p>
+This means that class <code>B</code> inherits all public members
+(variables, methods) of class <code>A</code>. Furthermore, those
+public members of <code>A</code> are <strong>private</strong> in
+<code>B</code>.
+</td>
+</tr>
+
+<tr>
+<td>
+Multiple inheritance: Not possible. Use interfaces (see below) as a
+work-around.
+</td>
+<td>
+Multiple inheritance:
+<pre class="simple">
+class A { ... }
+class B { ... }
+class C : public class A, public class B
+{ ... }
+</pre>
+This means that class <code>C</code> inherits all public members of
+classes <code>A</code> and <code>B</code>. If both <code>A</code> and
+<code>B</code> include some of the same members (e.g., same function
+names), then code in class <code>C</code> must be explicit about
+whether it is referring to members inherited from <code>A</code> or
+<code>B</code>.
+</td>
+</tr>
+
+<tr>
+<td>
+Override inherited methods:
+<pre class="simple">
+public class A {
+  public void foo() { ... }
+}
+
+public class B extends A {
+  // override inherited foo()
+  public void foo() { ... }
+}
+</pre>
+</td>
+<td>
+Override inherited methods:
+<pre class="simple">
+class A {
+  public:
+  virtual void foo();
+}
+
+class B : public A {
+  public:
+  // override inherited foo()
+  virtual void foo();
+}
+</pre>
+In other words, only <code>virtual</code> functions can be overridden
+in the way you would expect from Java. The <code>virtual</code>
+keyword activates polymorphism. So, if we have a <code>B</code>
+object but cast it to an <code>A</code> object, and then call its
+<code>foo()</code> method, it would use <code>B</code>'s
+<code>foo()</code> method. If <code>foo()</code> was not virtual in
+the base class, then after casting our <code>B</code> object to an
+<code>A</code>, <code>A</code>'s <code>foo()</code> function would
+be used and <code>B</code>'s <code>foo()</code> function would be
+inaccessible.
+</td>
+  
+<tr>
+<td>
+Interfaces:
+<pre class="simple">
+interface Foo {
+  void methodA();
+  int methodB(int bar);
+}
+
+class Quux implements Foo {
+  void methodA() { ... }
+  int methodB(int bar) { ... }
+}
+</pre>
+</td>
+<td>
+Interfaces in C++ are accomplished with "pure" virtual functions,
+e.g., class functions that have no code, but must be defined in
+descendent classes.
+<pre class="simple">
+class Foo {
+  virtual void methodA() = 0;
+  virtual int methodB(int bar) = 0;
+}
+
+class Quux : public Foo {
+  virtual void methodA() { ... }
+  virtual int methodB(int bar) { ... }
+}
+</pre>
 </td>
 </tr>
 
@@ -651,8 +803,31 @@ void MyClass::incrementX() {
 
 <tr>
 <td>
+Create and initialize arrays:
+<pre class="simple">
+int[] xs = new int[10];
+int[][] matrix = new int[5][7];
+int[] ys = {1, 2, 3, 4};
+
+// ragged array
+int[][] matrix2 = { {1, 2}, {3, 4, 5} };
+</pre>
 </td>
 <td>
+Create and initialize arrays:
+<pre class="simple">
+int xs[10];
+int matrix[5][7];
+int ys[] = {1, 2, 3, 4};
+
+// ragged array is not possible
+// without multiple lines of code
+// (often involving a loop)
+
+// instead, try this rectangular
+// 2d array
+int matrix2 = { {1, 2, 3}, {4, 5, 6} };
+</pre>
 </td>
 </tr>
 
@@ -672,8 +847,97 @@ void MyClass::incrementX() {
 
 <tr>
 <td>
+Lists:
+<pre class="simple">
+Integer myint = new Integer(5);
+List&lt;Integer&gt; mylist = new ArrayList&lt;Integer&gt;();
+
+mylist.add(myint);
+boolean yeah = mylist.contains(myint);
+
+// get from index 0
+Integer myint2 = mylist.get(0);
+
+int count = mylist.size();
+mylist.clear();
+</pre>
 </td>
 <td>
+Vectors are used more commonly:
+<pre class="simple">
+// this needs #include &lt;vector&gt;
+// and #include &lt;algorithm&gt;
+// (the latter for the find() function)
+
+vector&lt;int&gt; mylist;
+mylist.push_back(5);
+vector&lt;int&gt;::iterator myIt;
+myIt = find(mylist.begin(), mylist.end(), 5);
+if(myIt != mylist.end()) {
+  cout << "found the number 5." << endl;
+}
+
+int x = mylist[0];
+mylist.clear();
+</pre>
+</td>
+</tr>
+
+<tr>
+<td>
+Maps (key-value pairs):
+<pre class="simple">
+Map&lt;String, Integer&gt; mymap =
+  new HashMap&lt;String, Integer&gt;();
+mymap.put("foo", 5);
+Integer c = mymap.get("foo");
+mymap.remove("foo");
+</pre>
+</td>
+<td>
+Maps (key-value pairs):
+<pre class="simple">
+// this needs #include &lt;map&gt;
+
+map&lt;string, int&gt; mymap;
+mymap["foo"] = 5;
+int c = mymap["foo"];
+mymap.erase("foo");
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Generics / Templates
+
+<table>
+<thead>
+<tr>
+<th>Java</th>
+<th>C++</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>
+<pre class="simple">
+public class Foo&lt;T&gt; {
+  T value;
+  T func(T arg) { ... }
+}
+</pre>
+</td>
+<td>
+<pre class="simple">
+template&lt;typename T&gt;
+class Foo {
+  public:
+  T value;
+  T func(T arg);
+}
+</pre>
 </td>
 </tr>
 
