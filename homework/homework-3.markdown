@@ -219,6 +219,13 @@ Download <a href="http://golly.sourceforge.net/">Golly</a> (for
 Windows, Mac, Linux) to play with cellular automata and some amazing
 creations by researchers.
 
+See a [video](https://www.youtube.com/watch?v=KJe9H6qS82I) of a
+"continuous" (floating-point) version of the Game.
+
+See a [video](https://www.youtube.com/watch?v=xP5-iIeKXE8) of the Game
+of Life implemented in the Game of Life. Very trippy! And here's a
+[looping version](https://www.youtube.com/watch?v=D6aP9S9rEQk).
+
 Cellular automata is serious research; see a
 [list of journals](http://uncomp.uwe.ac.uk/genaro/Cellular_Automata_Repository/Journals.html)
 that publish articles about cellular automata.
