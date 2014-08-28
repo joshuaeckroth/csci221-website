@@ -10,8 +10,7 @@ Skills needed to complete this assignment:
 
 - [Linux](/lecture/linux.html), [git](/lecture/git.html)
 
-- [Java vs. C++](/lecture/java-vs-cpp.html),
-  [primitive types](/lecture/types-and-classes.html)
+- [Java vs. C++](/lecture/java-vs-cpp.html)
 
 - [GCC compiler](/lecture/gcc-compiler.html),
   [Makefiles](/lecture/makefiles.html),

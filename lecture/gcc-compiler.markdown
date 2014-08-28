@@ -86,3 +86,50 @@ g++ -ansi -pedantic -Wall -g -O2 -o outfile source1.cpp source2.cpp source3.cpp
 
 Typing `g++` commands over-and-over is annoying, so we'll use
 [Makefiles](/lecture/makefiles.html).
+
+## Compiler workflow
+
+<img src="/images/compiler-workflow.png" align="right" alt="Compiler workflow" />
+
+The "compiler" is actually just one stage in a larger workflow that
+transforms source files into a single binary program. The steps are as
+follows, assuming we're compiling one file at a time:
+
+1. Read the source file, and run it through the preprocessor. See the
+   [preprocessor notes](/lecture/preprocessor.html) for details about
+   that. The preprocessor may copy-paste `#include`'d files, among
+   other things. Ultimately, raw C++ source comes out the other side.
+
+2. Compile this raw C++ source into Assembler language source.
+
+3. Assembler the assembler language source into an "object file,"
+   which is binary (machine code) but not yet a working program.
+
+<div style="clear: both;"></div>
+
+The object file is only the compiled code from the single input
+file. It likely refers to functions, variables, classes,etc. that are
+defined in other source files. So the final step is to "link" various
+object files into a final binary. This is shown in the diagram below:
+
+<div style="text-align: center;">
+<img src="/images/compiler-linker.png" alt="Linker" />
+</div>
+
+### Errors in compiling, linking
+
+The compiler can produce these kinds of errors:
+
+- Syntax errors
+- Unknown variables/functions/classes
+- Incompatible types
+
+The linker can produce these kinds of errors:
+
+- Undefined reference (function assumed to exist but actually no
+  definition found)
+- No `main()` function (not an error if just compiling a library,
+  e.g., with `g++ -static` or `g++ -shared`)
+
+Each of these groups of errors do not include "runtime errors," e.g.,
+crashes, or logic errors.
