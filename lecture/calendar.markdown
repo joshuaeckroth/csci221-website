@@ -8,7 +8,6 @@ title: Course calendar
     <tr>
       <th>Week</th>
       <th>Topics</th>
-      <th>Quiz</th>
       <th>Homework</th>
     </tr>
   </thead>
@@ -24,7 +23,6 @@ title: Course calendar
         <br/>
         <a href="/lecture/git.html">Git</a>
       </td>
-      <td>Blackboard quiz 0: git and Linux</td>
       <td><a href="/homework/homework-0.html">Homework&nbsp;0</a></td>
     </tr>
     <tr>
@@ -32,27 +30,23 @@ title: Course calendar
       <td>
         <a href="/lecture/java-vs-cpp.html">Java vs. C++</a>
         <br/>
-        Quick scan of C++ syntax
-        <br/>
-        <a href="/lecture/types-and-classes.html">Types and classes</a>
-        <br/>
-        <a href="/lecture/type-casting.html">Type casting</a>
-      </td>
-      <td>Blackboard quiz 1: C++ syntax, types, classes</td>
-      <td><a href="/homework/homework-1.html">Homework&nbsp;1</a></td>
-    </tr>
-    <tr>
-      <td><b>2</b><br/>9/2, 9/4</td>
-      <td>
         <a href="/lecture/gcc-compiler.html">GCC compiler</a>
         <br/>
         <a href="/lecture/preprocessor.html">Preprocessor directives</a>
         <br/>
         <a href="/lecture/makefiles.html">Makefiles</a>
-        <br/>
-        <a href="/lecture/gdb-debugger.html">GDB debugger</a>
       </td>
-      <td>Blackboard quiz 2: GCC, Preprocessor, Makefiles, GDB</td>
+      <td><a href="/homework/homework-1.html">Homework&nbsp;1</a></td>
+    </tr>
+    <tr>
+      <td><b>2</b><br/>9/2, 9/4</td>
+      <td>
+        <a href="/lecture/gdb-debugger.html">GDB debugger</a>
+        <br/>
+        <a href="/lecture/pointers-symbol-table.html">Pointers and the symbol table</a>
+        <br/>
+        <a href="/lecture/memory-management.html">Memory management</a>
+      </td>
       <td>
         <a href="/homework/homework-2.html">Homework&nbsp;2</a>
       </td>
@@ -61,8 +55,10 @@ title: Course calendar
       <td><b>3</b><br/>9/9, 9/11</td>
       <td>
         <a href="/lecture/arrays.html">Arrays</a>
+        <br/>
+        <a href="/lecture/operator-overloading.html">Operator
+        overloading</a>
       </td>
-      <td>Blackboard quiz 3: Arrays</td>
       <td>
         <a href="/homework/homework-3.html">Homework&nbsp;3</a>
       </td>
@@ -70,11 +66,8 @@ title: Course calendar
     <tr>
       <td><b>4</b><br/>9/18</td>
       <td>
-        <a href="/lecture/pointers-symbol-table.html">Pointers and the symbol table</a>
-        <br/>
-        <a href="/lecture/memory-management.html">Memory management</a>
+        <a href="/lecture/linked-lists.html">Linked lists</a>
       </td>
-      <td>Blackboard quiz 4: Pointers, memory management</td>
       <td>
         <a href="/homework/homework-4.html">Homework&nbsp;4</a>
       </td>
@@ -82,11 +75,8 @@ title: Course calendar
     <tr>
       <td><b>5</b><br/>9/23, 9/25</td>
       <td>
-        <a href="/lecture/linked-lists.html">Linked lists</a>
-        <br/>
         <a href="/lecture/trees.html">Trees</a>
       </td>
-      <td>Blackboard quiz 5: Linked lists, trees</td>
       <td>
         <a href="/homework/homework-5.html">Homework&nbsp;5</a>
       </td>
@@ -97,7 +87,6 @@ title: Course calendar
         9/30: In-class review of all prior material
         <br/>
         <b>10/2: Midterm exam</b>; see <a href="/guide/midterm-exam.html">Study guide</a>
-      <td>no quiz</td>
       <td>no homework</td>
     </tr>
     <tr>
@@ -105,7 +94,6 @@ title: Course calendar
       <td>
         <a href="/lecture/input-output.html">Input/output</a> (including files)
       </td>
-      <td>Blackboard quiz 6: I/O</td>
       <td>
         <a href="/homework/homework-6.html">Homework&nbsp;6</a>
       </td>
@@ -120,7 +108,6 @@ title: Course calendar
         <br/>
         <a href="/lecture/template-metaprogramming.html">Template meta-programming</a>
       </td>
-      <td>Blackboard quiz 7: Polymorphism, template meta-programming</td>
       <td>
         <a href="/homework/homework-7.html">Homework&nbsp;7</a>
       </td>
@@ -133,7 +120,6 @@ title: Course calendar
         <br/>
         <a href="/lecture/maps-sets-etc.html">Maps, sets, etc.</a>
       </td>
-      <td>Blackboard quiz 8: Templates, vectors, maps, sets</td>
       <td>
         <a href="/homework/homework-8.html">Homework&nbsp;8</a>
       </td>
@@ -147,7 +133,6 @@ title: Course calendar
         <br/>
         <a href="/lecture/game-design.html">Game design</a> (text game)
       </td>
-      <td>Blackboard quiz 9: UML, Namespaces, Collaboration with git</td>
       <td>
         Start <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
       </td>
@@ -163,7 +148,6 @@ title: Course calendar
         <br/>
         <a href="/lecture/documentation.html">Documentation</a>
       </td>
-      <td>no quiz</td>
       <td>
         Finish <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
       </td>
@@ -173,7 +157,6 @@ title: Course calendar
       <td>
         <a href="/lecture/useful-libraries.html">Useful libraries</a>
       </td>
-      <td>no quiz</td>
       <td>
         First deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
@@ -185,7 +168,6 @@ title: Course calendar
         <br/>
         <a href="/lecture/dev-tools.html">Development tools</a>
       </td>
-      <td>no quiz</td>
       <td>
         Second deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
@@ -195,7 +177,6 @@ title: Course calendar
       <td>
         <a href="/lecture/dev-tools.html">Development tools</a>
       </td>
-      <td>no quiz</td>
       <td>
         Third deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
@@ -207,7 +188,6 @@ title: Course calendar
         <br/>
         12/4: Final exam review; see <a href="/guide/final-exam.html">Study guide</a>
       </td>
-      <td>no quiz</td>
       <td>no homework</td>
     </tr>
     <tr>
@@ -215,7 +195,6 @@ title: Course calendar
       <td>
         Final exam on Monday, December 8, 1pm-3pm
       </td>
-      <td></td>
       <td></td>
     </tr>
   </tbody>

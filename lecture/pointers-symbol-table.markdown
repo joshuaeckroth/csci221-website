@@ -92,13 +92,11 @@ example (using the variables above):
 </table>
 
 The "variable name" column is obvious, as is the "type" column. The
-"scope" columns means "where is this variable visible?" We learned
-about scope in the
-[variables and types](/lecture/variables-and-types.html) notes. The
-"memory location" column holds a number (written in hexadecimal
-notation: each digit has 16 possible values, using symbols 0-9 and
-a-f) which indicates where, in the computer's memory, the value of the
-variable is kept.
+"scope" columns means "where is this variable visible?" The "memory
+location" column holds a number (written in hexadecimal notation: each
+digit has 16 possible values, using symbols 0-9 and a-f) which
+indicates where, in the computer's memory, the value of the variable
+is kept.
 
 It's *very important* to see that the *value* of the variable is not
 in the symbol table! Only the memory location of where the value is

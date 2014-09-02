@@ -48,8 +48,36 @@ Hit Ctrl-Z to stop a running program and go back to the gdb prompt.
 - `display x` -- show the value of variable `x` (must be in scope at
   current breakpoint)
 
+- `display &x` -- show the address of `x`
+
+- `display *px` -- dereference a pointer `px` (show the value in
+  memory that the pointer points to)
+
 - `watch x` -- watch for changes to the variable `x`; each change
   triggers a break
+
+- `info variables` -- show all known variables (slow!)
+
+- `info variables myregex` -- show all known variables with names that
+  match regular expression `myregex`
+
+## Type inspection
+
+- `ptype MyType` -- show the definition of a type `MyType`, which in
+  the case of a class, shows the class methods and data (public and
+  private).
+
+- `info types` -- show all known types
+
+- `info types myregex` -- show types matching regular expression
+  `myregex` (e.g., `Rat.*` or `.*string.*`)
+
+## Function inspection
+
+- `info functions` -- show all known functions
+
+- `info functions myregex` -- show all known functions with names
+  matching regular expression `myregex`
 
 ## Stack traces
 
@@ -65,3 +93,15 @@ Hit Ctrl-Z to stop a running program and go back to the gdb prompt.
 - `list 50` -- show source code nearby line 50
 
 - `list 1,1000` -- show source code lines 1 to 1000
+
+## Miscellaneous
+
+- `info macro mymacro` -- show the source and location of definition
+  for a preprocessor macro; requires compiling with `-ggdb3` instead
+  of `-g`
+
+- `info source` -- gives information about the program and its source;
+  notice with the `-ggdb3` option, it says "Includes preprocessor
+  macro info," while with `-g` it says "Does not include preprocessor
+  macro info."
+

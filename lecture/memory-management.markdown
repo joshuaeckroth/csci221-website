@@ -3,4 +3,5 @@ layout: default
 title: Memory management
 ---
 
-(new/delete; with arrays; inside classes: destructors)
+(malloc/free; new/delete; classes: copy constructor, destructors;
+memory leaks, etc.)
