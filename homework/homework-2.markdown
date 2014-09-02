@@ -22,7 +22,8 @@ Name your BitBucket repository **exactly** `csci221-homework2`.
 
 ### Requirements
 
-- Download [homework-2-1.zip](/homework/homework-2-1.zip). It contains
+- Copy the contents of the folder (on Londo)
+  `/home/jeckroth/csci221-public/homework-2/rational`. It contains
   three files (from lecture): `main.cpp`, `rational.cpp`, and
   `rational.h`.
 
@@ -103,15 +104,15 @@ with debug symbols, so you can inspect it and fix it.
 Your task is to fix the broken code, and give me the fixed source code
 (via BitBucket, as usual). Of course, fix the code I wrote; don't give
 me completely new code. The point of this assignment is to learn how
-to use GDB for debugging.
+to use [GDB](/lecture/gdb-debugger.html) for debugging.
 
 ### Requirements
 
-- Download [homework-2-2.zip](/homework/homework-2-2.zip). It contains
-  two files, `longest-collatz-sequence` and
+- Copy the contents of the folder (on Londo)
+  `/home/jeckroth/csci221-public/homework-2/collatz`. It contains two
+  files, `longest-collatz-sequence` and
   `longest-collatz-sequence-broken`, which are Linux
-  binaries. Transfer these files to your Linux account so you can run
-  them.
+  binaries. Transfer these files to your account.
 
 - Try running `longest-collatz-sequence`. You should get the correct
   answer (check that it is correct on the Project Euler website). Try
@@ -152,9 +153,14 @@ working source code?
   function. You can now inspect variables, list code, etc. Type `c` to
   continue running. Type `d 1` to delete breakpoint #1.
 
+- Some crashes may be related to types, i.e., `int` vs. `long`
+  vs. ... See the [Java vs. C++](/lecture/java-vs-cpp.html) notes for
+  a list of the different types and their ranges.
+
 Note: I will be curious how you use GDB to solve this problem. Please
 take mental notes, or whatever, so we can talk about it in class.
 
-However it's done, fix the code and push it up to BitBucket. Your
-fixed code and my `longest-collatz-sequence` program should give the
-same answers (and take about the same amount of time).
+However it's done, fix the code and push it up to BitBucket (publish
+the code, not the binary). Your fixed code and my
+`longest-collatz-sequence` program should give the same answers (and
+take about the same amount of time to compute).
