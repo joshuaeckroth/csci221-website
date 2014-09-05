@@ -51,3 +51,33 @@ int main()
 }
 {% endhighlight %}
 
+## pointers.cpp
+
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int pos = 0;
+    float *y = new float[1000];
+    while(true)
+    {
+        //cin >> *(y + pos);
+        cin >> y[pos];
+
+        if(y[pos] < 0)
+        {
+            break;
+        }
+        pos++;
+    }
+
+    for(int i = 0; i < pos; i++)
+    {
+        //cout << "Value at index " << i << " is " << *(y + i) << endl;
+        cout << "Value at index " << i << " is " << y[i] << endl;
+    }
+    delete[] y;
+}
+{% endhighlight %}
