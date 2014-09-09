@@ -3,11 +3,6 @@
 	http://themes.sweyla.com/css/Sweyla375941.css
 */
 
-code {
-	background: #FDFFFF;
-	color: #000000;
-}
-
 code span.selection { color: #C8C8C8; }
 code span.vi { color: #00014A; }
 code span.kn { color: #004DD0; }

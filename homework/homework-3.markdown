@@ -7,6 +7,8 @@ Implement John Conway's Game of Life.
 
 Skills needed to complete this assignment:
 
+- [Memory management](/lecture/memory-management.html)
+
 - [Arrays](/lecture/arrays.html)
 
 Name your BitBucket repository **exactly** `csci221-homework3`.
@@ -16,6 +18,10 @@ Name your BitBucket repository **exactly** `csci221-homework3`.
 - Create one file, `life.cpp`, with three functions: `main`,
   `generation`, `display` (described below). This program should
   simulate Conway's Game of Life.
+
+- **Do not use array syntax, i.e., `arr[4]`; use only pointers.**
+
+- Do not leak memory. Check your program with `valgrind`.
 
 - Create a `Makefile` that builds your program.
 
@@ -35,13 +41,11 @@ specified with only a few rules.
 Life is an organism that lives in a discrete, two-dimensional
 world. While this world is actually unlimited, we don't have that
 luxury, so we restrict the world to a certain width and height (you
-choose). It is your choice to make the edges "wrap around" or not.
+choose). Ensure that the edges "wrap around."
 
-For this assignment, the world should be represented by a 1D array
-(width*height big). Review the
-[array lecture notes](/lecture/arrays.html) for guidance about how to
-treat a 1D array as a 2D array. The array should have `bool` values,
-indicating a living or dead cell.
+The world should be represented as an array created with the `new`
+operator. It is your choice to use a 1D array or a 2D array. You must
+access elements in the array using pointer syntax, not `[]` syntax.
 
 The world is updated all at once. Each cell is born, kept alive, kept
 dead, or killed according to simple rules. These rules refer to the

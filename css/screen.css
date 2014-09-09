@@ -56,12 +56,29 @@ acronym {
 }
 
 pre {
-    font: 14px Consolas, Droid Sans Mono, monospace;
     border-right: 5px solid #eeeeee;
     padding: 15px 0 15px 15px;
+    font: 14px Consolas, Droid Sans Mono, monospace;
 }
 
 pre.simple {
+    border: none;
+}
+
+code {
+    white-space: nowrap;
+    color: #000000;
+    background: #eeeeee;
+    padding: 2px;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    background: #ffffff;
+}
+
+pre code {
+    background: #ffffff;
+    white-space: pre;
     border: none;
 }
 

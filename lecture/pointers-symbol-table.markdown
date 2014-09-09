@@ -114,6 +114,43 @@ a `double`, for example, has 8 bytes so the memory location would just
 say where the first byte is stored (the other 7 bytes can be obtained
 by adding 1, 2, 3, etc. to the memory location).
 
+## A real symbol table
+
+Consider this program (yes, this is the complete program):
+
+{% highlight cpp %}
+int x = 37;
+float y = 3.14;
+char c = 'q';
+
+int main()
+{
+
+    return 0;
+}
+{% endhighlight %}
+
+We can view the symbol table with the Linux command `readelf --symbols
+[file]`. Here is the (relevant) output:
+
+```
+Symbol table '.symtab' contains 67 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+...
+    53: 000000000060093c     4 OBJECT  GLOBAL DEFAULT   24 x
+...
+    56: 0000000000600940     4 OBJECT  GLOBAL DEFAULT   24 y
+...
+    64: 0000000000400554    11 FUNC    GLOBAL DEFAULT   13 main
+...
+    66: 0000000000600944     1 OBJECT  GLOBAL DEFAULT   24 c
+```
+
+We can see our global symbols plus the `main` function. Note that, in
+this output, the actual variable types are not represented; they are
+only considered "objects." But note that their size is recorded: four
+bytes for `x` and `y`, one byte for `c`.
+
 ## Pointers
 
 > A memory reference instruction which is to use an indirect address
@@ -461,42 +498,6 @@ cout << *px << endl; // crashes the program with a "segfault"
 <a href="http://xkcd.com/371/">
 ![xkcd comic](/images/xkcd-compiler-complaint.png "xkcd comic")
 </a>
-
-## Background: Why pointers?
-
-<div style="text-align: center">
-<a id="viewerPlaceHolder" style="width:640px;height:480px;display:block;margin: 0 auto;"></a>
-</div>
-                
-<script type="text/javascript"> 
-        var fp = new FlexPaperViewer(   
-            '/flash/FlexPaperViewer',
-            'viewerPlaceHolder', { config : {
-            SwfFile : escape('/flash/pointers-background.swf'),
-            Scale : 0.6, 
-            ZoomTransition : 'easeOut',
-            ZoomTime : 0.5,
-            ZoomInterval : 0.2,
-            FitPageOnLoad : true,
-            FitWidthOnLoad : false,
-            FullScreenAsMaxWindow : false,
-            ProgressiveLoading : false,
-            MinZoomSize : 0.2,
-            MaxZoomSize : 5,
-            SearchMatchAll : false,
-            InitViewMode : 'Portrait',
-            PrintPaperAsBitmap : false,
-            ViewModeToolsVisible : false,
-            ZoomToolsVisible : false,
-            NavToolsVisible : true,
-            CursorToolsVisible : false,
-            SearchToolsVisible : false,
-            localeChain: 'en_US'
-            }});
-</script>
-
-[Download the PDF](/pdf/pointers-background.pdf)
-
 
 ## Conclusion
 
