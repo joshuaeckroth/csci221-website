@@ -448,6 +448,10 @@ Thus,
 p[1][3][4] &equiv; *(*(*(p + 1) + 3) + 4)
 </pre>
 
+Want proof?! Try this with some 1D array: `arr[3]` vs. `3[arr]`. Note
+that this won't work with 2D or more-D arrays, because the stars won't
+be in the right places.
+
 ## Frequency of English letters example
 
 {% highlight cpp %}
