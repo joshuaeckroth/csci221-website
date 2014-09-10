@@ -407,8 +407,46 @@ With a little bit of arithmetic, we can treat a 1D array as a 2D
 array:
 
 {% highlight cpp %}
-// TODO
+int getVal(int *arr, int numCols, int row, int col)
+{
+    return arr[row * numCols + col];
+}
 {% endhighlight %}
+
+## Pointer syntax
+
+Let's use the famous delta-heart equivalency:
+
+<pre>
+&Delta;[&hearts;] &equiv; *(&Delta; + &hearts;)
+</pre>
+
+Anytime the compiler sees something of the form
+<code>&Delta;[&hearts;]</code>, it rewrites it to <code>*(&Delta; +
+&hearts;)</code>. So,
+
+<pre>
+replace p[1][3][4]:
+ - &Delta; = p[1][3]
+ - &hearts; = 4
+&rAarr; *(p[1][3] + 4)
+
+replace p[1][3]:
+ - &Delta; = p[1]
+ - &hearts; = 3
+&rAarr; *(*(p[1] + 3) + 4)
+
+replace p[1]:
+ - &Delta; = p
+ - &hearts; = 1;
+&rAarr; *(*(*(p + 1) + 3) + 4)
+</pre>
+
+Thus,
+
+<pre>
+p[1][3][4] &equiv; *(*(*(p + 1) + 3) + 4)
+</pre>
 
 ## Frequency of English letters example
 
