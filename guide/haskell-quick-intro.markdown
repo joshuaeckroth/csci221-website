@@ -25,8 +25,8 @@ r = z * x + w
 
 f c = c*c
 
-main = do putStr f 3
-          putStr r
+main = do putStrLn (show (f 3))
+          putStrLn (show r)
 {% endhighlight %}
 
 Run `ghci` on the file
