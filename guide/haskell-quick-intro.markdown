@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Haskell Quick Introduction
+title: Haskell quick introduction
 ---
 
 ## Key points
@@ -112,7 +112,9 @@ be `a -> a` where `a` is one of the number types. Why? Because we used
 *Main>
 ```
 
-In other words, it takes type numbers and gives back a number.
+In other words, it takes two values of type `a` (i.e., any type, so
+long as it has parent type `Num`) and gives back a value of the same
+type.
 
 ### Functions are just partially-realized values
 
@@ -125,7 +127,10 @@ be type `X` for that function call.
 Give a function one of its several arguments, and it just becomes a
 "slightly more realized" value. I.e., that argument is replaced with
 its value everywhere it appears in the function, but the function
-still is not fully realized. Example:
+still is not fully realized. Normal variables, like `x` above (first
+example), are simply fully-realized values.
+
+Example of a function:
 
 {% highlight haskell %}
 average_three_values x y z = (x + y + z) / 3.0
@@ -154,20 +159,21 @@ mathematician Haskell Curry).
 
 ### Values are computed lazily (as-needed)
 
-When compiling a binary, starts in `main`. Whatever values `main`
-computes, and whatever values those computations depend on, are the
-only values computed.
+When compiling a binary, execution starts in `main`. Whatever value
+`main` computes, and whatever values that computation depends on, are
+the only values computed.
 
 So, in this code, `y` is never computed:
 
 {% highlight haskell %}
 main = let x = 5
            y = x * x
-       in putStrLn "hello"
+       in do putStrLn "hello"
+             putStrLn x
 {% endhighlight %}
 
 This means you can actually use infinite lists, for example, and never
-have a problem.
+have a problem (unless you try to process the whole list...).
 
 ### Side-effects are not allowed
 
@@ -181,13 +187,30 @@ Due to laziness (see previous point), even this never prints anything
 below):
 
 {% highlight haskell %}
-main = let x = putStr "foo"
-       in putStrLn "hello"
+f x = let y = putStr "foo"
+      in (2+x*x)
 {% endhighlight %}
 
-That's because `x` is never needed, so its value is never computed. So
-you can't put a "print" statement, or anything else with side-effects,
-in a position where it does not contribute to a computation.
+That's because `y` is never needed, so its value is never
+computed. Likewise, this does not work:
+
+{% highlight haskell %}
+f x = putStr "foo"
+      (2+x*x)
+{% endhighlight %}
+
+This example does not compile because `putStr` has type (and value)
+`IO ()` (i.e., void), which does not contribute to any arithmetic
+computation; it cannot feed into the next value `(2+x*x)` because (1)
+`(2+x*x)` is not a function and (2) if we put a function there, it has
+to be of special type `IO () -> IO a`, i.e., it has to accept a void
+input. Such functions do exist, but they have to be used in a special
+way; see the next section.
+
+Generally, you can't put a "print" statement, or anything else with
+side-effects, in a position where it does not contribute to a
+computation. You can only do side-effects when using the IO trick
+(next section).
 
 ### IO is a trick
 
@@ -389,3 +412,57 @@ quickSort (x:xs) = quickSort [a | a <- xs, a < x]   -- Sort the left part of the
                    ++ [x] ++                        -- Insert pivot between two sorted parts
                    quickSort [a | a <- xs, a >= x]  -- Sort the right part of the list
 {% endhighlight %}
+
+## Useful libraries
+
+Just a sample, obviously.
+
+- [Yesod](http://www.yesodweb.com/) -- A spiffy web framework for
+  building large web apps in Haskell. Among other cool features: SQL
+  injections are impossible, due to Haskell's strong type
+  system. Broken (internal) links are also impossible.
+
+- [QuickCheck](https://github.com/nick8325/quickcheck) -- Generates
+  random test inputs, based on the types of the parameters, and when
+  tests fail, automatically narrows down the failing example to a
+  (nearly) minimal failing case.
+
+- [Persistent](http://www.yesodweb.com/book/persistent) -- Database
+  library (SQL databases, et al.).
+
+- [Shakespearean Templates](http://www.yesodweb.com/book/shakespearean-templates)
+  -- HTML, CSS, JavaScript template libraries.
+
+- [Conduit](https://github.com/snoyberg/conduit) -- Efficient handling
+  of streams large and small, of all varieties (console IO, network
+  IO, binary file IO, etc.).
+
+- [OpenGL](http://www.haskell.org/haskellwiki/OpenGL) -- See link for
+  other game stuff as well.
+
+## Famous philosophical articles and a video
+
+- [J. Backus, "Can Programming Be Liberated from the von Neumann Style?
+  A Functional Style and Its Algebra of Programs," 1978.](/pdf/a1977-backus.pdf)
+  -- Given that functional programming is so different, can we build
+  machines differently to take better advantage of programming with
+  values (rather than instructions, registers, and memory)?
+
+- [J. Hughes, "Why Functional Programming Matters," 1989.](/pdf/The Computer Journal-1989-Hughes-98-107.pdf) -- Argues that functional
+  programming allows us to build more modular, more well-behaved
+  programs.
+
+- [B. Moseley & P. Marks, "Out of the Tar Pit," 2006.](/pdf/tarpit.pdf)
+  -- Attempts to come to grips with *complexity*, particularly
+  *accidental complexity*. I believe it is crucial to understand this
+  paper and its explanation of why everything is so hard.
+
+- [R. Hickey, "Simple Made Easy," 2011.](http://www.infoq.com/presentations/Simple-Made-Easy) -- A video of a conference presentation in which Rich Hickey,
+  creator of Clojure (another functional language), distinguishes
+  "simple" from "easy" and crucially introduces the word "complect" to
+  mean "A is complected with B when A and B cannot be easily
+  separated, their concerns are entwined." Complecting is the source
+  of complexity. Functional programming reduces the likelihood of
+  complecting various functions, modules, systems because functional
+  programs, if done right, can be paragons of "isolation of concerns."
+
