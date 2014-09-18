@@ -8,11 +8,15 @@ cases for every linked list function.
 
 Skills needed to complete this assignment:
 
-- [Memory management](/lecture/memory-management.html)
+- [Memory management](/lecture/memory-management.html), including
+  destructors.
 
 - [Linked lists](/lecture/linked-lists.html); note, the code you will
   work on is not the same code from the notes; you will work on more
   complete, more complex code.
+
+- Function pointers from the
+  [pointer notes](/lecture/pointers-symbol-table.html).
 
 Name your BitBucket repository **exactly** `csci221-homework4`.
 
