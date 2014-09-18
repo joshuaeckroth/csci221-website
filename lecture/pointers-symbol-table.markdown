@@ -499,6 +499,50 @@ cout << *px << endl; // crashes the program with a "segfault"
 ![xkcd comic](/images/xkcd-compiler-complaint.png "xkcd comic")
 </a>
 
+## Function pointers
+
+Functions are symbols, too. We can see them in the symbol table (see
+the section "A real symbol table" above). Thus, we can point to
+them. We can save this function pointer into a variable, and pass it
+to other functions. For example,
+
+{% highlight cpp %}
+// here is a normal function
+int foo(int x, float y)
+{
+    return (x + 2.0*y);
+}
+
+int main()
+{
+    // create a variable that holds a pointer to a function that
+    // returns an int and has parameters with types int and float
+    int (*fp)(int,float);
+    // associate fp to point to foo; the function name "foo" is itself
+    // a pointer already
+    fp = foo;
+    // now use the pointer to call the function with particular inputs
+    cout << (*fp)(5, 7.111) << endl;
+}
+{% endhighlight %}
+
+Here is a function that receives a function pointer, just like the one
+above, and then uses it.
+
+{% highlight cpp %}
+void bar(int (*my_func_ptr)(int, float), int my_int, float my_float)
+{
+    cout << (*my_func_ptr)(my_int, my_float) << endl;
+}
+{% endhighlight %}
+
+Here is how you might use this function:
+
+{% highlight cpp %}
+// refer to "foo", the function name, which is already a pointer
+bar(foo, 5, 7.111);
+{% endhighlight %}
+
 ## Conclusion
 
 Any discussion of pointers is a bit esoteric without showcasing
