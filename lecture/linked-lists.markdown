@@ -3,16 +3,16 @@ title: Linked lists
 layout: default
 ---
 
-As we have learned, arrays and vectors are used to manage lots of
-values with a single "variable" (plus an index for each
-element). Arrays and vectors in C++ are very efficient (accessing
-individual elements takes virtually no time at all), but inserting new
-elements in the middle (and growing the array or vector) takes a lot
-of time: the whole array/vector has to be copied into a larger one
-before the insertion can take place.
+As we have learned, arrays are used to manage lots of values with a
+single "variable" (plus an index for each element). Arrays in C++ are
+very efficient (accessing individual elements takes virtually no time
+at all, thanks to random-access memory), but inserting new elements in
+the middle (and growing the array) takes a lot of time: the whole
+array has to be copied into a larger one before the insertion can take
+place.
 
-An alternative to arrays/vectors is linked lists. Linked lists are not
-as efficient at "jumping to the middle" and grabbing a value, but they
+An alternative to arrays is linked lists. Linked lists are not as
+efficient at "jumping to the middle" and grabbing a value, but they
 can grow and shrink without requiring copying the whole list.
 
 **(Note: download all the code in these lecture notes as a complete
@@ -48,7 +48,7 @@ Node* n = new Node;
 n->value = -130.569;
 {% endhighlight %}
 
-In oder to keep track of the contents/length of the list, we create
+In order to keep track of the contents/length of the list, we create
 another class:
 
 {% highlight cpp %}

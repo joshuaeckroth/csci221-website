@@ -344,3 +344,51 @@ Output from `valgrind --leak-check=full --show-reachable=yes ./leaks`
 ==15267== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 6 from 6)
 ```
 
+## Destructors
+
+Sometimes, class functions will reserve memory with the `new` operator
+and save pointers to this memory in private class variables. When an
+object of the class is deleted, we want the class to take care of
+deleting the memory it reserved. We can't do it anyway, since the
+pointers are private class variables.
+
+To deal with this, we can create class "destructors." These are the
+opposite of class constructors: the destructor is executed when a
+class object is being deleted. Here is what it looks like:
+
+{% highlight cpp %}
+class MyClass
+{
+public:
+    MyClass(); // constructor
+    void food(); // some function
+    ~MyClass(); // destructor
+private:
+    int *my_pointer;
+};
+
+MyClass::MyClass()
+{
+    my_pointer = new int;
+}
+
+MyClass::~MyClass()
+{
+    delete my_pointer;
+}
+{% endhighlight %}
+
+Here is how you might use this class:
+
+{% highlight cpp %}
+int main()
+{
+    MyClass *obj = new MyClass;
+    obj->foo(); // whatever
+    delete obj; // now the destructor is executed
+}
+{% endhighlight %}
+
+<div style="text-align: center">
+<iframe width="420" height="315" src="//www.youtube.com/embed/cUaaSR4AbZs?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>

@@ -499,6 +499,18 @@ cout << *px << endl; // crashes the program with a "segfault"
 ![xkcd comic](/images/xkcd-compiler-complaint.png "xkcd comic")
 </a>
 
+## Class pointers
+
+When we have a pointer to a class object, we can refer to class
+members (variables and functions) using one of two formats:
+
+{% highlight cpp %}
+(*obj).foo();
+
+// or, better:
+obj->foo();
+{% endhighlight %}
+
 ## Function pointers
 
 Functions are symbols, too. We can see them in the symbol table (see
