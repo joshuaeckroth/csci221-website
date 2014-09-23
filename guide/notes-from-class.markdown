@@ -81,3 +81,167 @@ int main()
     delete[] y;
 }
 {% endhighlight %}
+
+## trees.cpp
+
+{% highlight cpp %}
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+class Tree
+{
+public:
+    Tree();
+    void print_preorder();
+    void print_postorder();
+    void print_inorder();
+    double eval();
+    Tree *left;
+    Tree *right;
+    double val;
+    string op;
+};
+
+Tree::Tree()
+{
+    left = NULL;
+    right = NULL;
+    val = 0.0;
+}
+
+double Tree::eval()
+{
+    if(op != "" && left != NULL && right != NULL)
+    {
+        if(op == "+")
+        {
+            return (left->eval() + right->eval());
+        }
+        else if(op == "-")
+        {
+            return (left->eval() - right->eval());
+        }
+        else
+        {
+            // should never happen
+            return 0.0;
+        }
+    }
+    else if(op != "" && left != NULL)
+    {
+        if(op == "sin")
+        {
+            return sin(left->eval());
+        }
+        else
+        {
+            // should never happen
+            return 0.0;
+        }
+    }
+    else
+    {
+        return val;
+    }
+}
+
+void Tree::print_preorder()
+{
+    if(op != "")
+    {
+        cout << op << " ";
+    }
+    else
+    {
+        cout << val << " ";
+    }
+    if(left != NULL)
+    {
+        left->print_preorder();
+    }
+    if(right != NULL)
+    {
+        right->print_preorder();
+    }
+}
+
+void Tree::print_postorder()
+{
+    if(left != NULL)
+    {
+        left->print_postorder();
+    }
+    if(right != NULL)
+    {
+        right->print_postorder();
+    }
+    if(op != "")
+    {
+        cout << op << " ";
+    }
+    else
+    {
+        cout << val << " ";
+    }
+}
+    
+
+void Tree::print_inorder()
+{
+    if(op != "" && left != NULL && right == NULL)
+    {
+        cout << op << "(";
+        left->print_inorder();
+        cout << ")";
+    }
+    else
+    {
+        if(op != "" && left != NULL)
+        {
+            left->print_inorder();
+        }
+        if(op != "")
+        {
+            cout << op << " ";
+        }
+        else
+        {
+            cout << val << " ";
+        }
+        if(right != NULL)
+        {
+            right->print_inorder();
+        }
+    }
+}
+
+int main()
+{
+    Tree *a = new Tree;
+    Tree *b = new Tree;
+    Tree *c = new Tree;
+    Tree *d = new Tree;
+    Tree *e = new Tree;
+    Tree *f = new Tree;
+    a->op = "+";
+    b->op = "-";
+    c->op = "sin";
+    f->val = 3.1;
+    c->left = f;
+    d->val = 7.2;
+    e->val = 8.0;
+    a->left = b;
+    a->right = e;
+    b->left = c;
+    b->right = d;
+
+    a->print_inorder();
+    cout << endl;
+
+    cout << "Evaluated = " << a->eval() << endl;
+    
+    return 0;
+}
+{% endhighlight %}
