@@ -8,7 +8,19 @@
         <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
         <link rel="stylesheet" href="/css/print-code-style.css" type="text/css" media="print" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-        <script type="text/javascript" src="/js/flexpaper_flash.js"></script>
+          <script type="text/javascript" src="/js/flexpaper_flash.js"></script>
+          <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [['$$','$$']],
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <div id="content">

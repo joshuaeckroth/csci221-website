@@ -13,24 +13,20 @@ values plus (one or more) pointers:
 class Tree {
 public:
     double value;
-    Tree *left, *right;
+    Tree *left;
+    Tree *right;
 };
 {% endhighlight %}
 
-The only difference with a linked list is that the tree has two "next
-pointers," or as we label them in the class, a "left" and "right" next
-pointer.
-
-Unlike the linked list, we use the `NULL` (bogus) pointer to indicate
-that either the `left` or `right` pointers point to nothing. In the
-linked list, we didn't worry about `NULL` because we had another
-variable, `count`, that told us how many values were in the list. This
-will not work with trees, because trees are not linear.
+The only difference with a linked list is that the tree has two (or
+more) "next pointers," or as we label them in the class, a "left" and
+"right" next pointer. We use the `NULL` (0) pointer to indicate that
+either the `left` or `right` pointers point to nothing.
 
 A tree can have any number of next pointers; if it always has two
 (each of which may or may not equal `NULL`), like we will do here,
 it's a binary tree. Surely you imagine a tree that had three pointers,
-or even an array or vector of pointers, rather than just two.
+or even an array of pointers, rather than just two.
 
 Thus, a tree's "next pointers" are more like "children" &mdash; each
 node in a binary tree has zero, one, or two children. Those children
@@ -39,43 +35,37 @@ say, for each node in the tree, either that node is the top (the
 "root") or only one node links to it (it is the child of only one
 node).
 
-If we did not restrict trees in this way, and allowed different nodes
-to link to the same children, then our algorithms for processing such
-structures would become more complicated. Actually, we wouldn't even
-call them trees anymore; the correct terminology is "graph." A graph
-is a structure where every node can have links to any other node, even
-back to itself (so trees are a kind of graph).
-
-We will actually be creating graphs in Homework 7 and 8, but for now
-we will concern ourselves only with trees.
+If we do not restrict trees in this way, and allow different nodes to
+link to the same children, then our algorithms for processing such
+structures will be more complicated. Actually, we wouldn't even call
+them trees anymore; the correct terminology is "graph." A graph is a
+structure where every node can have links to any other node, even back
+to itself (so trees are a kind of graph). See the
+[graphs](/lecture/graphs.html) notes for more details.
 
 ## Building a tree
 
-The rest of these lecture notes will refer specifically to
-[Homework 4](/homework/homework-4.html) requirements.
+Consider a kind of binary tree that represents arithmetic expressions,
+like `2 + sin(5)` and so on. Each node in the tree is either a number
+or an operator (`+`, `sin`, etc.). Some operators are unary (`sin`),
+some are binary (`+`). Unary operators have a left subtree but no
+right subtree. Binary operators have both subtrees.
 
-In Homework 4, each tree node contains two values (besides the
-pointers): a `string op` value and a `double val` value. The idea is
-that the `op` will equal `""` when the node has a numeric value
-(stored in `val`), and `op` will not equal `""` when the node
-represents a mathematical operation (in such cases, `op` may equal
-`"+"` or `"log"`, for example).
-
-Thus, here is our new tree structure:
+Here is our new tree structure:
 
 {% highlight cpp %}
 class Tree
 {
 public:
-    std::string op;
-    double val;
     Tree *left;
     Tree *right;
+    std::string op;
+    double val;
 };
 {% endhighlight %}
 
 (We use `std::string` instead of `string` in case `using namespace
-std;` has not been activated.)
+std;` is not present.)
 
 Let's now build a tree. Suppose we want to represent the expression
 `3.4-(2.6+5.0)`. This is what the tree should look like:
@@ -138,12 +128,10 @@ a subtree there is on the left side or the right side. So we cannot
 simply set up a loop to process the left and right subtrees; instead,
 we must resort to a recursive procedure.
 
-Recall, from the [Recursion lecture notes](/lecture/recursion.html),
-that a recursive procedure (recursive function) refers back to
-itself. Also, notice that the description above of how to print the
-contents of the tree was a recursive description: "print a `(`, then
-the contents of the left subtree, then ..." Suppose we call this
-process `print_tree`. Then we can rewrite the description like this:
+Notice that the description above of how to print the contents of the
+tree was a recursive description: "print a `(`, then the contents of
+the left subtree, then ..." Suppose we call this process
+`print_tree`. Then we can rewrite the description like this:
 
 > The `print_tree` procedure works as follows: Print a `(`. Then,
 > follow the `print_tree` procedure (this very same procedure) on the
@@ -185,12 +173,9 @@ printout `(3.4-(2.6+5))`, which is just what we want.
 
 ## A slight variation: handling other kinds of operators
 
-In Homework 4, you must be able to work with binary and unary
-operators/functions; that is, your tree nodes may have `+`, `-`,
-etc. operators (binary operators), and `log`, `sin`, etc. functions
-(unary functions). If we use the same `print_tree` function with a
-tree that has unary functions in it, we get output that doesn't look
-right.
+As described above, these trees may have both binary and unary
+operators. If we use the same `print_tree` function with a tree that
+has a unary operator in it, we get output that doesn't look right.
 
 For example, the tree
 
@@ -206,12 +191,12 @@ For example, the tree
 
 ...prints as `((4sin)/(4cos))` (do you see why?).
 
-We can fix this by adding another conditional in our code. Homework 4
-states that a function like `log` or `sin` has only a left subtree,
-and no right subtree (while operators `+`, `-`, etc. always have
-subtrees on both sides). So, we simply check if we have an operator
-and there is no right subtree; if so, we print the operator first,
-then `(`, then the left subtree, then `)`.
+We can fix this by adding another conditional in our code. Unary
+operators have only a left subtree, and no right subtree (while
+operators `+`, `-`, etc. always have subtrees on both sides). So, we
+simply check if we have an operator and there is no right subtree; if
+so, we print the operator first, then `(`, then the left subtree, then
+`)`.
 
 {% highlight cpp %}
 void print_tree(Tree *root)

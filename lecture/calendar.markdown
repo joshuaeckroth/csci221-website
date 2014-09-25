@@ -55,9 +55,6 @@ title: Course calendar
       <td><b>3</b><br/>9/9, 9/11</td>
       <td>
         <a href="/lecture/arrays.html">Arrays</a>
-        <br/>
-        <a href="/lecture/operator-overloading.html">Operator
-        overloading</a>
       </td>
       <td>
         <a href="/homework/homework-3.html">Homework&nbsp;3</a>
@@ -101,7 +98,6 @@ title: Course calendar
     <tr>
       <td><b>8</b><br/>10/14, 10/16</td>
       <td>
-        <br/>
         <a href="/lecture/polymorphism.html">Polymorphism</a>
         <br/>
         <a href="/lecture/drawbacks-of-object-orientation.html">Drawbacks of object-orientation</a>
@@ -115,7 +111,6 @@ title: Course calendar
     <tr>
       <td><b>9</b><br/>10/21, 10/23</td>
       <td>
-        <br/>
         <a href="/lecture/vectors.html">Vectors</a>
         <br/>
         <a href="/lecture/maps-sets-etc.html">Maps, sets, etc.</a>
