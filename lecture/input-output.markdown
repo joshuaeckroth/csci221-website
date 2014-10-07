@@ -247,4 +247,69 @@ When compiling, be sure to include the Boost Filesystem library with `-lboost_fi
 g++ -Wall -ansi -lboost_filesystem -o simple-ls simple-ls.cpp
 </pre>
 
+## Example: Hexdump
+
+{% highlight cpp %}
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+using namespace boost::filesystem;
+using namespace std;
+
+int main()
+{
+    int offset = 1024;
+    string filename = "test.bin";
+    path p(filename);
+    if(exists(p))
+    {
+        ifstream f(filename.c_str(), ios::binary);
+        if(f.is_open())
+        {
+            f.seekg(offset);
+            char bs[16];
+            int filelength = file_size(p);
+            for(int pos = offset; pos < filelength; pos += 16)
+            {
+                cout << hex << setfill('0') << setw(8) << pos << "  ";
+                f.read(bs, 16);
+                for(int i = 0; i < 16; i++)
+                {
+                    cout << hex << setfill('0') << setw(2)
+                         << (int)(unsigned char)bs[i] << " ";
+                    if(i == 7) { cout << " "; }
+                }
+                cout << " |";
+                for(int i = 0; i < 16; i++)
+                {
+                    if(bs[i] >= 32 && bs[i] <= 126)
+                    {
+                        cout << bs[i];
+                    }
+                    else
+                    {
+                        cout << ".";
+                    }
+                }
+                cout << "|" << endl;
+            }
+            f.close();
+        }
+        else
+        {
+            cout << "File cannot be opened." << endl;
+        }
+        
+    }
+    else
+    {
+        cout << "File doesn't exist." << endl;
+    }
+
+    return 0;
+}
+{% endhighlight %}
 
