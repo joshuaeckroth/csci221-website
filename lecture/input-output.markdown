@@ -150,21 +150,101 @@ You entered 123.457
 Notice how the last printout rounded up; the value of "x" inside the
 program has not changed, however.
 
-## File I/O
+## File Input
 
-### good, eof, fail, bad, clear
+{% highlight cpp %}
+#include <fstream>
+{% endhighlight %}
 
-### get
+### Basic operations
 
-### getline
+{% highlight cpp %}
+ifstream f("myfile.txt"); // read as text
+if(f.is_open())
+{
 
-### read
+}
+f.close();
+{% endhighlight %}
 
-### seekg
+{% highlight cpp %}
+ifstream f("myfile.bin", ios::in | ios::binary); // read as binary data
+{% endhighlight %}
 
-## Directories
+If you have your filename in a `string`, you have to convert it to a "C-style" (old-style) string first:
 
-POSIX method (readdir), or Boost?
+{% highlight cpp %}
+string filename = "myfile.txt";
+ifstream f(filename.c_str());
+{% endhighlight %}
 
-http://rosettacode.org/wiki/Walk_a_directory/Recursively#C.2B.2B
+### Reading
+
+ASCII reading is just like `cin`:
+
+{% highlight cpp %}
+int x;
+f >> x;
+{% endhighlight %}
+
+Binary reading reads into `char` arrays (byte arrays). The amount to read must always be specified:
+
+{% highlight cpp %}
+char title[31]; // reserve space for a terminating \0
+f.read(title, 30);
+title[30] = 0; // set the terminating \0
+{% endhighlight %}
+
+### Seeking
+
+You can jump to some byte position in the file with `seekg`:
+
+{% highlight cpp %}
+f.seekg(52); // go to byte 52
+{% endhighlight %}
+
+## Boost Filesystem library
+
+The [Boost Filesystem library](http://www.boost.org/doc/libs/1_39_0/libs/filesystem/doc/index.htm) provides cross-platform access to files and directories (standard C++ does not).
+
+{% highlight cpp %}
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
+using namespace boost::filesystem;
+{% endhighlight %}
+
+Here are some of the things you can do with a `path`:
+
+{% highlight cpp %}
+path p("somedir/somefile.txt");
+bool ex = exists(p);
+int size = file_size(p);
+string pathstr = p.string();
+string ext = p.extension();
+{% endhighlight %}
+
+Here is how to read a directory (doing this recursively is left as an exercise for the reader):
+
+{% highlight cpp %}
+path p("testdir");
+for(directory_iterator it(p); it != directory_iterator(); ++it)
+{
+    path p2 = it->path();
+    if(is_directory(p2))
+    {
+
+    }
+    else if(is_regular_file(p2))
+    {
+
+    }
+}
+{% endhighlight %}
+
+When compiling, be sure to include the Boost Filesystem library with `-lboost_filesystem`:
+
+<pre>
+g++ -Wall -ansi -lboost_filesystem -o simple-ls simple-ls.cpp
+</pre>
+
 
