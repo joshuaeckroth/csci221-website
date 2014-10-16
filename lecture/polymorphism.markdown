@@ -3,11 +3,111 @@ title: Polymorphism
 layout: default
 ---
 
-Consider the `Shape` class, and its descendents, defined in previous
-lectures.  A `Shape` is a kind of "abstract" category that cannot be
-used to perform any real task. For example, you cannot draw a shape,
-or find its area. At least, that's how we are thinking about
-shapes. When we defined the `Shape` class, we did not provide any of
+These notes will review object-oriented programming and inheritance with C++, then discuss polymorphism.
+
+## A simple set of classes
+
+Let's build a Shape class, and descendents Rectangle, Ellipse, and Triangle. The diagram below is a [UML](/lecture/uml.html) diagram, which we'll learn more about later.
+
+![Shape diagram](/images/shape-uml.png "Shape diagram")
+
+First, we'll write the Shape class.
+
+{% highlight cpp %}
+class Shape
+{
+public:
+    double x;
+    double y;
+};
+{% endhighlight %}
+
+We use the keyword `public` for technical reasons (alternatives are `private` and `protected`). Eventually we'll learn why we need that, but for now just consider it to be a necessary addition in order for the inheritance to work properly.
+
+Next, the `Rectangle` class. On the first line, we'll write `Rectangle : public Shape` to indicate that `Rectangle` inherits properties and methods from `Shape` (`public` again, to make the inheritance work). We'll also write a function header for the `area` method.
+
+{% highlight cpp %}
+class Rectangle : public Shape
+{
+public:
+    double width;
+    double height;
+
+    double area();
+};
+{% endhighlight %}
+
+The other classes are similarly written:
+
+{% highlight cpp %}
+class Ellipse : public Shape
+{
+public:
+    double major_axis;
+    double minor_axis;
+
+    double area();
+};
+
+class Triangle : public Shape
+{
+public:
+    double side1;
+    double side2;
+    double angle_between;
+
+    double area();
+};
+{% endhighlight %}
+
+Let's write the code for the `area` functions.
+
+{% highlight cpp %}
+double Rectangle::area()
+{
+    return width * height;
+}
+
+double Ellipse::area()
+{
+    return 3.1415926 * major_axis * minor_axis;
+}
+
+double Triangle::area()
+{
+    return 0.5 * side1 * side2 * sin(angle_between);
+}
+{% endhighlight %}
+
+Here is a simple `main` function to test the Triangle class:
+
+{% highlight cpp %}
+int main()
+{
+    Triangle t;
+    t.x = 5;
+    t.y = 4;
+    t.side1 = 3;
+    t.side2 = 4;
+    t.angle_between = 3.1415926/2.0;
+
+    cout << t.area() << endl;
+    cout << t.x << "," << t.y << endl;
+}
+{% endhighlight %}
+
+We see on the screen:
+
+<pre>
+6
+5,4
+</pre>
+
+## Polymorphism
+
+A `Shape` is a kind of "abstract" category that cannot be
+used to perform any real task. For example, you cannot draw a "shape,"
+or find its area. When we defined the `Shape` class, we did not provide any of
 these methods (e.g. `draw()`, `area()`, etc.). However, subclasses
 like `Rectangle` and `Ellipse` did have some useful methods (e.g.
 `area()`). That's because, obviously, one can actually draw a
@@ -49,7 +149,7 @@ However, we often find it convenient, or even necessary, to gather up
 several objects of several distinct types (different classes) which
 all happen to inherit from the same parent class. In our shapes
 example, we might want to gather up several objects of several kinds
-of shapes, and put them into a vector:
+of shapes, and put them into an array or linked list:
 
 {% highlight cpp %}
 // make a few shapes
@@ -57,27 +157,24 @@ Triangle t(3, 4, 3.141/2.0);
 Rectangle r(8, 12);
 Ellipse e(3.4, 3.4);
 
-vector<Shape> myshapes;
-myshapes.push_back(t);
-myshapes.push_back(r);
-myshapes.push_back(e);
+// using objects
 
-// or using pointers
-vector<Shape*> myshapes2;
-myshapes2.push_back(&t);
-myshapes2.push_back(&r);
-myshapes2.push_back(&e);
+Shape *myshapes = new Shape[3];
+myshapes[0] = t;
+myshapes[1] = r;
+myshapes[2] = e;
+
+// using pointers to objects
+
+Shape **myshapes2 = new Shape*[3];
+myshapes2[0] = &t;
+myshapes2[1] = &r;
+myshapes2[2] = &e;
 {% endhighlight %}
 
-However, now that they are all considered *just* shapes and not
-rectangles, ellipses, and so on, the objects in the vector can only be
-treated as objects of type `Shape`. So, in particular, we can't ask any
-object in the vector to calculate its area.
+However, now that they are all considered *just* shapes and not rectangles, ellipses, and so on, the objects (or pointers) in the array can only be treated as objects of type `Shape`. So, in particular, we can't ask any object in the vector to calculate its area.
 
-This is the problem that polymorphism solves. Polymorphism means that
-an object of some class, say `r` of the class `Rectangle`, can "look
-like" a `Shape` object but *act* like a `Rectangle` object when its
-asked to do things that may be done differently by a `Rectangle`.
+This is the problem that polymorphism solves. Polymorphism means that an object of some class, say `r` of the class `Rectangle`, can "look like" a `Shape` object but *act* like a `Rectangle` object when its asked to do things that may be done differently by a `Rectangle`.
 
 Consider a different example: human infants are humans, and humans
 walk on two feet. Perhaps you have defined a class named `Human` and a
@@ -106,7 +203,7 @@ specific way).
 
 To achieve this effect with our `Shape` class, we indicate that the
 `area()` method is `virtual`. By `virtual` we mean polymorphic (but
-the C++ creator thought `virtual` was a better word, it seems). Here
+the C++ creator thought `virtual` was a better word, apparently). Here
 is the modified class:
 
 {% highlight cpp %}
@@ -183,7 +280,6 @@ Here is another, completely different example.
 // stolen from http://en.wikipedia.org/wiki/Virtual_function
 
 #include <iostream>
-#include <vector>
 using namespace std;
  
 class Animal
@@ -229,14 +325,14 @@ class OtherAnimal : public Animal
  
 int main()
 {
-    vector<Animal*> animals;
-    animals.push_back(new Animal());
-    animals.push_back(new Wolf());
-    animals.push_back(new Fish());
-    animals.push_back(new GoldFish());
-    animals.push_back(new OtherAnimal());
+    Animal **animals = new Animal*[5];
+    animals[0] = new Animal();
+    animals[1] = new Wolf();
+    animals[2] = new Fish();
+    animals[3] = new GoldFish();
+    animals[4] = new OtherAnimal();
  
-    for(int i = 0; i < animals.size(); i++)
+    for(int i = 0; i < 5; i++)
     {
         animals[i]->eat();
     }
@@ -259,14 +355,14 @@ If we did not use `Animal` pointers, but instead put instances of each
 class into the vector (rather than pointers), like so:
 
 {% highlight cpp %}
-vector<Animal> animals;
-animals.push_back(Animal());
-animals.push_back(Wolf());
-animals.push_back(Fish());
-animals.push_back(GoldFish());
-animals.push_back(OtherAnimal());
+Animal *animals = new Animal[5];
+animals[0] = Animal();
+animals[1] = Wolf();
+animals[2] = Fish();
+animals[3] = GoldFish();
+animals[4] = OtherAnimal();
 
-for(int i = 0; i < animals.size(); i++)
+for(int i = 0; i < 5; i++)
 {
     animals[i].eat();
 }

@@ -241,10 +241,10 @@ for(directory_iterator it(p); it != directory_iterator(); ++it)
 }
 {% endhighlight %}
 
-When compiling, be sure to include the Boost Filesystem library with `-lboost_filesystem`:
+When compiling, be sure to include the Boost Filesystem library with `-lboost_filesystem -lboost_system`:
 
 <pre>
-g++ -Wall -ansi -lboost_filesystem -o simple-ls simple-ls.cpp
+g++ -Wall -ansi -o simple-ls -lboost_filesystem -lboost_system simple-ls.cpp
 </pre>
 
 ## Example: Hexdump

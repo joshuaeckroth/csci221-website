@@ -13,6 +13,8 @@ is itself a full programming language, but we'll just use the simplest pieces.
 Our use of template meta-programming will be limited to generating classes and
 functions that work on any type of object.
 
+**Important note:** Template classes and functions must have their full implementations in the header file, not an external `.cpp` file. This is because template classes and functions cannot be compiled in a generic way, so we cannot produce a `.o` file that is generic.
+
 ## Generic linked lists
 
 Think back to our linked lists. Let's say we have a linked list class:
@@ -163,6 +165,82 @@ That feeling of elation that you must have is the feeling of freeing yourself
 from strong typing. You didn't really free yourself; the types are all still
 there (`double`, `string`, etc.). But it's close enough (we don't need much to
 be thrilled).
+
+## Another example: Template specialization
+
+This example is borrowed from [cplusplus.com](http://www.cplusplus.com/doc/tutorial/templates/). It shows how we can "specialize" a template class by writing another class with a specific type for the template type, and even add new methods that that specialized class.
+
+{% highlight cpp %}
+// template specialization
+#include <iostream>
+using namespace std;
+
+// class template:
+template <class T>
+class mycontainer {
+    T element;
+  public:
+    mycontainer (T arg) {element=arg;}
+    T increase () {return ++element;}
+};
+
+// class template specialization:
+template <>
+class mycontainer <char> {
+    char element;
+  public:
+    mycontainer (char arg) {element=arg;}
+    char uppercase ()
+    {
+      if ((element>='a')&&(element<='z'))
+      element+='A'-'a';
+      return element;
+    }
+};
+
+int main () {
+  mycontainer<int> myint (7);
+  mycontainer<char> mychar ('j');
+  cout << myint.increase() << endl;
+  cout << mychar.uppercase() << endl;
+  return 0;
+}
+{% endhighlight %}
+
+Output:
+
+<pre>
+8
+J
+</pre>
+
+## Function templates
+
+You can use templates on functions, too, and not just classes. Example from [cppreference.com](http://en.cppreference.com/w/cpp/language/function_template)
+
+{% highlight cpp %}
+#include <iostream>
+ 
+template<typename T>
+void f(T s)
+{
+    std::cout << s << '\n';
+}
+ 
+int main()
+{
+    f<double>(1); // instantiates and calls f<double>(double)
+    f<>('a'); // instantiates and calls f<char>(char)
+    f(7); // instantiates and calls f<int>(int)
+    void (*ptr)(std::string) = f; // instantiates f<string>(string)
+}
+{% endhighlight %}
+
+## More information
+
+- [cppreference.com - Class templates](http://en.cppreference.com/w/cpp/language/class_template)
+- [cppreference.com - Function templates](http://en.cppreference.com/w/cpp/language/function_template)
+
 
 <a href="http://imgs.xkcd.com/comics/hofstadter.png">
 ![Hofstadter](/images/xkcd-hofstadter.png "Hofstadter")
