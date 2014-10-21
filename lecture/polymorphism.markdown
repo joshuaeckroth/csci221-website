@@ -113,8 +113,8 @@ like `Rectangle` and `Ellipse` did have some useful methods (e.g.
 `area()`). That's because, obviously, one can actually draw a
 rectangle or calculate its area.
 
-We already know that using object-orientation and inheritance in
-particular is a good idea for shapes; that's because rectangles,
+We already know that using object-orientation, and inheritance in
+particular, are good ideas for shapes; that's because rectangles,
 ellipses, and so on share many common properties and methods, such as
 the properties `x` and `y` (location in a 2D space), and perhaps some
 methods like `translate()`, `rotate()`, and so on. However, we were
@@ -125,7 +125,7 @@ the `area()` method for each subclass.
 
 Now, there is a significant problem with this state of affairs we have
 constructed. We're not getting the full power of object-orientation
-and inheritance. We all know that every shape has an area, so any
+and inheritance. We know that every shape has an area, so any
 object that is a `Shape`, by way of inheritance, should have an
 `area()` method. Recall that if we create a `Rectangle` object, say
 `Rectangle r(3, 5);` then we are simultaneously creating a `Shape`
@@ -172,7 +172,7 @@ myshapes2[1] = &r;
 myshapes2[2] = &e;
 {% endhighlight %}
 
-However, now that they are all considered *just* shapes and not rectangles, ellipses, and so on, the objects (or pointers) in the array can only be treated as objects of type `Shape`. So, in particular, we can't ask any object in the vector to calculate its area.
+However, now that they are all considered *just* shapes and not rectangles, ellipses, and so on, the objects (or pointers) in the array can only be treated as objects of type `Shape`. So, in particular, we can't ask any object in the array to calculate its area.
 
 This is the problem that polymorphism solves. Polymorphism means that an object of some class, say `r` of the class `Rectangle`, can "look like" a `Shape` object but *act* like a `Rectangle` object when its asked to do things that may be done differently by a `Rectangle`.
 
@@ -183,17 +183,17 @@ class named `HumanInfant` (which is a subclass of `Human`). The
 human walking on two feet. The `HumanInfant` will also have a method
 called `move()` but what you'll see is a baby crawling. So of course
 the code for the two `move()` methods will be different. Now consider
-that you have a collection of `Human` objects, say a vector called
+that you have a collection of `Human` objects, say an array called
 `characters_in_the_game`, and you want to tell each character to move
 in some random direction. You want the correct `move()` method to work
 on each character. In this example, you will have `Human` objects and
 `HumanInfant` objects, but they will all "look like" `Human` objects
-when the are put into the vector (because vectors can only hold one
+when the are put into the array (because arrays can only hold one
 type of thing, and you don't want to change `Human` objects into
 `HumanInfant` objects; rather, the other way around is more
 appropriate, because the class hierarchy says `HumanInfants` are
 `Humans`, not vice versa). Even though the baby characters will appear
-to be regular adult characters (because every object in the vector
+to be regular adult characters (because every object in the array 
 will be of the type `Human`-pointer, i.e. `Human*`), when the `move()`
 method is called for each object in the array, the `HumanInfant`'s
 `move()` method is called if the object is *actually* of that type,
@@ -230,7 +230,7 @@ at all, since we don't ever want to create true generic `Shape`
 objects. Rather, we will only be creating `Rectangle`, `Ellipse`,
 etc. objects. So we delete the code for the `area()` method in the
 `Shape` class and just write `= 0;` instead to indicate that
-subclasses will have this `area()` method but the `Shape` class will
+subclasses will have this `area()` method but the parent `Shape` class will
 not. By doing this, we are turning `area()` into a "pure virtual"
 method, and thus changing the `Shape` class into an "abstract class."
 The reason for this extra terminology is that we will no longer be
@@ -352,7 +352,7 @@ I eat like a generic Animal.
 </pre>
 
 If we did not use `Animal` pointers, but instead put instances of each
-class into the vector (rather than pointers), like so:
+class into the array (rather than pointers), like so:
 
 {% highlight cpp %}
 Animal *animals = new Animal[5];
@@ -377,3 +377,12 @@ I eat like a generic Animal.
 I eat like a generic Animal.
 I eat like a generic Animal.
 </pre>
+
+## Comparison with Java
+
+- In Java, all methods in all classes are polymorphic. This means that any descendent class can override a method in an ancestor class, and should an object be created of this descendent class, its specialized method will always be used.
+- Java interfaces are equivalent to C++ abstract classes where all methods are polymorphic and "pure virtual" (`= 0`), and the class has no data members.
+- Java abstract classes and abstract methods are like pure virtual methods in C++. We call a C++ class abstract if it has (or inherits) at least one pure virtual method. In Java and C++, you cannot create an instance of an abstract class.
+
+Also see the notes [Java vs. C++](/lecture/java-vs-cpp.html), specifically the section "Type casting and polymorphism."
+
