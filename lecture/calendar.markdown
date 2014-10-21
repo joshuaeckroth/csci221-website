@@ -98,14 +98,13 @@ title: Course calendar
     <tr>
       <td><b>8</b><br/>10/14, 10/16</td>
       <td>
-        <a href="/lecture/polymorphism.html">Polymorphism</a>
+        <a href="/lecture/constructors-and-inheritance.html">Constructors and inheritance</a>
         <br/>
-        <a href="/lecture/drawbacks-of-object-orientation.html">Drawbacks of object-orientation</a>
+        <a href="/lecture/polymorphism.html">Polymorphism</a>
         <br/>
         <a href="/lecture/template-metaprogramming.html">Template meta-programming</a>
       </td>
       <td>
-        <a href="/homework/homework-7.html">Homework&nbsp;7</a>
       </td>
     </tr>
     <tr>
@@ -116,7 +115,7 @@ title: Course calendar
         <a href="/lecture/maps-sets-etc.html">Maps, sets, etc.</a>
       </td>
       <td>
-        <a href="/homework/homework-8.html">Homework&nbsp;8</a>
+        <a href="/homework/homework-7.html">Homework&nbsp;7</a>
       </td>
     </tr>
     <tr>

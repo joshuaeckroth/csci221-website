@@ -3,21 +3,11 @@ title: Vectors
 layout: default
 ---
 
-Vectors are one of many ways of keeping a collection of values "under
-one roof." We can give one name to a collection of values and then
-access each value by a position. We can also add more values or remove
-values.
+The `vector` class is provided in the C++ "standard template library" (STL), and available with `#include <vector>`. It uses arrays but provides a variety of convenience functions. Because it is a template class (see the [Template meta-programming](/lecture/template-metaprogramming.html) notes), you can store any type of value in a vector, but only one type of value in each different vector.
 
-(The "traditional" way of representing a collection of values is the
-"array." We won't be looking at arrays this quarter because they're
-much more difficult to use than vectors and, for our purposes, they
-aren't any more powerful.)
+Because vectors use arrays to store data, access to individual elements in the vector is fast. However, adding new elements can be slow, if it is forced to grow the vector (which involves copying the whole array).
 
 ## Vector usage
-
-When you create a vector, you have to decide what (single) kind of
-value it will hold. This type is specified in a funny way (using a
-"template" which we'll learn about later).
 
 Here is how you create a vector full of integers:
 
@@ -25,8 +15,7 @@ Here is how you create a vector full of integers:
 vector<int> myvec;
 {% endhighlight %}
 
-(Don't forget `#include <vector>` at the top of your files when you
-use vectors).
+(Don't forget `#include <vector>` and `using namespace std;` at the top of your files when you use vectors).
 
 If you want doubles instead:
 
@@ -34,17 +23,19 @@ If you want doubles instead:
 vector<double> vals;
 {% endhighlight %}
 
-It's not possible to have a vector full of doubles *and* ints, for
-example ("heterogeneous" containers are not possible in C++).
+It's not possible to have a vector full of doubles *and* ints, for example ("heterogeneous" containers are not possible in C++).
 
-You can put elements in your vector with several methods. Most common
-is `push_back`:
+You can put elements in your vector with several methods. Most common is `push_back`:
 
 {% highlight cpp %}
 vector<double> vals;
 vals.push_back(5.3);
 vals.push_back(0.66);
 {% endhighlight %}
+
+`push_back` is fast because the vector usually keeps an array that's bigger than the data in it, so there are free spaces at the end. When those spaces run out, it creates a new (oversized) array and copies the old values into the new array.
+
+You can also use `insert_front`, but that requires copying all the values down one position, so it's quite slow.
 
 You can retrieve the size of a vector with the `size` function:
 
@@ -59,11 +50,9 @@ some position ("index"):
 cout << vals[1] << endl;
 {% endhighlight %}
 
-Note that positions for vectors start at 0, so `[1]` refers to the
-*second* element (the value 0.66).
+Note that positions for vectors start at 0, just like arrays, so `[1]` refers to the *second* element (the value 0.66).
 
-Using the `size` function and the `[]` syntax, we can print the
-contents of a vector using a simple `for()` loop:
+Using the `size` function and the `[]` syntax, we can print the contents of a vector using a simple `for()` loop:
 
 {% highlight cpp %}
 for(int i = 0; i < vals.size(); i++)
@@ -72,7 +61,7 @@ for(int i = 0; i < vals.size(); i++)
 }
 {% endhighlight %}
 
-TODO: back(), pop_back()
+The last element can be obtained with `back()`, and the `pop_back()` method returns and removes the last element.
 
 ## Example 1 - simple vector
 
@@ -498,29 +487,23 @@ int main()
 }
 {% endhighlight %}
 
-## Example 12 - passing a vector by reference to a function
+## Example 12 - passing a vector by pointer to a function
 
 If we want the function to be able to modify the vector given in a
 parameter, or we simply want to avoid the cost of copying a large
-vector, we can use "call-by-reference" in the parameter:
+vector, we can give a pointer to the vector:
 
 {% highlight cpp %}
 #include <iostream>
 #include <vector>
 using namespace std;
 
-void repeatThree(vector<double> &vals)
+void addValues(vector<double> *vals)
 {
-    vector<double> repeatedVals;
-
-    for(unsigned int i = 0; i < vals.size(); i++)
+    for(unsigned int i = 0; i < 10; i++)
     {
-        repeatedVals.push_back(vals[i]);
-        repeatedVals.push_back(vals[i]);
-        repeatedVals.push_back(vals[i]);
+        vals->push_back(*vals[i] + 10);
     }
-    
-    vals = repeatedVals;
 }
 
 int main()
@@ -531,7 +514,7 @@ int main()
     vals.push_back(5.3);
     vals.push_back(6.2);
     
-    repeatThree(vals);
+    addValues(&vals);
 
     for(unsigned int i = 0; i < vals.size(); i++)
     {

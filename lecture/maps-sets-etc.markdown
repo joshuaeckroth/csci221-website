@@ -13,6 +13,10 @@ There are several other "containers" in the STL, and they are designed to
 support much of the same functionality of vectors. First we'll learn about
 maps.
 
+## Summary of STL containers
+
+Have a look at [this page](http://www.cplusplus.com/reference/stl/) from cplusplus.com. It gives a good overview of all the various containers and the methods available. Pay attention to containers new in C++11 (standard from 2011). This [StackOverflow post](http://stackoverflow.com/q/181693) has a good table for the complexity of various operations for various containers.
+
 ## Maps
 
 Maps are like vectors in that they are STL containers. However, while vectors

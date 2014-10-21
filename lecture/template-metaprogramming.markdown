@@ -13,7 +13,7 @@ is itself a full programming language, but we'll just use the simplest pieces.
 Our use of template meta-programming will be limited to generating classes and
 functions that work on any type of object.
 
-**Important note:** Template classes and functions must have their full implementations in the header file, not an external `.cpp` file. This is because template classes and functions cannot be compiled in a generic way, so we cannot produce a `.o` file that is generic.
+**Important note:** Template classes and functions must have their full implementations in the header file, not an external `.cpp` file. This is because template classes and functions cannot be compiled in a generic way, so we cannot produce a `.o` file that has compiled but generic functions/methods.
 
 ## Generic linked lists
 
