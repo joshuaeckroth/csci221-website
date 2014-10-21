@@ -21,6 +21,7 @@ Create a "Team" on Bitbucket and add me and your partner as members. Call your t
 - Document your object-oriented design with a single UML diagram.
 - Separate your teamwork so that each person is responsible for different classes (mostly). E.g., person A works on the Room class and descriptions, and person B works on the Agent/Monster/Player classes (described below).
 - I need to see in the git repository that both partners contributed. Both people need to submit code.
+- **Extra credit: +1 pt (out of 5)**: Put items in various rooms, and allow a player to pick them up, hold them for a while, and then drop them. Create an `Item` class for this purpose, new commands `get foo`, `drop foo`, and `inv` (show player's inventory).
 
 ## Example
 
