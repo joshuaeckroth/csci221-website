@@ -17,6 +17,7 @@ Create a "Team" on Bitbucket and add me and your partner as members. Call your t
 ## Requirements
 
 - Make a game like the text adventure games of the 70's and 80's. See the example below.
+- Create at least 10 rooms (with at least 7 connections) and at least 3 monsters. Support 1 or 2 players.
 - Document your object-oriented design with a single UML diagram.
 - Separate your teamwork so that each person is responsible for different classes (mostly). E.g., person A works on the Room class and descriptions, and person B works on the Agent/Monster/Player classes (described below).
 - I need to see in the git repository that both partners contributed. Both people need to submit code.
