@@ -115,7 +115,7 @@ title: Course calendar
         <a href="/lecture/maps-sets-etc.html">Maps, sets, etc.</a>
       </td>
       <td>
-        <a href="/homework/homework-7.html">Homework&nbsp;7</a>
+        Start <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
       </td>
     </tr>
     <tr>
@@ -128,7 +128,6 @@ title: Course calendar
         <a href="/lecture/game-design.html">Game design</a> (text game)
       </td>
       <td>
-        Start <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
       </td>
     </tr>
     <tr>

@@ -70,4 +70,11 @@ Finally, a class may implement an interface, which we show with a "lollipop" dia
 - Use verbs for method names
 - Do not include every class variable and method; avoid showing obvious elements like constructors and pointers to objects already shown in the diagram (as association links, for example)
 
+## UML editors
+
+Check out these free packages:
+
+- [StarUML](http://staruml.io/) -- supports drawing class diagrams; you can download a Java code generator and reverse engineering tool from the StarUML program, but I don't think it's too sophisticated yet.
+- [Dia](http://dia-installer.de/) -- supports drawing class diagrams and lots of other (non-UML) kinds of diagrams.
+- [Doxygen](http://www.stack.nl/~dimitri/doxygen/) -- generates class diagrams and source code listings from your code; see the [documentation](/lecture/documentation.html) notes on this site.
 
