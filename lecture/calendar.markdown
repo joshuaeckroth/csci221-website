@@ -126,6 +126,10 @@ title: Course calendar
         <a href="/lecture/namespaces.html">Namespaces</a>
         <br/>
         <a href="/lecture/game-design.html">Game design</a> (text game)
+        <br/>
+        <a href="/lecture/collaboration-with-git.html">Collaboration with git</a>
+        <br/>
+        <a href="/lecture/documentation.html">Documentation</a>
       </td>
       <td>
       </td>
@@ -133,13 +137,9 @@ title: Course calendar
     <tr>
       <td><b>11</b><br/>11/4, 11/6</td>
       <td>
-        <a href="/lecture/collaboration-with-git.html">Collaboration with git</a>
-        <br/>
         <a href="/lecture/dev-methodologies.html">Development methodologies</a>
         <br/>
         <a href="/lecture/testing.html">Testing</a>
-        <br/>
-        <a href="/lecture/documentation.html">Documentation</a>
       </td>
       <td>
         Finish <a href="/homework/group-project-1.html">Group project&nbsp;1</a>

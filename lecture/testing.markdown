@@ -3,5 +3,7 @@ layout: default
 title: Testing
 ---
 
-(google test: https://code.google.com/p/googletest/)
+## Google Test
+
+- [Download](https://code.google.com/p/googletest/downloads/detail?name=gtest-1.7.0.zip&can=2&q=)
 
