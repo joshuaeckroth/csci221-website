@@ -21,51 +21,57 @@ Agile changes the risk profile because mistakes are discovered sooner:
 
 Image from [this presentation](http://www.slideshare.net/Managewell/agile-software-development-38182472).
 
-Of course, in practice, agile often reduces to "less planninge" and "more work."
+Of course, in practice, agile often reduces to "less planning" and "more work."
 
 ![Dilbert agile](/images/dilbert-agile.gif)
 
+There is a more sinister outcome besides more meetings with managers and customers. Because iterations happen more often, say every two weeks, team members may be replaced, reassigned, or eliminated more frequently. In large, waterfall projects, team members become virtually irreplaceable because completion of the project depends more critically on the people who were there at the beginning.
+
+> "Agile development is a horrible, soul sucking, time wasting management style. It micromanages teams and treats programmers as easily replaceable cogs in a system instead of professionals and artisans." ([hurrycaine from reddit](http://www.reddit.com/r/programming/comments/2lea0u/whats_your_most_controversial_technical_opinion/clubjlf))
+
 ## User stories
+
+Part of the agile workflow is the "user story." It is a kind of soft requirement that, presumably, can easily be stated by the customer. The programming team takes these stories, a few every two weeks or so, and writes whatever code is necessary to make sure the user can accomplish the stated task. The idea is that programmers can't possibly misunderstand such a simple and straightforward requirement, so programmers will build systems that actually meet customers' needs.
 
 ![User story](/images/Sample-user-story.jpg)
 
-Image from: [Agile Marketieng](http://www.agilemarketing.net/user-stories-agile-marketing-part-2/)
+Image from: [Agile Marketing](http://www.agilemarketing.net/user-stories-agile-marketing-part-2/)
+
+These stories are prioritized, and a few are worked on in each iteration.
 
 ![Agile board](/images/agileboard.jpeg)
 
 Image from: [garrensmith.com](http://www.garrensmith.com/2009/12/10/AgileBoard.html)
 
-## Test-driven development
+The user story attempts to **minimize commitment** to code architecture and specific technologies. A user story is intended to be **more or less exactly what the customer wants**. However, I'm doubtful that user stories can be elicited from the customer without any priming. What if the story above was stated this way instead?
 
-![Test-driven development](/images/tdd_cycle.jpg)
+> "As a Mom, I want our family to see video of what my kids are doing."
 
-Image from: [this Code Project article](http://www.codeproject.com/Articles/320791/Developing-Factorial-Application-Using-Test-Driven)
-
-
+This second version may or may not mean that the customer wants live-streaming of video. Clearly, that's a completely different product. Why did the customer say the first version (take video, share video)? Was she coached? Were her words interpreted and rewritten by the programmers? Will future user stories be free-form once the programmers have committed to certain architectures, technologies, etc.?
 
 ## Continuous integration
+
+The main problem with the waterfall method was that the risk of failure grew as the project was in development. Risk decreases once a customer sees a demo and offers feedback. Agile tries to reduce this risk by showing demos more often (after every iteration, ideally).
+
+Thus, it might be best to have a **continuously working system**, one that can be shown to a customer at any time because the team is always certain that it works. This can be accomplished by defining some scripted tests to ensure "workingness," and refusing to accept any code changes that break the tests. With continuous integration, as it's called, there is no risk of wasting time on big integration/bug-fixing issues just before a demo is due. The "master" branch of the project will always be in a functioning state.
 
 ![Continuous integration](/images/continuous-integration.png)
 
 Image from: [blog.jki.net](http://blog.jki.net/news/niweek-2012-fire-and-forget-bulletproof-builds-using-continuous-integration-with-labview-video-slides-now-available/)
 
-### Tools for continuous integration
+Continuous integration (CI) is easy to adopt. This is because decentralized version control systems (DVCS) like git are commonly used. With DVCS, developers can commit to their own isolated branch as often as they like without continuously worrying about continuous integration on the master branch.
 
-- Hudson
+## Test-driven development
+
+A more extreme risk-mitigation technique is to write extensive test cases before any other code is written, then write just enough code to make all test cases pass. As a result, necessarily the code is fully tested, and these tests will serve as "regression" tests in the future. (A regression test is a test that was developed for an earlier feature, but the test is still executed to ensure the old feature still works. If the regression test fails, you have a "regression.")
+
+![Test-driven development](/images/tdd_cycle.jpg)
+
+Image from: [this Code Project article](http://www.codeproject.com/Articles/320791/Developing-Factorial-Application-Using-Test-Driven)
+
+Writing all tests before any other code assumes you have a very clear idea of the requirements of the system. On a small scale, in isolated components, this approach might be useful. For example, test-driven development (TDD) might be a good idea when developing algorithms that operate on well-defined data structures. However, its usefulness is unclear to me for the more typical case of ambiguous and changing requirements. TDD limits creative exploration. And if requirements change, one might have to change a lot of test cases.
 
 ## An analysis
-
-Programmers seem, to me, to be obsessed with escaping this:
-
-![The Trial](/images/trial_7-large-1.jpg)
-
-Image from *The Trial* by Orson Welles
-
-...and arriving at this:
-
-![User stories and coffee](/images/user-stories-coffee.jpg)
-
-Image from: [spverma.wordpress.com](http://spverma.wordpress.com/2011/02/07/292/)
 
 Here is my analysis of the situation:
 
@@ -77,7 +83,7 @@ Here is my analysis of the situation:
 
 - Thus, programmers are held liable for mistakes, if not legally in all cases, at least professionally or as a team.
 
-- Finally, and therefore, programmers suffer an everpresent anxiety, and will consider any new idea that promises to eliminate it.
+- Finally, and therefore, programmers suffer an ever-present anxiety, and will consider any new idea that promises to eliminate it.
 
 Programmers not only want to eliminate their anxiety. They also want to build something beautiful. Broken requirements, missed deadlines and overtime, hacks, kludges, and increasing technical debt keep us from that elusive beauty. Doing the right thing requires time.
 
@@ -97,7 +103,7 @@ Even after software is deployed, and programmers are stuck with maintenance prob
 
 ## Estimation
 
-The above analysis reduces all the problems down to time. No wonder "estimation" is famously difficult. There are no viable rules for how to estimate the time it will take for a person or team to complete a software project. This is because we can't even be sure we have an effective methodology. No methodology can foresee mistakes, which take time to correct; they only attempt to mitigate how impactful mistakes will be (do we have to start over from scratch? or just restart this iteration?).
+The above analysis reduces all the problems down to time. No wonder "estimation" is famously difficult. There are no viable rules for how to estimate the time it will take for a person or team to complete a software project. This is because we can't even be sure we have an effective methodology. No methodology can foresee mistakes, which take time to correct; they only attempt to mitigate how impactful mistakes will be (do we have to start over from scratch? or just restart this iteration? do we have to fix a single broken test, or integrate several independent branches of broken code?).
 
 For what it's worth, here are two rules for estimation:
 
