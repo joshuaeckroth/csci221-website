@@ -19,7 +19,7 @@ This class is about C++ and modern software development.
 
 ## Grading
 
-- Homeworks: 40% (8 of them)
+- Homeworks: 40% (6 of them)
 
 - Group project 1: 10%
 
