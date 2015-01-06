@@ -3,11 +3,11 @@ title: Syllabus
 layout: default
 ---
 
-<p>
-<b>CSCI 221 - 01, Fall 2014 &mdash; Software Development I</b><br/>
-</p>
+CSCI 221 - 01, Spring 2015 &mdash; Software Development I
 
-This class is about C++ and modern software development.
+Work hard in this class and you should be able to:
+
+- **Work in a team developing modern C++ applications.**
 
 ## About me
 
@@ -27,16 +27,16 @@ This class is about C++ and modern software development.
 
 - Midterm exam: 15%
 
-- Final exam: 15% (Monday, December 8, 1pm-3pm)
+- Final exam: 15% (Friday, May 1, 11am-1pm)
 
 Homework may be turned in late, up to the day of the final exam. Late
 work is penalized. The maximum grade for late work is 60%.
 
 ## Test dates
 
-- Midterm: October 2
+- Midterm: Feb 26
 
-- Final exam: December 8, 1-3pm
+- Final exam: May 1, 11am-1pm
 
 See the [calendar](/lecture/calendar.html) for more dates.
 

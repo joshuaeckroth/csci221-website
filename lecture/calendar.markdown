@@ -13,7 +13,7 @@ title: Course calendar
   </thead>
   <tbody>
     <tr>
-      <td><b>0</b><br/>8/21</td>
+      <td><b>1</b><br/>1/13<br/>1/15</td>
       <td>
         <a href="/lecture/syllabus.html">Syllabus</a>
         <br/>
@@ -23,10 +23,12 @@ title: Course calendar
         <br/>
         <a href="/lecture/git.html">Git</a>
       </td>
-      <td><a href="/homework/homework-0.html">Homework&nbsp;0</a></td>
+      <td>
+        <a href="/homework/homework-0.html">Homework&nbsp;0</a>
+      </td>
     </tr>
     <tr>
-      <td><b>1</b><br/>8/26, 8/28</td>
+      <td><b>2</b><br/>1/20<br/>1/22</td>
       <td>
         <a href="/lecture/java-vs-cpp.html">Java vs. C++</a>
         <br/>
@@ -39,7 +41,7 @@ title: Course calendar
       <td><a href="/homework/homework-1.html">Homework&nbsp;1</a></td>
     </tr>
     <tr>
-      <td><b>2</b><br/>9/2, 9/4</td>
+      <td><b>3</b><br/>1/27<br/>1/29</td>
       <td>
         <a href="/lecture/gdb-debugger.html">GDB debugger</a>
         <br/>
@@ -52,7 +54,7 @@ title: Course calendar
       </td>
     </tr>
     <tr>
-      <td><b>3</b><br/>9/9, 9/11</td>
+      <td><b>4</b><br/>2/3<br/>2/5</td>
       <td>
         <a href="/lecture/arrays.html">Arrays</a>
       </td>
@@ -61,7 +63,7 @@ title: Course calendar
       </td>
     </tr>
     <tr>
-      <td><b>4</b><br/>9/18</td>
+      <td><b>5</b><br/>2/10<br/>2/12</td>
       <td>
         <a href="/lecture/linked-lists.html">Linked lists</a>
       </td>
@@ -70,7 +72,7 @@ title: Course calendar
       </td>
     </tr>
     <tr>
-      <td><b>5</b><br/>9/23, 9/25</td>
+      <td><b>6</b><br/>2/17<br/>2/19</td>
       <td>
         <a href="/lecture/trees.html">Trees</a>
       </td>
@@ -79,16 +81,17 @@ title: Course calendar
       </td>
     </tr>
     <tr>
-      <td><b>6</b><br/>9/30, 10/2</td>
+      <td><b>7</b><br/>2/24<br/>2/26</td>
       <td>
-        9/30: In-class review of all prior material
+        2/24: In-class review of all prior material
         <br/>
-        <b>10/2: Midterm exam</b>; see <a href="/guide/midterm-exam.html">Study guide</a>
+        <b>2/26: Midterm exam</b>; see <a href="/guide/midterm-exam.html">Study guide</a>
       <td>no homework</td>
     </tr>
     <tr>
-      <td><b>7</b><br/>10/7</td>
+      <td><b>8</b><br/>3/10<br/>3/12</td>
       <td>
+        <b>Note: We skipped over Spring Break</b><br/>
         <a href="/lecture/input-output.html">Input/output</a> (including files)
       </td>
       <td>
@@ -96,7 +99,7 @@ title: Course calendar
       </td>
     </tr>
     <tr>
-      <td><b>8</b><br/>10/14, 10/16</td>
+      <td><b>9</b><br/>3/17<br/>3/19</td>
       <td>
         <a href="/lecture/constructors-and-inheritance.html">Constructors and inheritance</a>
         <br/>
@@ -105,21 +108,22 @@ title: Course calendar
         <a href="/lecture/template-metaprogramming.html">Template meta-programming</a>
       </td>
       <td>
+        Start <a href="/homework/group-project-1.html">Group Project&nbsp;1</a>
       </td>
     </tr>
     <tr>
-      <td><b>9</b><br/>10/21, 10/23</td>
+      <td><b>10</b><br/>3/24<br/>3/26</td>
       <td>
         <a href="/lecture/vectors.html">Vectors</a>
         <br/>
         <a href="/lecture/maps-sets-etc.html">Maps, sets, etc.</a>
       </td>
       <td>
-        Start <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
+
       </td>
     </tr>
     <tr>
-      <td><b>10</b><br/>10/28, 10/30</td>
+      <td><b>11</b><br/>3/31<br/>4/2</td>
       <td>
         <a href="/lecture/uml.html">UML</a>
         <br/>
@@ -132,63 +136,51 @@ title: Course calendar
         <a href="/lecture/documentation.html">Documentation</a>
       </td>
       <td>
+        Finish <a href="/homework/group-project-1.html">Group Project&nbsp;1</a>
+        <br/>
+        Start <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
     </tr>
     <tr>
-      <td><b>11</b><br/>11/4, 11/6</td>
+      <td><b>12</b><br/>4/7<br/>4/9</td>
       <td>
         <a href="/lecture/dev-methodologies.html">Development methodologies</a>
         <br/>
         <a href="/lecture/testing.html">Testing</a>
       </td>
       <td>
-        Finish <a href="/homework/group-project-1.html">Group project&nbsp;1</a>
-      </td>
-    </tr>
-    <tr>
-      <td><b>12</b><br/>11/11, 11/13</td>
-      <td>
-        <a href="/lecture/useful-libraries.html">Useful libraries</a>
-      </td>
-      <td>
         First deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
     </tr>
     <tr>
-      <td><b>13</b><br/>11/18, 11/20</td>
+      <td><b>13</b><br/>4/14<br/>4/16</td>
       <td>
-        Presentations of mid-project status for group project&nbsp;2
+        <a href="/lecture/useful-libraries.html">Useful libraries</a>
         <br/>
-        <a href="/lecture/dev-tools.html">Development tools</a>
+        4/16: Presentations of mid-project status for group project&nbsp;2
       </td>
       <td>
         Second deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
     </tr>
     <tr>
-      <td><b>14</b><br/>11/25</td>
+      <td><b>14</b><br/>4/21<br/>4/23</td>
       <td>
-        <a href="/lecture/dev-tools.html">Development tools</a>
-      </td>
-      <td>
-        Third deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
-      </td>
-    </tr>
-    <tr>
-      <td><b>15</b><br/>12/2, 12/4</td>
-      <td>
-        12/2: Group project 2 presentations
+        <a href="/lecture/useful-libraries.html">Useful libraries</a>
         <br/>
-        12/4: Final exam review; see <a href="/guide/final-exam.html">Study guide</a>
+        4/23: Final exam review; see <a href="/guide/final-exam.html">Study guide</a>
       </td>
-      <td>no homework</td>
+      <td>
+      </td>
     </tr>
     <tr>
-      <td><b>16</b><br/>12/8</td>
+      <td><b>15</b><br/>4/28<br/>5/1</td>
       <td>
-        Final exam on Monday, December 8, 1pm-3pm
+        4/28: Group project 2 presentations
+        <br/>
+        <b>5/1: Final exam on Friday, May 1, 11am-1pm</b>
       </td>
-      <td></td>
+      <td>Third deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a></td>
     </tr>
   </tbody>
 </table>

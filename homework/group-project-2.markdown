@@ -20,7 +20,7 @@ Something bad will happen in the middle of the project. Prepare for it.
 
 ## Due dates
 
-- **Thur, 11/13, 11:59pm**: Some kind of document about the requirements of the project; some code; designations of which team members work on what features/tasks.
-- **Thur, 11/20, 11:59pm**: Mid-project presentations, indicating your goal, how you are making progress, how you are sure you will succeed, etc.
-- **Thur, 12/4, 11:59pm**: Final due date for the software (code, tests, documentation) and report. This is a "hard" due date. Nothing will be accepted after this date. Your final presentation will occur on this day in class.
+- **Tue, 4/7, 11:59pm**: Some kind of document about the requirements of the project; some code; designations of which team members work on what features/tasks.
+- **Tue, 4/16, 11:59pm**: Mid-project presentations, indicating your goal, how you are making progress, how you are sure you will succeed, etc.
+- **Tue, 4/28, 11:59pm**: Final due date for the software (code, tests, documentation) and report. This is a "hard" due date. Nothing will be accepted after this date. Your final presentation will occur on this day in class.
 

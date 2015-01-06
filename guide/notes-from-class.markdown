@@ -3,6 +3,7 @@ layout: default
 title: Notes from class
 ---
 
+{% comment %}
 ## hangman.cpp
 
 {% highlight cpp %}
@@ -245,3 +246,5 @@ int main()
     return 0;
 }
 {% endhighlight %}
+
+{% endcomment %}
