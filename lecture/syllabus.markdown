@@ -15,11 +15,11 @@ Work hard in this class and you should be able to:
 
 - Eliz Hall 214-9, 386-740-2519
 
-- Office hours: Mon 10-11am; Tue 12-1pm; Wed 11am-12pm; Thur 12-1pm
+- Office hours: Mon: 1:30-2:30, Tue: 12-2, Thur: 1-2
 
 ## Grading
 
-- Homeworks: 40% (6 of them)
+- Homeworks: 40% (7 of them)
 
 - Group project 1: 10%
 
