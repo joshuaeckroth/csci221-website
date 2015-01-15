@@ -3,6 +3,52 @@ layout: default
 title: Notes from class
 ---
 
+## hangman.cpp
+
+{% highlight cpp %}
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string answer = "softwares";
+    string attempt = "_________";
+    int gc = 5;
+
+    // loop to check inputs
+    while(true)
+    {
+        cout << attempt << endl;
+        char guess;
+        cin >> guess;
+        int pos;
+        int startpos = 0;
+        while(-1 != (pos = answer.find(guess, startpos)))
+        {
+            attempt[pos] = guess;
+            startpos = pos + 1;
+        }
+        if(startpos == 0)
+        {
+            cout << "Did not find that character." << endl;
+            if(--gc < 0)
+            {
+                cout << "You lost!" << endl;
+                break;
+            }
+        }
+        if(attempt == answer)
+        {
+            cout << "You won!" << endl;
+            break;
+        }
+    }
+
+    return 0;
+}
+{% endhighlight %}
+
 {% comment %}
 ## hangman.cpp
 
