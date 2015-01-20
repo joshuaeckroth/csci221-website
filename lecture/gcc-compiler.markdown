@@ -108,7 +108,7 @@ follows, assuming we're compiling one file at a time:
 <div style="clear: both;"></div>
 
 The object file is only the compiled code from the single input
-file. It likely refers to functions, variables, classes,etc. that are
+file. It likely refers to functions, variables, classes, etc. that are
 defined in other source files. So the final step is to "link" various
 object files into a final binary. This is shown in the diagram below:
 
