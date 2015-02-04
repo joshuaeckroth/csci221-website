@@ -3,6 +3,22 @@ layout: default
 title: GDB debugger
 ---
 
+## Starting the debugger
+
+First, you'll need to compile your program with "debug symbols" using the `-g` switch:
+
+```
+g++ -Wall -g -o myprog myprog.cpp
+```
+
+Then, start GDB on your program:
+
+```
+gdb ./myprog
+```
+
+Now you can use the commands listed below.
+
 ## Getting help
 
 - `help` -- list help topics
