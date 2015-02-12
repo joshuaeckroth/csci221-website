@@ -89,6 +89,77 @@ bool is_palindrome(string s){
 }
 {% endhighlight %}
 
+## pointers.cpp
+
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+int *foo()
+{
+    int *pa = new int;
+    *pa = 12;
+
+    return pa;
+}
+
+int main()
+{
+    int n;
+    cout << "Enter value for n: ";
+    cin >> n;
+
+    int *pn = &n; /// & is pronounced "reference to" or "address of"
+
+    /// ALL POINTERS ARE OF THE SAME BASIC TYPE
+
+    cout << "pn = " << (long)pn << endl;
+
+    (*pn)++;
+
+    cout << "n = " << *pn << endl;
+
+    int **ppn = &pn;
+    void *vppn = &pn;
+    cout << "ppn = " << ppn << endl;
+    cout << "pn = " << pn << endl;
+    cout << "*ppn = " << *ppn << endl;
+
+    int *q = pn;
+    cout << "q = " << q << endl;
+    cout << "*q = " << *q << endl;
+
+    void *v = &n;
+    cout << "v = " << v << endl;
+    cout << "*v = " << *((double*)v) << endl;
+
+    int w0 = 55;
+    int *w1 = &w0;
+    int **w2 = &w1;
+    int ***w3 = &w2;
+    int ****w4 = &w3;
+    int *****w5 = &w4;
+    cout << "*****w5 = " << *****w5 << endl;
+
+    int *pa = foo();
+
+    cout << "pa = " << pa << endl;
+    cout << "*pa = " << *pa << endl;
+
+    delete pa;
+
+    cout << "pa = " << pa << endl;
+    cout << "*pa = " << *pa << endl;
+
+
+    int *u = 0;
+    if(u != 0)
+    {
+
+    }
+}
+{% endhighlight %}
+
 {% comment %}
 ## hangman.cpp
 
