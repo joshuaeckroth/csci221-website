@@ -89,6 +89,92 @@ bool is_palindrome(string s){
 }
 {% endhighlight %}
 
+## arrays.cpp
+
+{% highlight cpp %}
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+void printIntArray(int *arr, int num)
+{
+	for(int i = 0; i < num; i++)
+	{
+		cout << *(arr+i) << endl;
+	}
+}
+
+void printDoubleArray(double *arr, int num)
+{
+	for(int i = 0; i < num; i++)
+	{
+		cout << *(arr+i) << endl;
+	}
+}
+
+double *generateRandomArray(int howMany)
+{
+	double *vals = new double[howMany];
+	for(int i = 0; i < howMany; i++)
+	{
+		vals[i] = rand();
+	}
+	return vals;
+}
+
+int main()
+{
+	int vals[3];
+	vals[0] = 55;
+	vals[1] = 72;
+	vals[2] = 100;
+	printIntArray(vals, 3);
+
+	srand(10);
+	double *randArray = generateRandomArray(10);
+	printDoubleArray(randArray, 10);
+
+	/*
+	cout << vals << endl;
+	cout << vals+1 << endl;
+
+	cout << *vals << endl;
+	cout << *(vals+1) << endl;
+	*/
+
+
+	return 0;
+}
+{% endhighlight %}
+
+## 2darrays.cpp
+
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int **vals = new int*[3];
+	for(int i = 0; i < 3; i++)
+	{
+		*(vals + i) = new int[4];
+		for(int j = 0; j < 4; j++)
+		{
+			*(*(vals + i) + j) = x;
+			x++;
+		}
+	}
+
+	cout << vals << endl; // should see a pointer
+	cout << vals[0] << endl; // should see a different pointer
+	cout << vals[1][2] << endl; // should see 6
+	cout << *(*(vals + 1) + 2) << endl;
+
+	return 0;
+}
+{% endhighlight %}
+
 ## pointers.cpp
 
 {% highlight cpp %}
