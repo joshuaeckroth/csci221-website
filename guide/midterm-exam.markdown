@@ -43,22 +43,19 @@ dereference infinitely-many times and still have a valid pointer.
 Answer in a sentence or two: why can't you use "pointer arithmetic"
 (i.e., `*(px + 1)`) on `void*` pointers?
 
+{% comment %}
 Write a recursive factorial function that has two arguments: an
 integer, and a function pointer to itself, and calls itself
 recursively with that function pointer.
+{% endcomment %}
 
-Extra credit: describe how you would diagnose a segmentation fault
+Describe how you would diagnose a segmentation fault
 that you suspect is caused by dereferencing an invalid pointer.
 
 ## Memory management
 
 Show how to reserve memory for an array, and then properly clean up
 that memory.
-
-Create a small scenario that results in a memory leak. Note, you
-cannot simply leave off a `delete`; you must ensure the pointer
-holding the memory address actually disappears as well, so it's an
-honest leak ("lost" memory).
 
 Create a small scenario that results in an indirect leak. An indirect
 leak is one where the memory is still being pointed to, by a valid
@@ -134,6 +131,7 @@ void List::truncate_at(int index)
 }
 {% endhighlight %}
 
+{% comment %}
 ## Trees
 
 Define a small class of public data, but no methods, and a small
@@ -161,4 +159,4 @@ and return the root of the larger tree. Note, you'll need more than
 left-subtree, right-subtree for this class declaration. What other
 private data do you need, and what are their default values as set in
 a constructor? Also write the code for the `find_root()` method.
-
+{% endcomment %}
