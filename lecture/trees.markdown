@@ -228,3 +228,15 @@ void print_tree(Tree *root)
 
 Now, that same tree prints as `(sin(4)/cos(4))`, which is what we
 want.
+
+## Self-practice exercises
+
+- The `print_tree` method above is a bit more complicated than a simple pre-order, in-order, or post-order. Write each of these other tree printing functions.
+
+- Write a tree destructor, `~Tree`.
+
+- Write a tree search function, `bool search_tree(double search_val)`, that looks through the whole tree for `search_val`.
+
+- Write a function, `void delete_subtree(double search_val)`, that deletes the whole subtree starting at the first occurrence of `search_val` (if it is found). If `search_val` is found multiple times in the tree, only the first occurrence (and its subtree) is deleted.
+
+- Write a `double multiply_collapse()` method that multiplies every value in the tree together and returns the result.
