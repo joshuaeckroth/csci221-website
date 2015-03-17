@@ -146,6 +146,10 @@ derivation rules:
   ([quotient rule](http://en.wikipedia.org/wiki/Differentiation_rules#The_quotient_rule)),
   `^`
   ([power rule](http://en.wikipedia.org/wiki/Differentiation_rules#Generalized_power_rule))
+
+## Extra credit
+
+Support some symbolic integrals. Depending on how many patterns you support, you will get more or less extra credit.
   
 ## Example executions
 
