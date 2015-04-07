@@ -136,9 +136,6 @@ title: Course calendar
         <a href="/lecture/documentation.html">Documentation</a>
       </td>
       <td>
-        Finish <a href="/homework/group-project-1.html">Group Project&nbsp;1</a>
-        <br/>
-        Start <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
     </tr>
     <tr>
@@ -149,18 +146,19 @@ title: Course calendar
         <a href="/lecture/testing.html">Testing</a>
       </td>
       <td>
-        First deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
+        Finish <a href="/homework/group-project-1.html">Group Project&nbsp;1</a>
+        <br/>
+        Start <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
+        <br/>
+        Iteration plan for <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
     </tr>
     <tr>
       <td><b>13</b><br/>4/14<br/>4/16</td>
       <td>
         <a href="/lecture/useful-libraries.html">Useful libraries</a>
-        <br/>
-        4/16: Presentations of mid-project status for group project&nbsp;2
       </td>
       <td>
-        Second deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a>
       </td>
     </tr>
     <tr>
@@ -176,11 +174,9 @@ title: Course calendar
     <tr>
       <td><b>15</b><br/>4/28<br/>5/1</td>
       <td>
-        4/28: Group project 2 presentations
-        <br/>
         <b>5/1: Final exam on Friday, May 1, 11am-1pm</b>
       </td>
-      <td>Third deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a></td>
+      <td>Final deliverable of <a href="/homework/group-project-2.html">Group Project&nbsp;2</a> (4/30)</td>
     </tr>
   </tbody>
 </table>
