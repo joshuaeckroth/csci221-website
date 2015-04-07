@@ -46,7 +46,7 @@ functions can be virtual (not pure virtual):
 
 ![Circle-Ellipse diagram](/images/circle-ellipse-3.png "Circle-Ellipse diagram")
  
-The Circle class can reimplement these functions so that any call to
+The Circle class can re-implement these functions so that any call to
 `set_major_axis` also sets the minor axis (to the same value), and
 vice versa. The drawback of this approach is that the names
 `set_major_axis` and `set_minor_axis` do not truly apply to circles,
@@ -134,7 +134,7 @@ be activated when we use a pointer to the superclass.
 
 What we'd like to be able to do is create, say, an `Animal` class, a
 `Mammal` class, and an `Elephant` class (with the obvious inheritance
-relations). Animals will have generic properites, like `int age`.
+relations). Animals will have generic properties, like `int age`.
 
 Mammals will have methods like `birth()` and
 `grow_more_hair()`. Elephants will have properties like `string color`
