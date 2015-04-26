@@ -3,11 +3,42 @@ layout: default
 title: Final exam study guide
 ---
 
+
+## Trees
+
+Define a small class of public data, but no methods, and a small
+`main()` function that creates a binary tree representing the
+mathematical expression `5+2*4`.
+
+Write a function that finds the maximum value in a binary tree
+containing `float`'s (no "operators", just left-subtree,
+right-subtree, and a `float` value).
+
+Write a function that prints all leaf nodes (nodes with no children)
+of a binary tree with `float` values.
+
+Write a class declaration containing public data, but no methods, for
+a tree that has an aribtrary number of children and a `float` value.
+
+Given some diagram of a tree, write the values in post/pre/in-order
+format.
+
+Write a class declaration with private data and one method (described
+momentarily) for a binary tree with `float` values. This single method
+should be called `find_root()` and returns a tree pointer to the root of
+the tree. This method should work on any subtree of the larger tree,
+and return the root of the larger tree. Note, you'll need more than
+left-subtree, right-subtree for this class declaration. What other
+private data do you need, and what are their default values as set in
+a constructor? Also write the code for the `find_root()` method.
+
+{% comment %}
 ## Input/output
 
 Write a few lines of code that open a text file `input.txt` for reading, and print each line of text in the file. Be sure to check if the file was successfully opened, and be sure to close the file.
 
 Write a few lines of code that open a text file `output.txt` for writing (not appending), and print 10 lines of text (or whatever) into the file. Be sure to check if the file was successfully opened, and be sure to close the file.
+{% endcomment %}
 
 ## Inheritance
 
@@ -43,8 +74,6 @@ Describe how to achieve the equivalent of a Java interface in C++.
 Describe how to achieve the equivalent of a Java abstract class in C++.
 
 What makes a C++ class "abstract"?
-
-What's a "vtable"?
 
 Suppose you have two classes, `Super` and `Sub`, and `Super` has a method `foo` that `Sub` needs to override. Describe how you would do this in Java. Then write a minimum amount of C++ code to do the same thing.
 
@@ -118,8 +147,11 @@ Given the following UML class diagram, write a basic template for the represente
 
 Write a reasonable UML class diagram for a file transfer program that can support FTP and SFTP. Keep it simple; don't include every member of every class. Use polymorphism in the right places.
 
+{% comment %}
 ## Development methodologies
 
 Give two differences between "waterfall" and "agile" development methodologies.
 
 What are two benefits and drawbacks to "agile" processes?
+{% endcomment %}
+
