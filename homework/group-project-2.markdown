@@ -24,5 +24,5 @@ Something bad will happen in the middle of the project. Prepare for it.
 ## Due dates
 
 - **Tue, 4/9, 11:59pm**: A plan for each iteration (there are 3 weeks, 3 iterations): include the user stories and indicate who will work on what.
-- **Tue, 4/30, 11:59pm**: Final due date for the software (code, tests, documentation) and report. This is a "hard" due date. Nothing will be accepted after this date.
+- **Thur, 4/30, 11:59pm**: Final due date for the software (code, tests, documentation) and report. This is a "hard" due date. Nothing will be accepted after this date.
 
