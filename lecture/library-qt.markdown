@@ -30,9 +30,9 @@ Here is `counter.h`:
 {% highlight cpp %}
 // counter.h
 
-#define COUNTER_H
+\#define COUNTER_H
 
-#include <QObject>
+\#include <QObject>
 
 class Counter : public QObject
 {
@@ -52,14 +52,14 @@ private:
     int m_value;
 };
 
-#endif // COUNTER_H
+\#endif // COUNTER_H
 {% endhighlight %}
 
 Here is `counter.cpp`:
 
 {% highlight cpp %}
 // counter.cpp
-#include "counter.h"
+\#include "counter.h"
 
 void Counter::setValue(int value)
 {
@@ -73,8 +73,8 @@ void Counter::setValue(int value)
 Here is the main file:
 
 {% highlight cpp %}
-#include <iostream>
-#include "counter.h"
+\#include <iostream>
+\#include "counter.h"
 using namespace std;
 
 int main()
@@ -97,8 +97,8 @@ Boost also has signals/slots support. See their [tutorial](http://www.boost.org/
 Let's take a quick look at the default GUI application template. Here is `main.cpp`:
 
 {% highlight cpp %}
-#include "mainwindow.h"
-#include <QApplication>
+\#include "mainwindow.h"
+\#include <QApplication>
 
 int main(int argc, char *argv[])
 {
@@ -114,10 +114,9 @@ The `QApplication` line establishes a global pointer `qApp` (which you don't eve
 `MainWindow` is a class defined in `mainwindow.h`:
 
 {% highlight cpp %}
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
-#include <QMainWindow>
+\#ifndef MAINWINDOW_H
+\#define MAINWINDOW_H
+\#include <QMainWindow>
 
 namespace Ui {
 class MainWindow;
@@ -135,14 +134,14 @@ private:
     Ui::MainWindow *ui;
 };
 
-#endif // MAINWINDOW_H
+\#endif // MAINWINDOW_H
 {% endhighlight %}
 
 Here is `mainwindow.cpp`:
 
 {% highlight cpp %}
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+\#include "mainwindow.h"
+\#include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
