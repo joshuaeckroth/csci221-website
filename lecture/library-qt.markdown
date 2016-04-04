@@ -40,7 +40,6 @@ class Counter : public QObject
 
 public:
     Counter() { m_value = 0; }
-
     int value() const { return m_value; }
 
 public slots:
@@ -83,13 +82,10 @@ int main()
     Counter a, b;
     QObject::connect(&a, SIGNAL(valueChanged(int)),
                      &b, SLOT(setValue(int)));
-
     a.setValue(12);     // a.value() == 12, b.value() == 12
     cout << "a = " << a.value() << ", b = " << b.value() << endl;
-
     b.setValue(48);     // a.value() == 12, b.value() == 48
     cout << "a = " << a.value() << ", b = " << b.value() << endl;
-
     return 0;
 }
 {% endhighlight %}
@@ -109,7 +105,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-
     return a.exec();
 }
 {% endhighlight %}
@@ -223,7 +218,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(doit()));
 }
 {% endhighlight %}
