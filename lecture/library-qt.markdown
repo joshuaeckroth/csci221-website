@@ -27,12 +27,12 @@ We'll look at a simple example, borrowed from Qt's own [tutorial](http://qt-proj
 
 Here is `counter.h`:
 
-{% highlight cpp %}
+```
 // counter.h
+#ifndef COUNTER_H
+#define COUNTER_H
 
-\#define COUNTER_H
-
-\#include <QObject>
+#include <QObject>
 
 class Counter : public QObject
 {
@@ -52,14 +52,14 @@ private:
     int m_value;
 };
 
-\#endif // COUNTER_H
-{% endhighlight %}
+#endif // COUNTER_H
+```
 
 Here is `counter.cpp`:
 
-{% highlight cpp %}
+```
 // counter.cpp
-\#include "counter.h"
+#include "counter.h"
 
 void Counter::setValue(int value)
 {
@@ -68,13 +68,13 @@ void Counter::setValue(int value)
         emit valueChanged(value);
     }
 }
-{% endhighlight %}
+```
 
 Here is the main file:
 
-{% highlight cpp %}
-\#include <iostream>
-\#include "counter.h"
+```
+#include <iostream>
+#include "counter.h"
 using namespace std;
 
 int main()
@@ -88,7 +88,7 @@ int main()
     cout << "a = " << a.value() << ", b = " << b.value() << endl;
     return 0;
 }
-{% endhighlight %}
+```
 
 Boost also has signals/slots support. See their [tutorial](http://www.boost.org/doc/libs/1_38_0/doc/html/signals/tutorial.html), and this [StackOverflow post](http://stackoverflow.com/questions/768351/complete-example-using-boostsignals-for-c-eventing).
 
@@ -96,9 +96,9 @@ Boost also has signals/slots support. See their [tutorial](http://www.boost.org/
 
 Let's take a quick look at the default GUI application template. Here is `main.cpp`:
 
-{% highlight cpp %}
-\#include "mainwindow.h"
-\#include <QApplication>
+```
+#include "mainwindow.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
@@ -107,16 +107,17 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 }
-{% endhighlight %}
+```
 
 The `QApplication` line establishes a global pointer `qApp` (which you don't ever need to use) that manages the GUI application. It also parses command line arguments. The `QApplication` object should be created before any GUI objects are created.
 
 `MainWindow` is a class defined in `mainwindow.h`:
 
-{% highlight cpp %}
-\#ifndef MAINWINDOW_H
-\#define MAINWINDOW_H
-\#include <QMainWindow>
+```
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
 
 namespace Ui {
 class MainWindow;
@@ -134,14 +135,14 @@ private:
     Ui::MainWindow *ui;
 };
 
-\#endif // MAINWINDOW_H
-{% endhighlight %}
+#endif // MAINWINDOW_H
+```
 
 Here is `mainwindow.cpp`:
 
-{% highlight cpp %}
-\#include "mainwindow.h"
-\#include "ui_mainwindow.h"
+```
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -154,13 +155,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-{% endhighlight %}
+```
 
 All the `MainWindow` class accomplishes is to set up the GUI layout defined in `mainwindow.ui`. However, this `MainWindow` class would be expanded to respond to mouse clicks, key presses, etc. in the future in order to make the GUI actually do something. Signals and slots would be used for that purpose.
 
 The `mainwindow.ui` file is XML:
 
-{% highlight xml %}
+```
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow" >
@@ -185,7 +186,7 @@ The `mainwindow.ui` file is XML:
  <resources/>
  <connections/>
 </ui>
-{% endhighlight %}
+```
 
 But you probably don't want to edit that directly. Use Qt Creator's built in GUI form editor:
 
@@ -193,25 +194,25 @@ But you probably don't want to edit that directly. Use Qt Creator's built in GUI
 
 We'll add a button, and create a signal/slot connection. First, we need to make the slot. Go to the `mainwindow.h` file and add this slot:
 
-{% highlight cpp %}
+```
 public slots:
     void doit();
-{% endhighlight %}
+```
 
 We want a slot with no arguments because the `clicked()` signal has no arguments. Slots (and signals) are always `void` methods. Slots have access qualifiers (public, private, protected) because you might want to restrict how other classes execute your methods (a slot is basically a class method). On the other hand, signals have no access protection since the class itself emits signals.
 
 In `mainwindow.cpp`, define what the `doit()` function does:
 
-{% highlight cpp %}
+```
 void MainWindow::doit()
 {
     qDebug("hello world!"); // print a console message
 }
-{% endhighlight %}
+```
 
 Now, in the `MainWindow` constructor, connect the signal and slot:
 
-{% highlight cpp %}
+```
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -219,14 +220,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(doit()));
 }
-{% endhighlight %}
+```
 
 Now run the application.
 
-## Complex GUI
 
-## Networking
-
-## 2D Graphics
-
-## QML
