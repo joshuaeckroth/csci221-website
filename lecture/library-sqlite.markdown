@@ -31,7 +31,7 @@ sqlite3.o: sqlite3.h sqlite3.c
 
 Here are some example uses:
 
-{% highlight cpp %}
+```
 #include <iostream>
 #include "sqlite3.h"
 using namespace std;
@@ -88,4 +88,4 @@ int main() {
 
     return 0;
 }
-{% endhighlight %}
+```
