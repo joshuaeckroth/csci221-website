@@ -3,7 +3,11 @@ layout: default
 title: Collaboration with git
 ---
 
+# Collaboration with git
+
 You know about git from [earlier notes](/lecture/git.html). These notes explain more about the workflow of using git in teams.
+
+## Workflow
 
 ![Simple workflow](/images/simple_git_daily_workflow.png)
 

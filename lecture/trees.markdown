@@ -3,11 +3,17 @@ title: Trees
 layout: default
 ---
 
+# Trees
+
 Trees are structurally a lot like
 [linked lists](/lecture/linked-lists.html). Actually, a linked list is
-a simplistic kind of tree. Recall that a linked list "node" had a
-value and a "next" pointer. The tree structure also has (one or more)
-values plus (one or more) pointers:
+a simplistic kind of tree. 
+
+## Tree definition
+
+Recall that a linked list "node" had a value and a "next" pointer. The
+tree structure also has (one or more) values plus (one or more)
+pointers:
 
 {% highlight cpp %}
 class Tree {

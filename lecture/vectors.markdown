@@ -3,6 +3,8 @@ title: Vectors
 layout: default
 ---
 
+# Vectors
+
 The `vector` class is provided in the C++ "standard template library" (STL), and available with `#include <vector>`. It uses arrays but provides a variety of convenience functions. Because it is a template class (see the [Template meta-programming](/lecture/template-metaprogramming.html) notes), you can store any type of value in a vector, but only one type of value in each different vector.
 
 Because vectors use arrays to store data, access to individual elements in the vector is fast. However, adding new elements can be slow, if it is forced to grow the vector (which involves copying the whole array).

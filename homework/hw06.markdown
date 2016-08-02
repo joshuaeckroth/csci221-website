@@ -1,0 +1,32 @@
+---
+layout: default
+title: "HW06: Text adventure"
+due: "Oct 17, 11:59pm"
+categories: [assignments]
+---
+
+# HW06: Text adventure
+
+Create a "text adventure" game, e.g., like [Zork](http://iplayif.com/?story=http%3A%2F%2Fwww.ifarchive.org%2Fif-archive%2Fgames%2Fzcode%2Fzdungeon.z5).
+
+Because each person may create his/her own unique game, there is no test script. Just upload to bitbucket as usual.
+
+## Requirements
+
+- Create at least 10 "rooms" with descriptions and various exits
+- Support at least two players, who switch turns; create only one Player class to represent a single player, and create two objects for two players
+- Use `map` and possibly other templated containers to link rooms through various directions
+- Create a simple parser that interprets text commands like "go north" or "get lamp"
+- Some rooms must have items, which may be picked up by the player
+- Keep track of the player's inventory (items the player has picked up) and support a command "inventory" which shows this inventory
+- Create another class representing non-player characters (e.g., monsters) that move around the rooms autonomously
+- Somehow list the monsters that are in the same room as the player (perhaps the player has to type a command to see this list)
+- Use classes properly and document your classes (I suggest using Doxygen); you don't need comments for every method but I do want to see some kind of file or web pages that document the class relationships (e.g., UML)
+
+## Optional ideas
+
+- Support basic combat, e.g., use an item to attack a monster and reduce hit points
+- Create containers, e.g. bags, chests, etc., which can contain items, and possibly also contain monsters and/or players
+- Create a simple conversation engine so you can talk to monsters
+- Create a lock/key system so some rooms/containers are locked until a player finds a particular item
+

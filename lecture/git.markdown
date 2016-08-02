@@ -3,6 +3,8 @@ title: Git
 layout: default
 ---
 
+# Git
+
 Git is a version control system (VCS) that allows you to keep track of
 changes to your code and label certain versions as "v1.0" or "v2.0",
 etc. In this class, you will use git to submit your homework and

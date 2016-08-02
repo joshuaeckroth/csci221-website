@@ -3,6 +3,8 @@ layout: default
 title: Documentation
 ---
 
+# Documentation
+
 It's important to document your code. Document your code. But not too much. Because I said so.
 
 ## Doxygen

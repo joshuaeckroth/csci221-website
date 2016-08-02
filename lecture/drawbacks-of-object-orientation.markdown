@@ -3,6 +3,8 @@ layout: default
 title: Drawbacks of object-orientation
 ---
 
+# Drawbacks of object-orientation
+
 Object-orientation generally involves creating classes or categories
 of variables, using inheritance on these classes, and polymorphic
 functions so that variables of one type can "pretend" to be other
@@ -129,7 +131,7 @@ polymorphism is enabled (in a superclass), the redefined methods won't
 be activated when we use a pointer to the superclass.
 
 > Q: What's big and gray, has a trunk, and lives in the trees?
-
+>
 > A: An elephant -- I lied about the trees.
 
 What we'd like to be able to do is create, say, an `Animal` class, a

@@ -3,6 +3,8 @@ layout: default
 title: "Library: PLplot"
 ---
 
+# Library: PLplot
+
 Homepage: [PLplot](http://plplot.sourceforge.net/index.php), and its [manual](http://plplot.sourceforge.net/docbook-manual/plplot-html-5.10.0/index.html). In the manual, when a function is written `plfoo`, use it like `pls->foo()`.
 
 ## Installation

@@ -3,6 +3,8 @@ title: Polymorphism
 layout: default
 ---
 
+# Polymorphism
+
 These notes will review object-oriented programming and inheritance with C++, then discuss polymorphism.
 
 ## A simple set of classes

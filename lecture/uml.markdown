@@ -3,7 +3,13 @@ layout: default
 title: UML
 ---
 
+# UML
+
+That is, "Unified Modeling Language."
+
 ![UML Diagrams](/images/UML_diagrams_overview-highlighted.png)
+
+## Types of diagrams
 
 UML actually specifies 15 types of diagrams. They are mostly distinct from each other, and presumably useful in various circumstances. For our purposes, we'll only focus on the class diagrams.
 

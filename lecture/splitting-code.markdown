@@ -3,6 +3,8 @@ title: Splitting code into several files
 layout: default
 ---
 
+# Splitting code into several files
+
 You have probably been noticing that your source code files have grown somewhat
 large and include a diverse range of features: class definitions, class method
 implementations, other functions, and a `main()` function. In future
@@ -214,13 +216,5 @@ g++ -o myprogram rectangle.o ellipse.o main.o
 The first three lines compile each `.cpp` file separately (producing a
 corresponding `.o` file). The fourth line links all the `.o` files together to
 create the final program.
-
-## Visual Studio
-
-<iframe src="http://player.vimeo.com/video/24224470?title=0&byline=0&portrait=0" width="600" height="450" frameborder="0"></iframe>
-
-## CodeBlocks
-
-<iframe src="http://player.vimeo.com/video/24224759?title=0&byline=0&portrait=0" width="600" height="450" frameborder="0"></iframe>
 
 

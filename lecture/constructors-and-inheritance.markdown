@@ -3,9 +3,15 @@ title: Constructors and inheritance
 layout: default
 ---
 
+# Constructors and inheritance
+
 When a class inherits from another class, often the subclass will want
 to have its own constructors that refer back to the parent class's
-constructors. For example, consider the following class hierarchy:
+constructors.
+
+## Bank account example
+
+Consider the following class hierarchy:
 
 ![Bank Account UML diagram](/images/bankaccount-uml.png "Bank Account UML diagram")
 

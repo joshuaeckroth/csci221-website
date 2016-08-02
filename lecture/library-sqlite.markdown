@@ -3,6 +3,8 @@ layout: default
 title: "Library: SQLite"
 ---
 
+# Library: SQLite
+
 SQLite provides simple database access. It is modeled after relational databases: you have tables with rows & columns, column types (int, double, text), and SQL statements (`INSERT INTO ...`, `SELECT * FROM ...`). The database is stored in a single file, which is created when it's opened (if it doesn't exist yet).
 
 You can look at this database file, and run SQL commands, using the command line program `sqlite3`. You may have to install this on your machine. You can also compile it, as described [here](http://www.sqlite.org/howtocompile.html), section "Compiling the command-line interface." For a graphical interface, I recommend [SQLite Browser](http://sqlitebrowser.org/) or [SQLite Studio](http://sqlitestudio.pl/?act=download).

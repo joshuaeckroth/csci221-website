@@ -3,6 +3,8 @@ title: Linked lists
 layout: default
 ---
 
+# Linked lists
+
 As we have learned, arrays are used to manage lots of values with a
 single "variable" (plus an index for each element). Arrays in C++ are
 very efficient (accessing individual elements takes virtually no time
@@ -14,9 +16,6 @@ place.
 An alternative to arrays is linked lists. Linked lists are not as
 efficient at "jumping to the middle" and grabbing a value, but they
 can grow and shrink without requiring copying the whole list.
-
-**(Note: download all the code in these lecture notes as a complete
-program: [list.cpp](/code/list-cpp.html))**
 
 ## How a linked list works
 
@@ -98,7 +97,7 @@ creating node variables using the `new` operator, we'll create a
 function that deletes an entire list (because when you use `new` you
 gotta remember to `delete`).
 
-## Node at some position (counting from 0)
+## Node at some position
 
 {% highlight cpp %}
 // return a pointer to the i'th node
@@ -115,7 +114,7 @@ Node* node_at(List* list, int i)
 }
 {% endhighlight %}
 
-## Value at some position (counting from 0)
+## Value at some position
 
 {% highlight cpp %}
 double val_at(List* list, int i)

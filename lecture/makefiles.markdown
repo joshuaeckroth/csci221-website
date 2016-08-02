@@ -3,6 +3,15 @@ layout: default
 title: Makefiles
 ---
 
+# Makefiles
+
+When we have larger projects, it is much more efficient to compile
+only the modified files rather than all files. `Makefiles` let us
+define these dependencies and rebuild our project with simple
+commands.
+
+## Dependency graph
+
 Suppose we have a program made up of some files: `main.cpp`,
 `foo.cpp`, `foo.h`, `bar.cpp`, and `bar.h`. The dependencies among
 these are as follows (suppose):
@@ -27,11 +36,6 @@ Notice that when `main.cpp` is modified, for example, neither
 `foo.cpp` nor `bar.cpp` need to be recompiled. This is because they do
 not `#include` anything from `main.cpp` (not even recursively from
 their `#include`'s).
-
-When we have larger projects, it is much more efficient to compile
-only the modified files rather than all files. `Makefiles` let us
-define these dependencies and rebuild our project with simple
-commands.
 
 ## Example Makefile
 

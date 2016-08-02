@@ -3,6 +3,8 @@ layout: default
 title: "Library: Qt"
 ---
 
+# Library: Qt
+
 [Qt](http://qt-project.org/) is a massive library (or set of libraries) for low-level C++, GUIs, networking, multimedia, Unicode, string translation, etc. It also includes QML, a new language that simplifies GUI development. Qt supports mobile app development (Android, IOS, etc.) as well. Furthermore, it has a cool IDE, [Qt Creator](http://qt-project.org/doc/qtcreator-3.2/index.html) with a built-in help system, debugger, and drag-and-drop GUI designer. Best of all, the GUIs and other code work the same on Windows, Linux, and Mac OS X, and they even look "native" on each platform.
 
 These notes will explore some of the fundamental features of Qt. There is extensive documentation for Qt in the Qt Creator IDE as well as their [website](http://qt-project.org/doc/qt-5/reference-overview.html).

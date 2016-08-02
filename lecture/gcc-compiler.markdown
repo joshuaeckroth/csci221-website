@@ -3,6 +3,8 @@ layout: default
 title: GCC compiler
 ---
 
+# GCC compiler
+
 This page gives a few tips about the GNU Compiler Collection (GCC). As
 evidenced by the name, GCC includes multiple compilers: `gcc` (C),
 `g++` (C++), `gnat` (Ada), `gfortran` (Fortran), etc.
@@ -34,6 +36,7 @@ Similar to <code>-ansi</code>, but even stricter.
 <tr>
 <td>
 <code>-Wall</code>
+</td>
 <td>
 Produce warnings for all potential errors.
 </td>
@@ -41,6 +44,7 @@ Produce warnings for all potential errors.
 <tr>
 <td>
 <code>-g</code>
+</td>
 <td>
 Include debugging symbols so we can effectively use <code>gdb</code>
 on the resulting program.
@@ -116,7 +120,7 @@ object files into a final binary. This is shown in the diagram below:
 <img src="/images/compiler-linker.png" alt="Linker" />
 </div>
 
-### Errors in compiling, linking
+## Errors in compiling, linking
 
 The compiler can produce these kinds of errors:
 

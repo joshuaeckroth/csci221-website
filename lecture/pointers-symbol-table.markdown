@@ -3,6 +3,8 @@ title: Pointers and the symbol table
 layout: default
 ---
 
+# Pointers and the symbol table
+
 In most C++ programming books and tutorials, "pointers" are introduced
 much later than I am doing in these lecture notes. From experience, I
 have found that it is better to experience pointers sooner rather than
@@ -89,6 +91,7 @@ example (using the variables above):
   <td><code>int</code></td>
   <td>0x8fff5321</td>
 </tr>
+</tbody>
 </table>
 
 The "variable name" column is obvious, as is the "type" column. The
@@ -302,6 +305,7 @@ kept in the symbol table:
   <td><code>int*</code></td>
   <td>0x99267dac</td>
 </tr>
+</tbody>
 </table>
 
 Here it gets a little tricky. Since `pn` is a variable, it has a
@@ -454,7 +458,7 @@ p->age = 45;
 delete p;
 {% endhighlight %}
 
-## Blinky pointer fun (no, really)
+## Blinky pointer fun
 
 Check out this video: [Blinky pointer
 fun](http://cslibrary.stanford.edu/104/) from Stanford University.

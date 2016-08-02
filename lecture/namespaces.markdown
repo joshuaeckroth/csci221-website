@@ -3,7 +3,11 @@ layout: default
 title: Namespaces
 ---
 
+# Namespaces
+
 Namespaces are like packages in Java. They set a prefix for all variables/functions/classes defined inside.
+
+## Syntax
 
 {% highlight cpp %}
 namespace foo {
@@ -29,7 +33,7 @@ int main()
 }
 {% endhighlight %}
 
-## The `using` command
+## The "using" command
 
 There are two kinds of `using`:
 

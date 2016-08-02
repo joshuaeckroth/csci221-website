@@ -3,6 +3,8 @@ layout: default
 title: Java vs. C++
 ---
 
+# Java vs. C++
+
 The assumption in CSCI221 is that you have prior experience
 programming with Java. This should mean you have seen virtually all
 the features of the Java language that appear on this page. We will
@@ -33,7 +35,6 @@ operations like `+`, `-`, `%`, etc., work the same in Java and C++.
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 <pre class="simple">
@@ -68,7 +69,6 @@ int main() {
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 <pre class="simple">
@@ -96,7 +96,6 @@ $ ./hello_world
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 <ul>
@@ -116,14 +115,14 @@ $ ./hello_world
 <td>
 <ul>
 <li><code>char</code> &mdash; (equiv to <code>byte</code> in Java)</li>
-<li><code>short</code> &mdash; at least 16 bits
-<li><code>int</code> &mdash; at least 16 bits, usually 32 bits
-<li><code>long</code> &mdash; at least 32 bits, usually 64 bits
-<li><code>long long</code> &mdash; at least 64 bits, usually 64 bits
+<li><code>short</code> &mdash; at least 16 bits</li>
+<li><code>int</code> &mdash; at least 16 bits, usually 32 bits</li>
+<li><code>long</code> &mdash; at least 32 bits, usually 64 bits</li>
+<li><code>long long</code> &mdash; at least 64 bits, usually 64 bits</li>
 <li><code>float</code> &mdash; 32 bits, IEEE 754</li>
 <li><code>double</code> &mdash; 64 bits, IEEE 754</li>
 <li><code>long double</code> &mdash; usually 80-bit floating point</li>
-<li><code>bool</code> &mdash; <code>true</code> or <code>false</code>
+<li><code>bool</code> &mdash; <code>true</code> or <code>false</code></li>
 </ul>
 </td>
 </tr>
@@ -146,7 +145,6 @@ classes), while in C++ it is not.
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 Create a string:
@@ -161,7 +159,6 @@ string msg = "Test...";
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Test if two strings are equal:
@@ -184,7 +181,6 @@ if(msg1 == msg2) {
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Append strings:
@@ -203,7 +199,6 @@ string s3 = s1 + s2;
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Copy a string:
@@ -223,7 +218,6 @@ string s2 = s1;
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Get the length:
@@ -240,7 +234,6 @@ int msgLength = msg.length();
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Get a particular character:
@@ -258,7 +251,6 @@ char letterC = msg[2];
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Extract a substring:
@@ -283,7 +275,6 @@ string shortMsg2 = longMsg.substr(3);
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Search for a string:
@@ -306,7 +297,6 @@ int pos2 = s.find("foo");
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Convert a string to a number:
@@ -337,7 +327,6 @@ if(!(my_converter >> x)) {
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Convert a number to a string:
@@ -361,7 +350,6 @@ string s = my_converter.str();
 </pre>
 </td>
 </tr>
-
 </tbody>
 </table>
 
@@ -515,11 +503,9 @@ in.close();
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 <pre class="simple">
-
 
 Math.abs(-15);
 Math.ceil(2.35);
@@ -546,7 +532,6 @@ pow(5, 3);
 </pre>
 </td>
 </tr>
-
 </tbody>
 </table>
 
@@ -560,7 +545,6 @@ pow(5, 3);
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 Define a class. This code must be in a file with the same name as the
@@ -583,6 +567,7 @@ public class MyClass {
     x++;
   }
 }
+</pre>
 </td>
 <td>
 Typically in C++, we declare the class in a file like `myclass.h` and
@@ -601,8 +586,6 @@ class MyClass {
     void incrementX();
 }
 
-
-
 // myclass.cpp
 #include &lt;myclass.h&gt;
 
@@ -617,9 +600,9 @@ float MyClass::getY() {
 void MyClass::incrementX() {
   x++;
 }
+</pre>
 </td>
 </tr>
-
 </tbody>
 </table>
 
@@ -633,7 +616,6 @@ void MyClass::incrementX() {
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 Cast primitive types:
@@ -656,7 +638,6 @@ float y = (float)b;
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Single inheritance:
@@ -695,9 +676,9 @@ This means that class <code>B</code> inherits all public members
 (variables, methods) of class <code>A</code>. Furthermore, those
 public members of <code>A</code> are <strong>private</strong> in
 <code>B</code>.
+</p>
 </td>
 </tr>
-
 <tr>
 <td>
 Multiple inheritance: Not possible. Use interfaces (see below) as a
@@ -719,7 +700,6 @@ whether it is referring to members inherited from <code>A</code> or
 <code>B</code>.
 </td>
 </tr>
-
 <tr>
 <td>
 Override inherited methods:
@@ -759,7 +739,7 @@ the base class, then after casting our <code>B</code> object to an
 be used and <code>B</code>'s <code>foo()</code> function would be
 inaccessible.
 </td>
-  
+</tr>
 <tr>
 <td>
 Interfaces:
@@ -792,7 +772,6 @@ class Quux : public Foo {
 </pre>
 </td>
 </tr>
-
 </tbody>
 </table>
 
@@ -806,7 +785,6 @@ class Quux : public Foo {
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 Create and initialize arrays:
@@ -836,7 +814,6 @@ int matrix2 = { {1, 2, 3}, {4, 5, 6} };
 </pre>
 </td>
 </tr>
-
 </tbody>
 </table>
 
@@ -850,7 +827,6 @@ int matrix2 = { {1, 2, 3}, {4, 5, 6} };
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 Lists:
@@ -888,7 +864,6 @@ mylist.clear();
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 Maps (key-value pairs):
@@ -925,7 +900,6 @@ mymap.erase("foo");
 </tr>
 </thead>
 <tbody>
-
 <tr>
 <td>
 <pre class="simple">
@@ -946,7 +920,6 @@ class Foo {
 </pre>
 </td>
 </tr>
-
 </tbody>
 </table>
 

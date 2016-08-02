@@ -1,0 +1,385 @@
+---
+layout: default
+title: "HW04: Mathtree"
+due: "Sep 26, 11:59pm"
+categories: [assignments]
+---
+
+# HW04: Mathtree
+
+Copy the code in `/home/jeckroth/csci221-public/homework-4` and finish writing the file `mathtree.cpp`. That's it!!1
+
+## Grader script
+
+`/usr/local/csci221sp2016/csci221-hw04-grader.pl`
+
+Note, the ASCII trees need not be printed. You can comment out that code in main.cpp (but leave the cout's).
+
+The test script handles some variability with parentheses and spaces. However, you might want to compare your output to the "gold standard" program `/home/jeckroth/csci221-public/homework-4/mathtree-comparison`
+
+## Background
+
+I wrote a parser that builds a binary tree representing a mathematical expression. I also adapted someone else's work on printing trees in ASCII. The mathtree program reads a mathematical expression from the user, prints the ASCII tree version of it, then both simplifies and finds the derivative (and simplifies the derivative). These results are printed as well, both in ASCII tree form and normal math notation.
+
+## Your task
+
+You need to write all the functions that have "TODO" markers in `mathtree.cpp`. These functions are:
+
+- `void delete_tree(struct Tree *root)` -- should delete the entire tree, so that Valgrind reports no memory leaks.
+- `struct Tree *Tree::clone()` -- should make a complete copy of the tree (known as `this` since this is a class/struct method), and return it; should not delete anything.
+- `struct Tree *Tree::simplify_rec()` -- performs simplification (see rules below); this function will be called repeatedly until the input tree (known as `this`) and simplified version (what's returned from this function) are equivalent, meaning the tree cannot be simplified further; thus, this function should probably just do one simplification at a time.
+- `struct Tree *Tree::derive()` -- find the derivative of the mathematical expression represented in the tree; see the rules below.
+- `void Tree::print_inorder()` -- print the tree (known as `this`) in normal mathematical notation; see examples below.
+
+## Hint
+
+Use `clone()` in other parts of your code to ensure you **never** restructure a tree by just modifying its pointers. Always use a clone, and (possibly) delete the original. The functions `derive()` and `simplify()` and `simplify_rec()` **must always return an entirely new tree** and share no nodes with any other trees. If you do not heed this advice, good luck to you in your future endeavors!
+
+## About the tree structure
+
+These trees have left/right subtrees, which might be NULL, and some other values:
+
+- `op` -- a `string`, which might contain an operator, or might be empty. Possible binary operators are: +, -, /, *, ^. Possible unary operators are: sin, cos, ln. Unary operators have a NULL right tree.
+- `val` – a double, which contains a meaningful value only in the cases when `op == ""` and `var = 0`.
+- `var` – a char, which contains the value 'x' (the only possible variable according to the parser), only in cases when `op == ""`. When the tree is not a variable, but rather a value, then var = 0 (the null character, ASCII 0).
+
+There are convenience functions `is_var()`, `is_val()`, `is_unary_op()`, and `is_binary_op()` that determine the nature of a tree.
+
+## Simplification rules
+
+During simplification, produce a new tree according to the following rules.
+
+- 1.0 * foo => foo – i.e., remove the 1.0 multiplier
+- foo * 1.0 => foo
+- 0.0 * foo => 0.0
+- foo * 0.0 => 0.0
+- 0.0 + foo => foo
+- foo + 0.0 => foo
+- sin(foo) or cos(foo) or ln(foo) -- in cases where foo turns out to be a number, after simplifying, (is_val() is true), then the result is to actually compute sin or cos or ln on the simplified version of foo. Otherwise, if the simplified foo is not a value, just return sin(simplify(foo)) etc.
+- `foo + bar` or `foo - bar` or `foo * bar` or `foo / bar` or `foo ^ bar` -- in cases where both foo and bar simplify to values, compute the actual function; otherwise, return simplify(foo) + simplify(bar), etc.
+
+If those rules don’t apply, return a clone of the original tree.
+
+## Derivative rules
+
+- If the tree is just the var x, return a new tree representing 1.0.
+- If the tree is just a constant value, return a new tree representing 0.0.
+- If the tree is sin(foo), return a new tree representing cos(foo) * derive(foo).
+- If the tree is foo + bar, return a new tree representing derive(foo) + derive(bar).
+
+Etc. I’ll leave the rest up to you. You must implement these derivation rules:
+
+- sin, cos, ln rules
+- +, -, * (product rule), / (quotient rule), ^ (power rule)
+
+## Example 1
+
+```
+Enter expression: 5 + 2 * 3
+
+Original tree:
+
+    +
+   / \
+  /   \
+5.00   *
+      / \
+     /   \
+    /     \
+  2.00   3.00
+
+Simplified tree:
+
+11.00
+
+Printed in order:
+11
+
+
+Derivative tree:
+
+         +
+        / \
+       /   \
+     0.00   +
+           / \
+          /   \
+         /     \
+        /       \
+       /         \
+      /           \
+     *             *
+    / \           / \
+   /   \         /   \
+  /     \       /     \
+2.00   0.00   0.00   3.00
+
+Printed in order:
+
+(0 + ((2 * 0) + (0 * 3)))
+
+Simplified derivative tree:
+
+0.00
+
+Printed in order:
+
+0
+```
+
+## Example 2
+
+```
+Enter expression: x
+
+Original tree:
+
+x
+
+Simplified tree:
+
+x
+
+Printed in order:
+x
+
+
+Derivative tree:
+
+1.00
+
+Printed in order:
+
+1
+
+Simplified derivative tree:
+
+1.00
+
+Printed in order:
+
+1
+```
+
+## Example 3
+
+```
+Enter expression: 5^x
+
+Original tree:
+
+    ^
+   / \
+  /   \
+5.00   x
+
+Simplified tree:
+
+    ^
+   / \
+  /   \
+5.00   x
+
+Printed in order:
+(5 ^ x)
+
+
+Derivative tree:
+
+         *
+        / \
+       /   \
+      /     \
+     /       \
+    ^         +
+   / \       / \
+  /   \     /   \
+5.00   x   /     \
+          /       \
+         /         \
+        *           *
+       / \         / \
+      /   \       /   \
+    0.00   /    1.00  ln
+          / \         /
+         /   \      5.00
+        x   5.00
+
+Printed in order:
+
+((5 ^ x) * ((0 * (x / 5)) + (1 * ln(5) )))
+
+Simplified derivative tree:
+
+       *
+      / \
+     /   \
+    ^   1.61
+   / \
+  /   \
+5.00   x
+
+Printed in order:
+
+((5 ^ x) * 1.60944)
+```
+
+## Example 4
+
+```
+Enter expression: sin(cos(x))
+
+Original tree:
+
+   sin
+   /
+ cos
+ /
+x
+
+Simplified tree:
+
+   sin
+   /
+ cos
+ /
+x
+
+Printed in order:
+sin(cos(x) ) 
+
+
+Derivative tree:
+
+       *
+      / \
+     /   \
+   cos    *
+   /     / \
+ cos    /   \
+ /     -   1.00
+x     / \
+     /   \
+   0.00  sin
+         /
+        x
+
+Printed in order:
+
+(cos(cos(x) )  * (-sin(x)  * 1))
+
+Simplified derivative tree:
+
+       *
+      / \
+     /   \
+   cos    -
+   /     / \
+ cos    /   \
+ /    0.00  sin
+x           /
+           x
+
+Printed in order:
+
+(cos(cos(x) )  * -sin(x) )
+```
+
+## Example 5
+
+```
+Enter expression: sin(x) + cos(5 * ln(x))
+
+Original tree:
+
+     +
+    / \
+   /   \
+ sin   cos
+ /     /
+x     *
+     / \
+    /   \
+  5.00  ln
+        /
+       x
+
+Simplified tree:
+
+     +
+    / \
+   /   \
+ sin   cos
+ /     /
+x     *
+     / \
+    /   \
+  5.00  ln
+        /
+       x
+
+Printed in order:
+(sin(x)  + cos((5 * ln(x) )) )
+
+
+Derivative tree:
+
+           +
+          / \
+         /   \
+        /     \
+       /       \
+      /         \
+     *           *
+    / \         / \
+   /   \       /   \
+ cos  1.00    /     \
+ /           /       \
+x           /         \
+           /           \
+          /             \
+         -               +
+        / \             / \
+       /   \           /   \
+     0.00  sin        /     \
+           /         /       \
+          *         /         \
+         / \       *           *
+        /   \     / \         / \
+      5.00  ln   /   \       /   \
+            /  5.00   /    0.00  ln
+           x         / \         /
+                    /   \       x
+                  1.00   x
+
+Printed in order:
+
+((cos(x)  * 1) + (-sin((5 * ln(x) ))  * ((5 * (1 / x)) + (0 * ln(x) ))))
+
+Simplified derivative tree:
+
+       +
+      / \
+     /   \
+   cos    *
+   /     / \
+  x     /   \
+       /     \
+      /       \
+     /         \
+    -           *
+   / \         / \
+  /   \       /   \
+0.00  sin   5.00   /
+      /           / \
+     *           /   \
+    / \        1.00   x
+   /   \
+ 5.00  ln
+       /
+      x
+
+Printed in order:
+
+(cos(x)  + (-sin((5 * ln(x) ))  * (5 * (1 / x))))
+```

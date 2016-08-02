@@ -3,6 +3,8 @@ title: Maps, sets, etc.
 layout: default
 ---
 
+# Maps, sets, etc.
+
 We saw [vectors](/lecture/vectors.html) previously. Vectors are part of the
 "Standard Template Library" (STL) -- "standard" because vectors are part of
 every C++ installation, "template" because the vector class is a template class

@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Development Methodologies
+title: Development methodologies
 ---
+
+# Development methodologies
 
 ## Waterfall vs. Agile
 

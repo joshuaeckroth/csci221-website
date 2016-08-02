@@ -3,16 +3,15 @@ title: Object-oriented design for a game
 layout: default
 ---
 
-A game is a good domain to study object-oriented design. Since CSE 230 is not
-an object-oriented design class (that's CSE 502 or CSE 616), I will demonstrate
-a somewhat-complicated object-oriented rather than asking you to come up with
-your own.
+# Objected-oriented design for a game
 
-In my game, there are one or more human players (the Player class), and some
-grues (the Grue class; a grue is a scary monster that eats people, but is never
-present in lighted rooms, for what it's worth). The Game class tells the grues
-and players to make their moves (the grues' moves are random, the players'
-moves come from asking the person at the keyboard to make a move).
+A game is a good domain to study object-oriented design. In my game,
+there are one or more human players (the Player class), and some grues
+(the Grue class; a grue is a scary monster that eats people, but is
+never present in lighted rooms, for what it's worth). The Game class
+tells the grues and players to make their moves (the grues' moves are
+random, the players' moves come from asking the person at the keyboard
+to make a move).
 
 Rooms are connected to each other by arbitrary exits (e.g. "south," "out the
 window"). Each room keeps track of the things inside it (using a `set`). Also,

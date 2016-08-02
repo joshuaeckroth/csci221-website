@@ -1,5 +1,6 @@
-highlighter: pygments
-permalink: none
-markdown: rdiscount
-rdiscount:
-  extensions: [smart]
+kramdown:
+   input: GFM
+   hard_wrap: false
+gems:
+  - jekyll-sitemap
+highlighter: rouge

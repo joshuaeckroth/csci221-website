@@ -1,0 +1,34 @@
+.highlighter-rouge .hll { background-color: #ffffcc }
+.highlighter-rouge .c { font-style: italic } /* Comment */
+.highlighter-rouge .err { border: 1px solid #FF0000 } /* Error */
+.highlighter-rouge .k { font-weight: bold } /* Keyword */
+.highlighter-rouge .cm { font-style: italic } /* Comment.Multiline */
+.highlighter-rouge .c1 { font-style: italic } /* Comment.Single */
+.highlighter-rouge .cs { font-style: italic } /* Comment.Special */
+.highlighter-rouge .ge { font-style: italic } /* Generic.Emph */
+.highlighter-rouge .gh { font-weight: bold } /* Generic.Heading */
+.highlighter-rouge .gp { font-weight: bold } /* Generic.Prompt */
+.highlighter-rouge .gs { font-weight: bold } /* Generic.Strong */
+.highlighter-rouge .gu { font-weight: bold } /* Generic.Subheading */
+.highlighter-rouge .kc { font-weight: bold } /* Keyword.Constant */
+.highlighter-rouge .kd { font-weight: bold } /* Keyword.Declaration */
+.highlighter-rouge .kn { font-weight: bold } /* Keyword.Namespace */
+.highlighter-rouge .kr { font-weight: bold } /* Keyword.Reserved */
+.highlighter-rouge .s { font-style: italic } /* Literal.String */
+.highlighter-rouge .nc { font-weight: bold } /* Name.Class */
+.highlighter-rouge .ni { font-weight: bold } /* Name.Entity */
+.highlighter-rouge .ne { font-weight: bold } /* Name.Exception */
+.highlighter-rouge .nn { font-weight: bold } /* Name.Namespace */
+.highlighter-rouge .nt { font-weight: bold } /* Name.Tag */
+.highlighter-rouge .ow { font-weight: bold } /* Operator.Word */
+.highlighter-rouge .sb { font-style: italic } /* Literal.String.Backtick */
+.highlighter-rouge .sc { font-style: italic } /* Literal.String.Char */
+.highlighter-rouge .sd { font-style: italic } /* Literal.String.Doc */
+.highlighter-rouge .s2 { font-style: italic } /* Literal.String.Double */
+.highlighter-rouge .se { font-weight: bold; font-style: italic } /* Literal.String.Escape */
+.highlighter-rouge .sh { font-style: italic } /* Literal.String.Heredoc */
+.highlighter-rouge .si { font-weight: bold; font-style: italic } /* Literal.String.Interpol */
+.highlighter-rouge .sx { font-style: italic } /* Literal.String.Other */
+.highlighter-rouge .sr { font-style: italic } /* Literal.String.Regex */
+.highlighter-rouge .s1 { font-style: italic } /* Literal.String.Single */
+.highlighter-rouge .ss { font-style: italic } /* Literal.String.Symbol */

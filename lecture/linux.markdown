@@ -3,6 +3,8 @@ layout: default
 title: Linux
 ---
 
+# Linux
+
 Here are some useful videos to help you get up to speed on Linux:
 
 - [Copying files from your computer to Linux and vice versa](http://www.youtube.com/watch?v=nwEnzrhtPDc&feature=related)

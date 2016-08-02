@@ -3,7 +3,11 @@ layout: default
 title: "Library: Xapian"
 ---
 
+# Library: Xapian
+
 Xapian provides search capabilities to your program. It supports fulltext search and complex boolean queries. Xapian uses an index, so you have to add data to an index before you can search the index. The index can be on-disk or in-memory; if it's on-disk, you won't need to rebuild it every time your program starts.
+
+## Example program
 
 {% highlight cpp %}
 #include <iostream>

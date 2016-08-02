@@ -3,13 +3,19 @@ title: Arrays
 layout: default
 ---
 
+# Arrays
+
 Arrays are one way to store *many values of the same type in one
 variable*. An array can be of any (fixed) size. If an array is of size
 `n`, then the *elements* (values) of the array can be accessed with
 indices `0` through `n-1`. The memory "allocated" to an array is
 contiguous; you can think of each element sitting right next to its
-siblings somewhere in memory. Here is an example of how we create
-arrays, and give them their values:
+siblings somewhere in memory.
+
+## Examples
+
+Here is an example of how we create arrays, and give them their
+values:
 
 ![Create an array](/images/array-1_0.png "Create an array")
 

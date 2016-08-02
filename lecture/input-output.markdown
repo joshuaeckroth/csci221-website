@@ -3,6 +3,10 @@ layout: default
 title: Input/output
 ---
 
+# Input/output
+
+## Stdin and stdout
+
 You remember using `cout` to display a message. You can use `cin` to do
 the opposite: get input from the user. It works like this (notice the
 `>>` of `cin`, which are opposite those of `cout`):

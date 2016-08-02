@@ -3,6 +3,8 @@ layout: default
 title: Memory management
 ---
 
+# Memory management
+
 ## Data section vs. dynamic memory
 
 ### Data section
@@ -97,7 +99,7 @@ The `new` operator uses the "heap" (main memory) for memory
 allocation. The allocated memory is not automatically freed. One must
 use the `delete` operator to free up heap memory.
 
-## `new` and `delete` and `delete[]`
+## new and delete and delete[]
 
 The `new` operator reserves memory for one value of a certain
 type. Example: `new int`. The return value is a pointer (memory
@@ -172,27 +174,21 @@ valgrind --leak-check=full --show-reachable=yes ./myprogram
 
 ### Types of leaks
 
-definitely lost
+- **definitely lost** -- reserved memory for which no pointer exists.
 
-  : reserved memory for which no pointer exists.
+- **indirectly lost** -- reserved memory that has one or more pointers
+    to it (also created with `new`), but pointers to those pointers
+    are lost.
 
-indirectly lost
+- **possibly lost** -- an array is reserved but the only remaining
+    pointer is pointing to the middle of it, not the start; note that
+    you only use `delete[]` with a pointer that points to the start of
+    the array.
 
-  : reserved memory that has one or more pointers to it (also created
-    with `new`), but pointers to those pointers are lost.
-
-possibly lost
-
-  : an array is reserved but the only remaining pointer is pointing to
-    the middle of it, not the start; note that you only use `delete[]`
-    with a pointer that points to the start of the array.
-
-still reachable
-
-  : memory that is never freed but for which there is still a pointer
-    to it when the program exists; one simple way to achieve this is
-    to keep the pointer as a global variable, but never free the
-    memory.
+- **still reachable** -- memory that is never freed but for which
+    there is still a pointer to it when the program exists; one simple
+    way to achieve this is to keep the pointer as a global variable,
+    but never free the memory.
 
 ### Examples of leaks
 

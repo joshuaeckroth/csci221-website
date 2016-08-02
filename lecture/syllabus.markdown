@@ -3,7 +3,9 @@ title: Syllabus
 layout: default
 ---
 
-CSCI 221 - 01, Spring 2015 &mdash; Software Development I
+# Syllabus
+
+CSCI 221 - 01, Fall 2016 &mdash; Software Development I
 
 Work hard in this class and you should be able to:
 
@@ -13,40 +15,55 @@ Work hard in this class and you should be able to:
 
 - Joshua Eckroth, [jeckroth@stetson.edu](mailto:jeckroth@stetson.edu)
 
-- Eliz Hall 214-9, 386-740-2519
+- Eliz Hall 214, 386-740-2519
 
-- Office hours: Mon: 1:30-2:30, Tue: 12-2, Thur: 1-2
+- Office hours: Mon/Wed 12-2:30
+
+## Text book
+
+There is no text book for this class.
 
 ## Grading
 
-- Homeworks: 40% (7 of them)
+- Attendance on work days (usually Fridays): 5%
+- Homeworks (7 of them): 30%
+- Group project: 10%
+- Proficiency exam 1: 2.5%
+- Proficiency exam 2: 2.5%
+- Test 1: 15%
+- Test 2: 15%
+- Test 3 (Final exam): 20%
 
-- Group project 1: 10%
+Late work is penalized 20% for each day that it is late. Submissions
+more than 3 days late receive no credit. Tests cannot be made up
+unless a doctor's note is provided.
 
-- Group project 2: 20%
+## Proficiency exam dates
 
-- Midterm exam: 15%
-
-- Final exam: 15% (Friday, May 1, 11am-1pm)
-
-Homework may be turned in late, up to the day of the final exam. Late
-work is penalized. The maximum grade for late work is 60%.
+- Proficiency exam 1: Wed Nov 2
+- Proficiency exam 2: Wed Nov 30
 
 ## Test dates
 
-- Midterm: Feb 26
+- Test 1: Fri Sep 30
+- Test 2: Fri Oct 28
+- Test 3 (Final exam): Wed Dec 14, 9a-11a
 
-- Final exam: May 1, 11am-1pm
+## Group project
 
-See the [calendar](/lecture/calendar.html) for more dates.
+- Deliverable 1: Mon Nov 7
+- Deliverable 2: Mon Nov 14
+- Deliverable 3: Mon Nov 21
+- Deliverable 4: Mon Nov 28
+- Deliverable 5: Mon Dec 5
+- Presentations: Wed Dec 7, Fri Dec 9
 
 ## Honor code
 
 I am strongly in agreement with the
 [Stetson University Honor Code](http://www.stetson.edu/other/honor-system/). Any
 form of cheating is not acceptable, will not be tolerated, and could
-lead to dismissal from the University. This includes plagiarism of any
-sort on quizzes, exams, or on projects. So please, do not cheat!
+lead to dismissal from the University.
 
 ## Academic success center
 
@@ -62,36 +79,3 @@ Success Center will plan how best to coordinate accommodations. The
 Academic Success Center is located at 209 E Bert Fish Drive, and can
 be contacted using the email address
 [asc@stetson.edu](mailto:asc@stetson.edu).
-
-## Some inspiration
-
-> In my life as an architect, I find that the single thing which
-> inhibits young professionals, new students most severely, is their
-> acceptance of standards that are too low. If I ask a student whether
-> her design is as good as Chartres, she often smiles tolerantly at me
-> as if to say, "Of course not, that isn't what I am trying to
-> do... I could never do that."
-
-> Then, I express my disagreement, and tell her: "That standard must
-> be our standard. If you are going to be a builder, no other standard
-> is worthwhile. That is what I expect of myself in my own buildings,
-> and it is what I expect of my students." Gradually, I show the
-> students that they have a right to ask this of themselves, and
-> must ask this of themselves. Once that level of standard is in their
-> minds, they will be able to figure out, for themselves, how to do
-> better, how to make something that is as profound as that.
-
-> Two things emanate from this changed standard. First, the work
-> becomes more fun. It is deeper, it never gets tiresome or boring,
-> because one can never really attain this standard. One's work
-> becomes a lifelong work, and one keeps trying and trying. So it
-> becomes very fulfilling, to live in the light of a goal like this.
-
-> But secondly, it does change what people are trying to do. It takes
-> away from them the everyday, lower-level aspiration that is purely
-> technical in nature, (and which we have come to accept) and replaces
-> it with something deep, which will make a real difference to all of
-> us that inhabit the earth. -- Christopher Alexander, from the
-> Foreword to
-> [Patterns of Software](http://www.dreamsongs.com/Files/PatternsOfSoftware.pdf)
-> by Richard P. Gabriel

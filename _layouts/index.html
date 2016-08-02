@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/code.css">
+    <link href="http://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="container-tight">
+      <table id="index">
+        <tr>
+          <td>
+            <h2>Notes</h2>
+            <ul class="posts">
+              <li>
+                <div class="post-title"><a href="lecture/syllabus.html">Syllabus</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/linux.html">Linux</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/git.html">Git</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/java-vs-cpp.html">Java vs. C++</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/gcc-compiler.html">GCC compiler</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/preprocessor.html">Preprocessor</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/splitting-code.html">Splitting code into several files</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/makefiles.html">Makefiles</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/gdb-debugger.html">GDB debugger</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/pointers-symbol-table.html">Pointers and the symbol table</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/memory-management.html">Memory management</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/arrays.html">Arrays</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/linked-lists.html">Linked lists</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/trees.html">Trees</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/constructors-and-inheritance.html">Constructors and inheritance</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/drawbacks-of-object-orientation.html">Drawbacks of object orientation</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/input-output.html">Input/output</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/polymorphism.html">Polymorphism</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/template-metaprogramming.html">Template meta-programming</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/vectors.html">Vectors</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/maps-sets-etc.html">Maps, sets, etc.</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/uml.html">UML</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/game-design.html">Game design</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/documentation.html">Documentation</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/namespaces.html">Namespaces</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/collaboration-with-git.html">Collaboration with git</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/dev-methodologies.html">Development methodologies</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/testing.html">Testing</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/library-sqlite.html">Library: SQLite</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/library-xapian.html">Library: Xapian</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/library-plplot.html">Library: PLplot</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="lecture/library-qt.html">Library: Qt</a></div>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <h2>Homework</h2>
+            <ul class="posts">
+              {% for p in site.pages sort_by:title order:ascending %}
+              {% if p.categories contains 'assignments' %}
+              <li>
+                <div class="post-title"><a href="{{ p.url }}">{{ p.title }}</a></div>
+                <div class="post-due">{% if p.due %}due {{ p.due }}{% endif %}</div>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <h2 style="margin-top: 20px;">Group projects</h2>
+            <ul class="posts">
+              <li>
+                <div class="post-title"><a href="/project/group-1.html">Group 1</a></div>
+              </li>
+              <li>
+                <div class="post-title"><a href="/project/group-2.html">Group 2</a></div>
+              </li>
+            </ul>
+            <h2 style="margin-top: 20px;">Study guides</h2>
+            <ul class="posts">
+              {% for p in site.pages sort_by:title order:ascending %}
+              {% if p.categories contains 'studyguides' %}
+              <li>
+                <div class="post-title"><a href="{{ p.url }}">{{ p.title }}</a></div>
+                <div class="post-due">{% if p.date %}{{ p.date }}{% endif %}</div>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </td>
+          <td id="metabox">
+            <div class="classname">CSCI 221</div>
+            <div class="semester">Fall 2016</div>
+            <div class="email"><b><a href="mailto:jeckroth@stetson.edu">jeckroth@stetson.edu</a></b></div>
+            <div class="officehours">
+              Office hours:<br/>
+              Mon/Wed 12-2:30
+            </div>
+          </td>
+        </tr>
+      </table>
+
+
+
+<div class="license">
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">CSCI 221 material</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://csci221.artifice.cc" property="cc:attributionName" rel="cc:attributionURL">Joshua Eckroth</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. Source code for this website available at <a href="https://github.com/joshuaeckroth/csci221-website">GitHub</a>.
+</div>
+        </div>
+    </body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23971505-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</html>
+

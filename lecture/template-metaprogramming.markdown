@@ -3,17 +3,24 @@ title: Template meta-programming
 layout: default
 ---
 
+# Template meta-programming
+
 Template meta-programming can be a very interesting, complicated topic
-(anything "meta" is very interesting, after all). We'll keep it very simple in
-this class.
+(anything "meta" is very interesting, after all). We'll keep it very
+simple in this class.
 
-The idea behind template meta-programming is that we want to use a special
-language *on top of C++* that generates C++ code. This "template meta-language"
-is itself a full programming language, but we'll just use the simplest pieces.
-Our use of template meta-programming will be limited to generating classes and
-functions that work on any type of object.
+The idea behind template meta-programming is that we want to use a
+special language *on top of C++* that generates C++ code. This
+"template meta-language" is itself a full programming language, but
+we'll just use the simplest pieces.  Our use of template
+meta-programming will be limited to generating classes and functions
+that work on any type of object.
 
-**Important note:** Template classes and functions must have their full implementations in the header file, not an external `.cpp` file. This is because template classes and functions cannot be compiled in a generic way, so we cannot produce a `.o` file that has compiled but generic functions/methods.
+**Important note:** Template classes and functions must have their
+full implementations in the header file, not an external `.cpp`
+file. This is because template classes and functions cannot be
+compiled in a generic way, so we cannot produce a `.o` file that has
+compiled but generic functions/methods.
 
 ## Generic linked lists
 

@@ -3,6 +3,8 @@ layout: default
 title: GDB debugger
 ---
 
+# GDB debugger
+
 ## Starting the debugger
 
 First, you'll need to compile your program with "debug symbols" using the `-g` switch:

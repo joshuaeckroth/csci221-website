@@ -1,0 +1,18 @@
+---
+layout: default
+title: "HW05: Elevator"
+due: "Oct 10, 11:59pm"
+categories: [assignments]
+---
+
+# HW05: Elevator
+
+Make an efficient elevator logic for an arbitrary number of elevators. See code at `/usr/local/csci221sp2016/elevator`. Test script forthcoming.
+
+# Technique
+
+- Add a subclass of ElevatorLogic. Add this class to the Makefile so it's built with the test_elevator code.
+
+# Goal
+
+Make the most responsive elevator logic, according to the output CSV file.

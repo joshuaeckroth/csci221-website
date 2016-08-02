@@ -3,6 +3,8 @@ layout: default
 title: Testing
 ---
 
+# Testing
+
 These notes show how to use the Google Test library.
 
 - [Download Google Test](https://code.google.com/p/googletest/downloads/detail?name=gtest-1.7.0.zip&can=2&q=)
