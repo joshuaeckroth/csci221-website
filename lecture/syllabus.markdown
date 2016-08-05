@@ -5,11 +5,7 @@ layout: default
 
 # Syllabus
 
-CSCI 221 - 01, Fall 2016 &mdash; Software Development I
-
-Work hard in this class and you should be able to:
-
-- **Work in a team developing modern C++ applications.**
+CSCI 221 - 01, Fall 2016 --- Software Development I
 
 ## About me
 
