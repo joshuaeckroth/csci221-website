@@ -9,7 +9,7 @@ CSCI 221 - 01, Fall 2016 --- Software Development I
 
 ## About me
 
-- Joshua Eckroth, [jeckroth@stetson.edu](mailto:jeckroth@stetson.edu)
+- Joshua Eckroth, [jeckroth@stetson.edu](mailto:jeckroth@stetson.edu), [homepage](http://www2.stetson.edu/~jeckroth/)
 
 - Eliz Hall 214, 386-740-2519
 
@@ -17,7 +17,7 @@ CSCI 221 - 01, Fall 2016 --- Software Development I
 
 ## Text book
 
-There is no text book for this class.
+There is no textbook for this class.
 
 ## Grading
 
