@@ -9,7 +9,7 @@ categories: [assignments]
 
 Program a simple text-based version of the Numberwang game. See the example execution below to see how it works.
 
-Name your BitBucket repository exactly `csci221-hw01`. Test with the script `/usr/local/csci221sp2016/csci221-hw01-grader.pl [bitbucketusername]`
+Name your BitBucket repository exactly `csci221-HW01`. Test with the script `/home/jeckroth/csci221/homework/HW01/grader.pl [bitbucketusername]`
 
 ## Requirements
 
@@ -64,4 +64,9 @@ That's Numberwang!
 Final scores: Tracy pulls ahead with 32,
 and Josh finishes with 13.
 ```
+
+## Related stickers
+
+- Most Impressive Numberwang Award
+- Most Impressive Wangernumb Award
 

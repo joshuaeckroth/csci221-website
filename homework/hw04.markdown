@@ -7,15 +7,15 @@ categories: [assignments]
 
 # HW04: Mathtree
 
-Copy the code in `/home/jeckroth/csci221-public/homework-4` and finish writing the file `mathtree.cpp`. That's it!!1
+Copy the code in `/home/jeckroth/csci221/homework/HW04/mathtree` and finish writing the file `mathtree.cpp`. That's it!!1
 
 ## Grader script
 
-`/usr/local/csci221sp2016/csci221-hw04-grader.pl`
+`/home/jeckroth/csci221/homework/HW04/grader.pl`
 
 Note, the ASCII trees need not be printed. You can comment out that code in main.cpp (but leave the cout's).
 
-The test script handles some variability with parentheses and spaces. However, you might want to compare your output to the "gold standard" program `/home/jeckroth/csci221-public/homework-4/mathtree-comparison`
+The test script handles some variability with parentheses and spaces. However, you might want to compare your output to the "gold standard" program `mathtree-comparison`.
 
 ## Background
 
@@ -383,3 +383,8 @@ Printed in order:
 
 (cos(x)  + (-sin((5 * ln(x) ))  * (5 * (1 / x))))
 ```
+
+## Related stickers
+
+- Most Elegant Mathtree Award
+

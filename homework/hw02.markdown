@@ -7,15 +7,15 @@ categories: [assignments]
 
 # HW02: Makefile and GDB
 
-Download existing code and create a Makefile for building the code. Also, fix a few bugs using GDB debugging techniques.
+Create a Makefile for existing code. Also, fix a few bugs using GDB debugging techniques.
 
-Name your BitBucket repository exactly `csci221-hw02`. Test with the script `/usr/local/csci221sp2016/csci221-hw02-grader.pl [bitbucketusername]`
+Name your BitBucket repository exactly `csci221-HW02`. Test with the script `/home/jeckroth/csci221/homework/HW02/grader.pl [bitbucketusername]`
 
 ## Task 1: Create a Makefile
 
 ### Requirements
 
-Copy the contents of the folder (on Londo) `/home/jeckroth/csci221-public/homework-2/rational`. It contains three files: `main.cpp`, `rational.cpp`, and `rational.h`.
+Copy the contents of the folder (on Londo) `/home/jeckroth/csci221/homework/HW02/rational`. It contains three files: `main.cpp`, `rational.cpp`, and `rational.h`.
 
 Create a Makefile so that one could easily build a binary file out of these sources.
 
@@ -23,7 +23,7 @@ Create a Makefile so that one could easily build a binary file out of these sour
 - rational.o depends on rational.h and rational.cpp
 - ratdemo depends on main.o and rational.o
 
-The Makefile must have the following “targets”:
+The Makefile must have the following "targets":
 
 - all, which depends on ratdemo target and otherwise does nothing
 - ratdemo, which links main.o and rational.o, creating the binary ratdemo
@@ -63,13 +63,13 @@ g++ -o ratdemo main.o rational.o
 
 Name your solution `longest-collatz-sequence.cpp`
 
-I wrote two programs. One is broken. They are intended to solve the “Longest Collatz Sequence” problem, described at [Project Euler, Problem 14](https://projecteuler.net/problem=14). Read and understand the problem. One of my programs works correctly, and gives the answer. The other does not. I compiled the working program without debug symbols, and I am not giving you the code. So, you won’t be able to see how it works. The second, broken program was compiled with debug symbols, so you can inspect it and fix it.
+I wrote two programs. One is broken. They are intended to solve the "Longest Collatz Sequence" problem, described at [Project Euler, Problem 14](https://projecteuler.net/problem=14). Read and understand the problem. One of my programs works correctly, and gives the answer. The other does not. I compiled the working program without debug symbols, and I am not giving you the code. So, you won’t be able to see how it works. The second, broken program was compiled with debug symbols, so you can inspect it and fix it.
 
 Your task is to fix the broken code, and give me the fixed source code (via BitBucket, as usual). Of course, fix the code I wrote; don’t give me completely new code. The point of this assignment is to learn how to use GDB for debugging.
 
 ### Requirements
 
-Copy the contents of the folder (on Londo) `/home/jeckroth/csci221-public/homework-2/collatz`.
+Copy the contents of the folder (on Londo) `/home/jeckroth/csci221/homework/HW02/collatz`.
 
 Try running `longest-collatz-sequence`. You should get the correct answer (check that it is correct on the Project Euler website). Try running the second program `longest-collatz-sequence-broken`. Something is wrong. You need to produce bug-free source code.
 

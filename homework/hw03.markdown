@@ -9,7 +9,7 @@ categories: [assignments]
 
 Name your code file `memmanage.cpp`. Include a `Makefile` that builds `memmanage` by running `make`, and has a `make clean` target that removes the binary `memmanage`.
 
-Name your BitBucket repository exactly `csci221-hw03`. Test with the script `/usr/local/csci221sp2016/csci221-hw03-grader.pl [bitbucketusername]`
+Name your BitBucket repository exactly `csci221-HW03`. Test with the script `/home/jeckroth/csci221/homework/HW03/grader.pl [bitbucketusername]`
 
 ## Task
 
@@ -91,3 +91,9 @@ for (c = 0; c < (n - 1); c++)
 ```
 
 Note, the bubble sort code has 5 variables (array, n, c, d, swap) and array syntax ([brackets]). You are allowed 1 variable in your entire program and no array syntax.
+
+## Related stickers
+
+- Most Elegant Bubblesort Award
+- Most Preprocessor Macros Award
+

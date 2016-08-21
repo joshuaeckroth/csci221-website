@@ -30,3 +30,9 @@ Because each person may create his/her own unique game, there is no test script.
 - Create a simple conversation engine so you can talk to monsters
 - Create a lock/key system so some rooms/containers are locked until a player finds a particular item
 
+## Related stickers
+
+- Most Fun Text Adventure Award
+- Most Elaborate Text Adventure Award
+- Most Descriptive Text Adventure Award
+
