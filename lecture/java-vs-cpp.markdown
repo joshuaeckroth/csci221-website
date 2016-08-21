@@ -14,8 +14,6 @@ with Java.
 Also consider:
 
 - [A summary of differences](http://en.wikipedia.org/wiki/Comparison_of_Java_and_C%2B%2B)
-  and
-  [another summary](http://stackoverflow.com/questions/9192309/the-main-difference-between-java-c)
 - [A history of C++](http://www.cplusplus.com/info/history/) as well
   as a
   [historical essay by C++'s author](http://www.stroustrup.com/hopl2.pdf)
@@ -155,6 +153,10 @@ String msg = "Test...";
 <td>
 Create a string:
 <pre class="simple">
+#include &lt;string&gt;
+using namespace std;
+
+//...
 string msg = "Test...";
 </pre>
 </td>
@@ -377,9 +379,11 @@ String line = sc.nextLine();
 <td>
 Read from the keyboard:
 <pre class="simple">
-// this needs: #include &lt;iostream&gt;
-// use of strings needs: #include &lt;string&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
 
+// ...
 int i;
 cin >> i;
 float x;
@@ -413,9 +417,11 @@ System.out.format("H in hex = %X%n", h);
 <td>
 Print to the console:
 <pre class="simple">
-// this needs: #include &lt;iostream&gt;
-// and: #include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
 
+// ...
 cout << "Hello, world!" << endl;
 int x = 5;
 cout << "X = " << x << endl;
@@ -456,9 +462,11 @@ out.close();
 <td>
 Write to a file:
 <pre class="simple">
-// this needs: #include &lt;iostream&gt;
-// and: #include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
 
+// ...
 ofstream out;
 out.open("foo.txt");
 out << "Hello, world!" << endl;
@@ -519,8 +527,10 @@ Math.pow(5, 3);
 </td>
 <td>
 <pre class="simple">
-// these need: #include &lt;cmath&gt;
+#include &lt;cmath&gt;
+using namespace std;
 
+// ...
 abs(-15);
 ceil(2.35);
 floor(2.35);

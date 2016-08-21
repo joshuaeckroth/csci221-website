@@ -84,20 +84,18 @@ Execute these commands (use your own name and email!):
 
 ## Basic workflow
 
-You'll want to do something like this for
-[homework 0](/homework/homework-0.html). Comments are shown after the
-`#` on each line. These commands should work on Linux/Mac OS
-X/Windows, assuming you have installed Git.
+Comments are shown after the `#` on each line. These commands should work on
+Linux/Mac OS X/Windows, assuming you have installed Git.
 
-    mkdir homework0                       # create a new directory
-    cd homework0                          # go into that directory
+    mkdir HW01                            # create a new directory
+    cd HW01                               # go into that directory
     git init                              # create a new empty git repository
 
-    (...create BitBucket repository, send an "invitation" to me...)
+    (...create BitBucket repository, and add me as a reader...)
 
     # next, register the BitBucket repository;
     # of course, CHANGE THIS EXAMPLE to your repository location!
-    git remote add origin git@bitbucket.org:joshuaeckroth/csci221-demo.git
+    git remote add origin git@bitbucket.org:joshuaeckroth/csci221-HW01.git
 
     (...write some code...)
 
@@ -107,9 +105,7 @@ X/Windows, assuming you have installed Git.
     (...write some code...)
 
     git commit -a -m "My second commit!"  # record all changed files in the second commit
-    git tag "v1.0"                        # save a label (tag) on the last commit
     git push --all                        # upload all commits to BitBucket
-    git push --tags                       # upload tags to BitBucket
 
 ## Branches
 

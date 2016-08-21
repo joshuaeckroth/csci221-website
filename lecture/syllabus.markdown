@@ -25,14 +25,13 @@ There is no textbook for this class.
 
 ## Grading
 
-- Attendance on work days (usually Fridays): 5%
+- Attendance on work days (Fridays, plus all class days Nov 7 - Dec 14): 5%
 - Homeworks (7 of them): 30%
-- Group project: 10%
 - Proficiency exam 1: 2.5%
 - Proficiency exam 2: 2.5%
-- Test 1: 15%
-- Test 2: 15%
-- Test 3 (Final exam): 20%
+- Test 1: 20%
+- Test 2: 20%
+- Group project: 20%
 
 Late work is penalized 20% for each day that it is late. Submissions
 more than 3 days late receive no credit. Tests cannot be made up
@@ -44,6 +43,10 @@ Homework will be submitted via Bitbucket. Create an account on Bitbucket and, fo
 
 See the individual assignments for the grading rubric. Homeworks are always out of 5 points.
 
+### Proficiency exams
+
+You are required to learn a wide variety of techniques for Linux, git, vim, emacs, etc. I will not lecture about these techniques. See the [list of techniques](/guide/proficiency-exams.html). You cannot use notes while being examined.
+
 ### Attendance
 
 The grading rubric for attendance is as follows, out of 3 points:
@@ -52,6 +55,20 @@ The grading rubric for attendance is as follows, out of 3 points:
 - attended at least 50% of work days: 2 pts
 - attended at least 25% of work days: 1 pt
 - attended fewer than 25% of work days: 0 pts
+
+### Group project
+
+In the last five weeks of the course, every student will be working on a group project. Groups will have 3-6 people, mostly grouped by interests and technology stack (e.g., Windows vs. Linux).
+
+Grades for the group project will be determined primarily on whether or not your group meets its deliverables. 20% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
+
+The group project grading rubric is as follows, out of 10 points:
+
+- +2 pts: meets deliverable 1
+- +2 pts: meets deliverable 2
+- +2 pts: meets deliverable 3
+- +2 pts: meets deliverable 4
+- remaining 2 pts: average of your group member's individual private ratings of your performance
 
 ## Calendar
 
@@ -62,18 +79,19 @@ The grading rubric for attendance is as follows, out of 3 points:
 
 ### Test dates
 
+Both tests are take-home.
+
 - Test 1: Fri Sep 30
 - Test 2: Fri Oct 28
-- Test 3 (Final exam): Wed Dec 14, 9-11a
 
 ### Group project deliverables
 
-- Deliverable 1: Mon Nov 7
-- Deliverable 2: Mon Nov 14
-- Deliverable 3: Mon Nov 21
-- Deliverable 4: Mon Nov 28
-- Deliverable 5: Mon Dec 5
-- Presentations: Wed Dec 7, Fri Dec 9
+Requirements for the group projects will depend on the projects in question. All projects will have four deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
+
+- Deliverable 1: Mon Nov 14
+- Deliverable 2: Mon Nov 28
+- Deliverable 3: Mon Dec 5
+- Deliverable 4: Mon Dec 14
 
 ### Topics
 
@@ -89,10 +107,10 @@ The grading rubric for attendance is as follows, out of 3 points:
 - Week 10: Qt library; proficiency exams
 - Week 11: Plan group projects
 - Week 12: Group project deliverable (presentation)
-- Week 13: Group project deliverable (presentation)
+- Week 13: Work day (only one day of class due to holiday)
 - Week 14: Group project deliverable (presentation); proficiency exams
 - Week 15: Group project deliverable (presentation)
-- Week 16: Final exam
+- Week 16: Group project deliverable (presentation)
 
 ## Honor code
 
