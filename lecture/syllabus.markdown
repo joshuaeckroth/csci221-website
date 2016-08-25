@@ -45,7 +45,12 @@ See the individual assignments for the grading rubric. Homeworks are always out 
 
 ### Proficiency exams
 
-You are required to learn a wide variety of techniques for Linux, git, vim, emacs, etc. I will not lecture about these techniques. See the [list of techniques](/guide/proficiency-exams.html). You cannot use notes while being examined.
+You are required to learn a wide variety of techniques for Linux, git, vim, emacs, etc. I will not lecture about these techniques. See the [list of techniques](/guide/proficiency-exams.html). You cannot use notes while being examined. The grading rubric is as follows, out of 3 points:
+
+- answer at least 75% of the questions: 3 pts
+- answer at least 50% of the questions: 2 pts
+- ansewr at least 25% of the questions: 1 pt
+- answer fewer than 25% of the questions: 0 pts
 
 ### Attendance
 
@@ -111,6 +116,18 @@ Requirements for the group projects will depend on the projects in question. All
 - Week 14: Group project deliverable (presentation); proficiency exams
 - Week 15: Group project deliverable (presentation)
 - Week 16: Group project deliverable (presentation)
+
+Homework due dates:
+
+<ul>
+{% for p in site.pages sort_by:title order:ascending %}
+{% if p.categories contains 'assignments' %}
+<li>
+<a href="{{ p.url }}">{{ p.title }}</a>, due {{ p.due }}
+</li>
+{% endif %}
+{% endfor %}
+</ul>
 
 ## Honor code
 
