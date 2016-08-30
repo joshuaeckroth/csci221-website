@@ -601,6 +601,7 @@ class MyClass {
 
 MyClass::MyClass(int x) {
   this->x = x;
+  y = 35.25;
 }
 
 float MyClass::getY() {
