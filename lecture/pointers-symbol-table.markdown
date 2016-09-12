@@ -11,6 +11,8 @@ have found that it is better to experience pointers sooner rather than
 later, because while the concept is simple and understandable early
 on, their use can become quite complex.
 
+## Symbol tables
+
 Imagine we have the following (simplistic) program:
 
 {% highlight cpp %}
@@ -44,8 +46,6 @@ times (obviously).
 
 How does the computer keep track of this information? It uses a symbol
 table.
-
-## Symbol tables
 
 For purposes of this class, a symbol table has a row for each
 variable, and several columns describing the variable. Here is an
