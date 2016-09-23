@@ -25,15 +25,12 @@ I wrote a parser that builds a binary tree representing a mathematical expressio
 
 You need to write all the functions that have "TODO" markers in `mathtree.cpp`. These functions are:
 
-- `void delete_tree(struct Tree *root)` -- should delete the entire tree, so that Valgrind reports no memory leaks.
-- `struct Tree *Tree::clone()` -- should make a complete copy of the tree (known as `this` since this is a class/struct method), and return it; should not delete anything.
 - `struct Tree *Tree::simplify_rec()` -- performs simplification (see rules below); this function will be called repeatedly until the input tree (known as `this`) and simplified version (what's returned from this function) are equivalent, meaning the tree cannot be simplified further; thus, this function should probably just do one simplification at a time.
 - `struct Tree *Tree::derive()` -- find the derivative of the mathematical expression represented in the tree; see the rules below.
-- `void Tree::print_inorder()` -- print the tree (known as `this`) in normal mathematical notation; see examples below.
 
 ## Hint
 
-Use `clone()` in other parts of your code to ensure you **never** restructure a tree by just modifying its pointers. Always use a clone, and (possibly) delete the original. The functions `derive()` and `simplify()` and `simplify_rec()` **must always return an entirely new tree** and share no nodes with any other trees. If you do not heed this advice, good luck to you in your future endeavors!
+Use `clone()` in other parts of your code to ensure you **never** restructure a tree by just modifying its pointers. Always use a clone, and (possibly) delete the original. The functions `derive()` and `simplify_rec()` **must always return an entirely new tree** and share no nodes with any other trees. If you do not heed this advice, good luck to you in your future endeavors!
 
 ## About the tree structure
 
