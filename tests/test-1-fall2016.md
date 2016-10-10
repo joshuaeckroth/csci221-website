@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Test 1 for Fall 2016
-due: "Fri Oct 7, 11:59pm"
+due: "Sun Oct 16, 11:59pm"
 categories: [tests]
 ---
 
