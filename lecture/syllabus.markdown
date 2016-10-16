@@ -26,7 +26,7 @@ There is no textbook for this class.
 ## Grading
 
 - Attendance on work days (Fridays, plus all class days Nov 7 - Dec 14): 5%
-- Homeworks (7 of them): 30%
+- Homeworks (6 of them): 30%
 - Proficiency exam 1: 2.5%
 - Proficiency exam 2: 2.5%
 - Test 1: 20%
@@ -84,10 +84,10 @@ The group project grading rubric is as follows, out of 10 points:
 
 ### Test dates
 
-Both tests are take-home.
+Both tests are take-home. Tests will be made available at these dates, and will be due typically 2-3 days later:
 
 - Test 1: Wed Oct 5
-- Test 2: Fri Oct 28
+- Test 2: Fri Nov 4
 
 ### Group project deliverables
 
