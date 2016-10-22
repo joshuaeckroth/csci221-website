@@ -87,7 +87,7 @@ The group project grading rubric is as follows, out of 10 points:
 Both tests are take-home. Tests will be made available at these dates, and will be due typically 2-3 days later:
 
 - Test 1: Wed Oct 5
-- Test 2: Fri Nov 4
+- Test 2: Wed Dec 7
 
 ### Group project deliverables
 
