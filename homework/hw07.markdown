@@ -14,64 +14,19 @@ Name your BitBucket repository `csci221-HW07`.
 ## Requirements
 
 - Read all MP3 files (extension `.mp3`) in the current directory and all
-subdirectories (recursively), and add them to a linked list.
-
-- Grab the linked list code from `/home/jeckroth/csci221/homework/HW07`.
-
+  subdirectories (recursively), and add them to an STL list (`#include <list>`) or vector (`#include <vector>`).
 - When reading an MP3 file, read its filename, title, artist, year, and genre. See the ID3v1 tag specification below). Convert genre id's to strings using the `genres.h` file in `genres.h`. Include `string genres[148];` in the top of your `main.cpp` file, and execute `intialize_genres()` as the first thing in your `main()` function. For any other code (besides `main.cpp`) that requires accessing this global `genres` array, put `extern string genres[148]` at the top of that file. Look up the genre in the array only in cases where the id is `>= 0` and `< 148`. Other genre ids are considered to be in the "Unknown" genre.
-
-- Each MP3 file should be an instance of an MP3 class. Create this class. It should have fields for the different attributes of an MP3 (from the ID3v1 tag), plus its file path.
-
-- The linked list, containing all MP3 instances, should be managed by   an
-instance of a Database class. The Database class should also provide a
-handful of search functions: `search_title`, `search_artist`,
-`search_album`, and `search_year`. Finally, include a `show_all` function in the Database class that simply prints info about every MP3 file.
-
-- Provide an interactive search mechanism, which asks whether to  search
-on title or artist or year, and then asks for the search value. The
-response should be a list of all MP3 files that match the search
-criteria. For title and artist, check for partial string matches   (use
-the `find` string function). For year, check for exact matches. Include some kind of `list` command that shows all the MP3 files. The
-Database class should do the search and print the results, but the
-`main` function should handle the user interaction.
-
-## Makefile
-
-For your pleasure, I've included a successful `Makefile` below.
-
-<pre>
-CXX = g++
-CXXFLAGS = -Wall -ansi -pedantic -ggdb3 -lboost_filesystem
-
-all: main
-
-main: main.o mp3.o database.o linkedlist.o node.o
-    $(CXX) $(CXXFLAGS) -o main main.o mp3.o database.o linkedlist.o node.o
-
-main.o: main.cpp database.h genres.h
-    $(CXX) $(CXXFLAGS) -c main.cpp
-
-database.o: database.cpp database.h mp3.h linkedlist.h
-    $(CXX) $(CXXFLAGS) -c database.cpp
-
-mp3.o: mp3.cpp mp3.h genres.h
-    $(CXX) $(CXXFLAGS) -c mp3.cpp
-
-linkedlist.o: linkedlist.cpp linkedlist.h node.h
-    $(CXX) $(CXXFLAGS) -c linkedlist.cpp
-
-node.o: node.cpp node.h
-    $(CXX) $(CXXFLAGS) -c node.cpp
-
-.PHONY: clean
-clean:
-    rm -rf *.o main
-</pre>
+- Each MP3 file should be an instance of an `MP3` class. Create this class. It should have fields for the different attributes of an MP3 (from the ID3v1 tag), plus its file path.
+- The list, containing all MP3 instances, should be managed by a single instance of a `Database` class. The Database class should also provide a handful of search functions: `search_title`, `search_artist`,
+  `search_album`, and `search_year`. Finally, include a `show_all` function in the Database class that simply prints info about every MP3 file.
+- Provide an interactive search mechanism, which asks whether to  search on title or artist or year, and then asks for the search value. The response should be a list of all MP3 files that match the search
+  criteria. For title and artist, check for partial string matches (use the `find` string function). For year, check for exact matches. Include some kind of `list` command that shows all the MP3 files. The
+  Database class should do the search and print the results, but the `main` function should handle the user interaction.
+- Create a Makefile.
 
 ## ID3v1 tag specification
 
-Look at last 128 bytes of the file. It should start with "TAG" (3
-bytes). Then:
+Look at last 128 bytes of the file. It should start with "TAG" (3 bytes). Then:
 
 - Song Title: 30 characters
 - Artist: 30 characters
@@ -123,38 +78,38 @@ Nine Inch Nails - The Four of us are Dying (The Slip, 2008) [] Unknown
 Nine Inch Nails - Lights in the Sky (The Slip, 2008) [] Unknown
 Nine Inch Nails - Head Down (The Slip, 2008) [] Unknown
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbB - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaA (cccccccccccccccccccccccccccccC, 2003) [dddddddddddddddddddddddddddD] Blues
- -  (, ) [] Blues
-Artist - Title (Album, 2003) [Comment] Hip-Hop
- -  (, 2003) [] Blues
- -  (,    3) [] Blues
- -  (, 2003) [] Blues
- - Disco (, 2003) [] Disco
- - Funk (, 2003) [] Funk
- - Country (, 2003) [] Country
- - Blues (, 2003) [] Blues
- - Dance (, 2003) [] Dance
- - Classic Rock (, 2003) [] Classic Rock
- - Grunge (, 2003) [] Grunge
-Artist - Title (Album, 2003) [Comment] Hip-Hop
- -  (, 112) [] Blues
- -  (, 0000) [] Blues
- -  (, 2003) [] Blues
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbB - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaA (cccccccccccccccccccccccccccccC, 2003) [dddddddddddddddddddddddddddddD] Blues
- -  (, 9999) [] Blues
-12345 - 12345 (12345, 2003) [12345] Blues
-12345 - 12345 (12345, 2003) [12345] Blues
-Monk Turner - Halloween Night (Calendar, 2008) [] Unknown
-Monk Turner - Valentines Directions for the (Calendar, 2008) [] Unknown
-Monk Turner - June (I Hate This Month) (Calendar, 2008) [] Unknown
-Monk Turner - Labor Day Sale (Calendar, 2008) [] Unknown
-Monk Turner - Agustus (Calendar, 2008) [] Unknown
-Monk Turner - January 1st (Calendar, 2008) [] Unknown
-Monk Turner - Merry May (Calendar, 2008) [] Unknown
-Monk Turner - December Song (Calendar, 2008) [] Unknown
-Monk Turner - Turkey Time (Calendar, 2008) [] Unknown
-Monk Turner - March in March (Calendar, 2008) [] Unknown
-Monk Turner - April Girl (Calendar, 2008) [] Unknown
-Monk Turner - Hot July (Calendar, 2008) [] Unknown
+-  (, ) [] Blues
+    Artist - Title (Album, 2003) [Comment] Hip-Hop
+-  (, 2003) [] Blues
+-  (,    3) [] Blues
+-  (, 2003) [] Blues
+-  Disco (, 2003) [] Disco
+-  Funk (, 2003) [] Funk
+-  Country (, 2003) [] Country
+-  Blues (, 2003) [] Blues
+-  Dance (, 2003) [] Dance
+-  Classic Rock (, 2003) [] Classic Rock
+-  Grunge (, 2003) [] Grunge
+    Artist - Title (Album, 2003) [Comment] Hip-Hop
+-  (, 112) [] Blues
+-  (, 0000) [] Blues
+-  (, 2003) [] Blues
+    bbbbbbbbbbbbbbbbbbbbbbbbbbbbbB - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaA (cccccccccccccccccccccccccccccC, 2003) [dddddddddddddddddddddddddddddD] Blues
+-  (, 9999) [] Blues
+    12345 - 12345 (12345, 2003) [12345] Blues
+    12345 - 12345 (12345, 2003) [12345] Blues
+    Monk Turner - Halloween Night (Calendar, 2008) [] Unknown
+    Monk Turner - Valentines Directions for the (Calendar, 2008) [] Unknown
+    Monk Turner - June (I Hate This Month) (Calendar, 2008) [] Unknown
+    Monk Turner - Labor Day Sale (Calendar, 2008) [] Unknown
+    Monk Turner - Agustus (Calendar, 2008) [] Unknown
+    Monk Turner - January 1st (Calendar, 2008) [] Unknown
+    Monk Turner - Merry May (Calendar, 2008) [] Unknown
+    Monk Turner - December Song (Calendar, 2008) [] Unknown
+    Monk Turner - Turkey Time (Calendar, 2008) [] Unknown
+    Monk Turner - March in March (Calendar, 2008) [] Unknown
+    Monk Turner - April Girl (Calendar, 2008) [] Unknown
+    Monk Turner - Hot July (Calendar, 2008) [] Unknown
 
 
 Type 'list' or enter a query: [artist/title/album/year] [query]

@@ -21,7 +21,6 @@ Because each person may create his/her own unique game, there is no test script.
 - Keep track of the player's inventory (items the player has picked up) and support a command "inventory" which shows this inventory
 - Create another class representing non-player characters (e.g., monsters) that move around the rooms autonomously
 - Somehow list the monsters that are in the same room as the player (perhaps the player has to type a command to see this list)
-- Use classes properly and document your classes (I suggest using Doxygen); you don't need comments for every method but I do want to see some kind of file or web pages that document the class relationships (e.g., UML)
 
 ## Optional ideas
 
