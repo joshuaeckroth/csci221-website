@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW07: MP3 browser"
-due: "Oct 31, 11:59pm"
+due: "Nov 2, 11:59pm"
 categories: [assignments]
 ---
 
