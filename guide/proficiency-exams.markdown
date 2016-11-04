@@ -59,7 +59,7 @@ All tasks must be completed with a single command line.
 - create a session, detach from it, log out, log back in, reattach session
 - list all active sessions
 - create multiple windows in session, switch among them
-- split a window, switch among the windows
+- split a window into panes (both panes visible on screen), switch among the panes
 
 ## Git
 

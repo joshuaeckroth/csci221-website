@@ -23,7 +23,7 @@ You might expect to create an ellipse class that has a major and minor
 axis, and a circle class that inherits from it:
 
 ![Circle-Ellipse diagram](/images/circle-ellipse-1.png "Circle-Ellipse diagram")
- 
+
 However, in such a class model, the Circle class inherits all the
 properties and functions of the Ellipse class. This allows a user of
 the Circle class to change the minor or major axis, and make these
@@ -39,7 +39,7 @@ A different approach could be to make Circle and Ellipse completely
 separate:
 
 ![Circle-Ellipse diagram](/images/circle-ellipse-2.png "Circle-Ellipse diagram")
- 
+
 But that seems like a significant failure of OO to model the real
 world.
 
@@ -47,7 +47,7 @@ For yet another alternative, the `set_major_axis` and `set_minor_axis`
 functions can be virtual (not pure virtual):
 
 ![Circle-Ellipse diagram](/images/circle-ellipse-3.png "Circle-Ellipse diagram")
- 
+
 The Circle class can re-implement these functions so that any call to
 `set_major_axis` also sets the minor axis (to the same value), and
 vice versa. The drawback of this approach is that the names
@@ -57,8 +57,7 @@ and how they work in the Circle class is somewhat counter-intuitive
 
 The C++ FAQ has a good response to this problem, full of details and
 examples, and the following interesting quote (which begins the answer
-to
-[question 21.8](http://www.parashift.com/c++-faq-lite/proper-inheritance.html#faq-21.8)):
+to [question 21.8](http://www.graphics.cornell.edu/~martin/docs/c++-faq/proper-inheritance.html#[21.8])):
 
 > *Question:* But I have a Ph.D. in Mathematics, and I'm sure a Circle
 > is a kind of an Ellipse! Does this mean Marshall Cline is stupid? Or
