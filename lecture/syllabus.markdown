@@ -49,7 +49,7 @@ You are required to learn a wide variety of techniques for Linux, git, vim, emac
 
 - answer at least 75% of the questions: 3 pts
 - answer at least 50% of the questions: 2 pts
-- ansewr at least 25% of the questions: 1 pt
+- answer at least 25% of the questions: 1 pt
 - answer fewer than 25% of the questions: 0 pts
 
 ### Attendance
