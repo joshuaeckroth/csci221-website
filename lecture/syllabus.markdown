@@ -96,7 +96,7 @@ Requirements for the group projects will depend on the projects in question. All
 - Deliverable 1: Mon Nov 14
 - Deliverable 2: Mon Nov 28
 - Deliverable 3: Mon Dec 5
-- Deliverable 4: Mon Dec 14
+- Deliverable 4: Wed Dec 14
 
 ### Topics
 
