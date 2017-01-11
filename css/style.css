@@ -27,11 +27,11 @@ h2, h3, h4, h5, h6 {
 
 #index h2 {
     margin-top: 0;
+    font-size: 28px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #212121;
-    font-family: "Suez One", serif;
+    font-weight: bold;
 }
 
 strong {
@@ -58,7 +58,7 @@ ul.posts {
 a, a:visited, a:active, a:hover {
     text-decoration: none;
     font-weight: bold;
-    color: #6186F1;
+    color: #26596A;
 }
 
 table#index {
@@ -83,22 +83,19 @@ td#metabox a,
 td#metabox a:visited,
 td#metabox a:active,
 td#metabox a:hover {
-    color: #111;
 }
 
 td#metabox {
-    background: #6186F1;
-    color: #fff;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 td#metabox div.classname {
-    font-size: 32px;
+    font-size: 60px;
     font-weight: bold;
 }
 
 td#metabox div.semester {
-    font-size: 22px;
+    font-size: 26px;
     margin-top: 20px;
 }
 
@@ -108,7 +105,7 @@ td#metabox div.email {
 
 td#metabox div.officehours {
     margin: 20px 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .right {
@@ -176,7 +173,7 @@ div.metatop span.homelink {
 table {
     margin: 0 auto;
     border-collapse: separate;
-    border: 1px solid #6186F1;
+    border: 1px solid #26596A;
     border-spacing: 0 5px;
 }
 
@@ -186,7 +183,7 @@ td {
 }
 
 thead tr th {
-    border-bottom: 1px solid #6186F1;
+    border-bottom: 1px solid #26596A;
 }
 
 thead th {
@@ -199,7 +196,7 @@ table#toc {
 }
 
 pre {
-    border-left: 4px solid #6186F1;
+    border-left: 4px solid #297C46;
     padding-left: 15px;
     margin: 2em 0;
 }
@@ -210,7 +207,7 @@ pre, code, tt {
 }
 
 code {
-    border: 1px dotted #6186F1;
+    border: 1px dotted #297C46;
     padding: 2px;
 }
 
@@ -220,7 +217,7 @@ pre code {
 }
 
 blockquote {
-    border-left: 4px solid #6186F1;
+    border-left: 4px solid #297C46;
     padding-left: 15px;
     margin: 2em 0;
     padding-left: 30px;
