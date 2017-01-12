@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW06: Text adventure"
-due: "Oct 26, 11:59pm"
+due: "Fri Mar 24, 11:59pm"
 categories: [assignments]
 ---
 
@@ -28,10 +28,4 @@ Because each person may create his/her own unique game, there is no test script.
 - Create containers, e.g. bags, chests, etc., which can contain items, and possibly also contain monsters and/or players
 - Create a simple conversation engine so you can talk to monsters
 - Create a lock/key system so some rooms/containers are locked until a player finds a particular item
-
-## Related stickers
-
-- Most Fun Text Adventure Award
-- Most Elaborate Text Adventure Award
-- Most Descriptive Text Adventure Award
 

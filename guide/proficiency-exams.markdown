@@ -2,7 +2,6 @@
 title: Proficiency exams
 layout: default
 categories: [studyguides]
-date: Wed Nov 2 / Wed Nov 30
 ---
 
 # Proficiency exams
@@ -11,6 +10,8 @@ Exams will take place twice in the semester. You can choose which of
 the major topics that make up your individual examination on each exam
 day. Due to time, you will be asked to perform a random subset of
 actions. You cannot use notes while being examined.
+
+Exam dates: Fri Feb 24, Fri Mar 31
 
 ## Linux
 

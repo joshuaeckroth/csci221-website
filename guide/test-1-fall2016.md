@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Test 1 for Fall 2016
-due: "Sun Oct 16, 11:59pm"
-categories: [tests]
+title: Test 1 from Fall 2016
+categories: [studyguides]
 ---
 
-# Test 1 for Fall 2016
+# Test 1 from Fall 2016
 
 **Note, you may only refer to this site during the test. Do not look at other notes or code or Google, etc.** Total points is 30, each question is 10 points.
 

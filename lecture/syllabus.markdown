@@ -5,9 +5,9 @@ layout: default
 
 # Syllabus
 
-CSCI 221 - 01, Fall 2016 --- Software Development I
+CSCI 221 - 01, Spring 2017 --- Software Development I
 
-MWF 11-11:50a Eliz Hall 205; pre-reqs: CSCI 142
+MWF 1:30-2:20p Eliz Hall 205; pre-reqs: CSCI 142
 
 This course introduces the C++ language and contemporary software development methodologies. By the end of the course, you should feel comfortable developing modern software in C++ and using various common C++ libraries, as well as working in teams in an "agile" development style.
 
@@ -17,15 +17,15 @@ This course introduces the C++ language and contemporary software development me
 
 - Eliz Hall 214, 386-740-2519
 
-- Office hours: Mon/Wed 12-2:30
+- Office hours: Mon 2:30-4; Wed 12-1, 2:30-4
 
-## Text book
+## Textbook
 
 There is no textbook for this class.
 
 ## Grading
 
-- Attendance on work days (Fridays, plus all class days Nov 7 - Dec 14): 5%
+- Attendance on work days (Fridays, plus all class days Apr 3 - May 5): 5%
 - Homeworks (6 of them): 30%
 - Proficiency exam 1: 2.5%
 - Proficiency exam 2: 2.5%
@@ -63,7 +63,7 @@ The grading rubric for attendance is as follows, out of 3 points:
 
 ### Group project
 
-In the last five weeks of the course, every student will be working on a group project. Groups will have 3-6 people, mostly grouped by interests and technology stack (e.g., Windows vs. Linux).
+In the last five weeks of the course, every student will be working on a single group project. I will define the project requirements and assign each student to a subgroup with a specific set of tasks. We will collaborate as a class to decide the deliverables after I have explained the project goals.
 
 Grades for the group project will be determined primarily on whether or not your group meets its deliverables. 20% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
 
@@ -79,41 +79,42 @@ The group project grading rubric is as follows, out of 10 points:
 
 ### Proficiency exam dates
 
-- Proficiency exam 1: Wed Nov 2
-- Proficiency exam 2: Wed Nov 30
+- Proficiency exam 1: Fri Feb 24
+- Proficiency exam 2: Fri Mar 31
 
 ### Test dates
 
 Both tests are take-home. Tests will be made available at these dates, and will be due typically 2-3 days later:
 
-- Test 1: Wed Oct 5
-- Test 2: Wed Dec 7
+- Test 1: available Mon Mar 13, due Fri Mar 17 11:59pm
+- Test 2: available Mon Apr 3, due Fri Apr 7 11:59pm
 
 ### Group project deliverables
 
 Requirements for the group projects will depend on the projects in question. All projects will have four deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
-- Deliverable 1: Mon Nov 14
-- Deliverable 2: Mon Nov 28
-- Deliverable 3: Mon Dec 5
-- Deliverable 4: Wed Dec 14
+- Deliverable 1: Mon Apr 10
+- Deliverable 2: Mon Apr 17
+- Deliverable 3: Mon Apr 24
+- Deliverable 4: Mon May 1
+- Deliverable 5: Fri May 5
 
 ### Topics
 
 - Week 1: Basics of C++
 - Week 2: Makefiles
 - Week 3: Pointers, memory management
-- Week 4: Structs, classes, linked lists, trees
-- Week 5: Test 1 (take-home); arrays
-- Week 6: Polymorphism, inheritance, destructors
-- Week 7: Templates, Standard Template Library
-- Week 8: UML, code documentation, SQLite library
-- Week 9: Test 2 (take-home)
-- Week 10: Qt library; proficiency exams
-- Week 11: Plan group projects
-- Week 12: Group project deliverable (presentation)
-- Week 13: Work day (only one day of class due to holiday)
-- Week 14: Group project deliverable (presentation); proficiency exams
+- Week 4: Pointers, memory management, references
+- Week 5: Structs, classes, operator overloading
+- Week 6: Linked lists
+- Week 7: Trees
+- Week 8: no class (break)
+- Week 9: Polymorphism, inheritance, destructors
+- Week 10: Templates, Standard Template Library
+- Week 11: Qt library
+- Week 12: Group project start
+- Week 13: Group project deliverable (presentation)
+- Week 14: Group project deliverable (presentation)
 - Week 15: Group project deliverable (presentation)
 - Week 16: Group project deliverable (presentation)
 

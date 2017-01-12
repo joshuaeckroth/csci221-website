@@ -1,11 +1,10 @@
 ---
-title: Test 2 for Fall 2016
+title: Test 2 from Fall 2016
 layout: default
-due: "Tue Dec 13, 11:59pm"
-categories: [tests]
+categories: [studyguides]
 ---
 
-# Test 2 for Fall 2016
+# Test 2 from Fall 2016
 
 **Note, you may only refer to this site during the test. Do not look at other notes or code or Google, etc. Do not work together. This is not a group test.**
 

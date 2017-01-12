@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW03: Single-variable Bubblesort"
-due: "Sep 21, 11:59pm"
+due: "Fri Feb 17, 11:59pm"
 categories: [assignments]
 ---
 
@@ -92,8 +92,4 @@ for (c = 0; c < (n - 1); c++)
 
 Note, the bubble sort code has 5 variables (array, n, c, d, swap) and array syntax ([brackets]). You are allowed 1 variable in your entire program and no array syntax.
 
-## Related stickers
-
-- Most Elegant Bubblesort Award
-- Most Preprocessor Macros Award
 
