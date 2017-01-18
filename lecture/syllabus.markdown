@@ -9,7 +9,7 @@ CSCI 221 - 01, Spring 2017 --- Software Development I
 
 MWF 1:30-2:20p Eliz Hall 205; pre-reqs: CSCI 142
 
-This course introduces the C++ language and contemporary software development methodologies. By the end of the course, you should feel comfortable developing modern software in C++ and using various common C++ libraries, as well as working in teams in an "agile" development style.
+This course introduces the C++ language and contemporary software development methodologies. By the end of the course, you should feel comfortable developing software with C++ inside a Linux environment while working in teams in an "agile" development style.
 
 ## About me
 
@@ -63,9 +63,9 @@ The grading rubric for attendance is as follows, out of 3 points:
 
 ### Group project
 
-In the last five weeks of the course, every student will be working on a single group project. I will define the project requirements and assign each student to a subgroup with a specific set of tasks. We will collaborate as a class to decide the deliverables after I have explained the project goals.
+In the last five weeks of the course, all students will be working on a single group project. I will define the project requirements and assign each student to a subgroup with a specific set of tasks. We will collaborate as a class to decide the deliverables after I have explained the project goals.
 
-Grades for the group project will be determined primarily on whether or not your group meets its deliverables. 20% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
+Grades for the group project will be determined primarily on whether or not the class meets its deliverables. 20% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
 
 The group project grading rubric is as follows, out of 10 points:
 
@@ -84,14 +84,14 @@ The group project grading rubric is as follows, out of 10 points:
 
 ### Test dates
 
-Both tests are take-home. Tests will be made available at these dates, and will be due typically 2-3 days later:
+Both tests are take-home. Tests will be made available at these dates, and will be due a few days later:
 
 - Test 1: available Mon Mar 13, due Fri Mar 17 11:59pm
 - Test 2: available Mon Apr 3, due Fri Apr 7 11:59pm
 
 ### Group project deliverables
 
-Requirements for the group projects will depend on the projects in question. All projects will have four deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
+Requirements for the group project will be established later. The project will have five deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
 - Deliverable 1: Mon Apr 10
 - Deliverable 2: Mon Apr 17
@@ -135,7 +135,7 @@ Homework due dates:
 I am strongly in agreement with the
 [Stetson University Honor Code](http://www.stetson.edu/other/honor-system/). Any
 form of cheating is not acceptable, will not be tolerated, and could
-lead to dismissal from the University.
+lead to dismissal from the University. In this class, cheating is defined as copying code from the internet (except this website), copying code from other students, or working together on assignments or tests. Only in the context of the group project may students work together; even then, code cannot be copied from the internet. Please consult with me if you find a solution to a problem on the internet and wish to make use of it; we can arrange an appropriate solution.
 
 ## Academic success center
 
