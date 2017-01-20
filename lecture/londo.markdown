@@ -10,7 +10,7 @@ You are free to use a server on Stetson campus known as "londo" for writing and 
 You can access londo from anywhere but to do so you must use a tool like Putty or
 SSH. Instructions are shown below for Windows and Mac systems.
 
-For future reference, londo's address is 147.253.255.20
+For future reference, londo's address is `londo.stetson.edu`
 
 ## Console access
 
@@ -24,7 +24,7 @@ Launch Putty:
 
 ![Putty](/images/putty-1.png)
 
-Type in londo's address:
+Type in londo's address (**use `londo.stetson.edu`, not what is shown in the screenshot**):
 
 ![Putty](/images/putty-2.png)
 
@@ -48,9 +48,7 @@ When you are done, just close the Putty window.
 
 ### Mac
 
-Start the Terminal app and run `ssh username@147.253.255.20` where "username" is your username:
-
-![Terminal](/images/ssh-1.png)
+Start the Terminal app and run `ssh username@londo.stetson.edu` where "username" is your username.
 
 The first time you connect, you will be asked if you trust the machine you are connecting to. Type "yes", and then type your password.
 
@@ -89,7 +87,7 @@ Find your local files on the left, and londo files on the right. Drag files back
 Use [Cyberduck](https://cyberduck.io/?l=en) on Mac to transfer files to/from londo. Use this address in the "Quick Connect" box (change the username):
 
 ```
-sftp://jeckroth@147.253.255.20
+sftp://jeckroth@londo.stetson.edu
 ```
 
 ![Cyberduck](/images/cyberduck-1.png)
