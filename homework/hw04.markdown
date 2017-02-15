@@ -7,5 +7,104 @@ categories: [assignments]
 
 # HW04: Rational overload
 
-TBD
+Name your BitBucket repository exactly `csci221-HW04`. Test with the script `/home/jeckroth/csci221/homework/HW04/grader.pl [bitbucketusername]`
+
+Implement various operators for the Rational class from [HW02](/homework/HW02.html). Copy the file `/home/jeckroth/csci221/homework/HW04/main.cpp` and make your `rational.h` and `rational.cpp` work with that main file. The test script will copy the main file again, so you should not modify it. You should produce the output found in `/home/jeckroth/csci221/homework/HW04/expected.txt`.
+
+Also create a `Makefile` just like in HW02. Name the output program `ratdemo` as before.
+
+Here is the `main.cpp` file for reference:
+
+```
+#include <iostream>
+#include "rational.h"
+using namespace std;
+
+/*
+a/b + c/d = (a*d + b*c) / (b*d)
+a/b - c/d = (a*d - b*c) / (b*d)
+(a/b) * (c/d) = (a*c) / (b*d)
+(a/b) / (c/d) = (a*d) / (c*b)
+-(a/b) = (-a/b)
+(a/b) < (c/d) means (a*d) < (c*b)
+(a/b) == (c/d) means (a*d) == (c*b)
+
+and we'll say *(a/b) means inverse: b/a
+e.g., Rational a(5,2); Rational b = *a;
+be sure to keep negative in numerator
+*/
+
+int main()
+{
+    Rational a(5, 2);
+    Rational b(3, 7);
+
+    cout << "Rational a = " << a.getNum() << "/" << a.getDenom() << endl;
+    cout << "Rational b = " << b.getNum() << "/" << b.getDenom() << endl;
+
+    Rational c = a-b;
+    Rational d = a+b;
+    Rational e = -b;
+    Rational f = *e;
+
+    cout << "Rational c = " << c.getNum() << "/" << c.getDenom() << endl;
+    cout << "Rational d = " << d.getNum() << "/" << d.getDenom() << endl;
+    cout << "Rational e = " << e.getNum() << "/" << e.getDenom() << endl;
+    cout << "Rational f = " << f.getNum() << "/" << f.getDenom() << endl;
+
+    cout << "Rational a == a: " << (a == a) << endl;
+    cout << "Rational a == c: " << (a == c) << endl;
+    cout << "Rational a != c: " << (a != c) << endl;
+    cout << "Rational a < b: " << (a < b) << endl;
+    cout << "Rational a > b: " << (a > b) << endl;
+    cout << "Rational a <= b: " << (a <= b) << endl;
+    cout << "Rational a >= b: " << (a >= b) << endl;
+    cout << "Rational a <= a: " << (a <= a) << endl;
+    cout << "Rational a >= a: " << (a >= a) << endl;
+
+    Rational g = f++;
+    Rational h = ++a;
+    Rational i = d--;
+    Rational j = ++e;
+
+    cout << "Rational a = " << a.getNum() << "/" << a.getDenom() << endl;
+    cout << "Rational d = " << d.getNum() << "/" << d.getDenom() << endl;
+    cout << "Rational e = " << e.getNum() << "/" << e.getDenom() << endl;
+    cout << "Rational f = " << f.getNum() << "/" << f.getDenom() << endl;
+    cout << "Rational g = " << g.getNum() << "/" << g.getDenom() << endl;
+    cout << "Rational h = " << h.getNum() << "/" << h.getDenom() << endl;
+    cout << "Rational i = " << i.getNum() << "/" << i.getDenom() << endl;
+    cout << "Rational j = " << j.getNum() << "/" << j.getDenom() << endl;
+
+    return 0;
+}
+```
+
+And expected output:
+
+```
+Rational a = 5/2
+Rational b = 3/7
+Rational c = 29/14
+Rational d = 41/14
+Rational e = -3/7
+Rational f = -7/3
+Rational a == a: 1
+Rational a == c: 0
+Rational a != c: 1
+Rational a < b: 0
+Rational a > b: 1
+Rational a <= b: 0
+Rational a >= b: 0
+Rational a <= a: 1
+Rational a >= a: 1
+Rational a = 7/2
+Rational d = 27/14
+Rational e = 4/7
+Rational f = -4/3
+Rational g = -7/3
+Rational h = 7/2
+Rational i = 41/14
+Rational j = 4/7
+```
 
