@@ -95,7 +95,7 @@ Rational a != c: 1
 Rational a < b: 0
 Rational a > b: 1
 Rational a <= b: 0
-Rational a >= b: 0
+Rational a >= b: 1
 Rational a <= a: 1
 Rational a >= a: 1
 Rational a = 7/2
