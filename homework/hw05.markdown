@@ -7,11 +7,11 @@ categories: [assignments]
 
 # HW05: Mathtree
 
-Copy the code in `/home/jeckroth/csci221/homework/HW04/mathtree` and finish writing the file `mathtree.cpp`. That's it!!1
+Copy the code in `/home/jeckroth/csci221/homework/HW05/mathtree` and finish writing the file `mathtree.cpp`. That's it!!1
 
 ## Grader script
 
-`/home/jeckroth/csci221/homework/HW04/grader.pl`
+`/home/jeckroth/csci221/homework/HW05/grader.pl`
 
 Note, the ASCII trees need not be printed. You can comment out that code in main.cpp (but leave the cout's).
 
