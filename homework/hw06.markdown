@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW06: Text adventure"
-due: "Wed Mar 29, 11:59pm"
+due: "Wed Apr 5, 11:59pm"
 categories: [assignments]
 ---
 
@@ -11,11 +11,18 @@ Create a "text adventure" game, e.g., like [Zork](http://iplayif.com/?story=http
 
 Because each person may create his/her own unique game, there is no test script. Just upload to bitbucket as usual.
 
+## Design
+
+![Game UML](/images/game-uml-spring2017.png)
+
+## Logic
+
+
+
 ## Requirements
 
 - Create at least 10 "rooms" with descriptions and various exits
 - Support at least two players, who switch turns; create only one Player class to represent a single player, and create two objects for two players
-- Use `map` and possibly other templated containers to link rooms through various directions
 - Create a simple parser that interprets text commands like "go north" or "get lamp"
 - Some rooms must have items, which may be picked up by the player
 - Keep track of the player's inventory (items the player has picked up) and support a command "inventory" which shows this inventory
