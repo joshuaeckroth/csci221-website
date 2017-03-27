@@ -1,0 +1,58 @@
+@startuml
+class Thing {
+ -vector shortNames
+ -string longName
+ -string description
+}
+
+LifeForm <|--- Player
+class Player {
+}
+
+LifeForm <|--- Monster
+class Monster {
+ +act()
+}
+
+Thing <|--- Weapon
+class Weapon {
+ -double strength
+}
+
+Thing <|--- LifeForm
+class LifeForm {
+ -int hp
+ -double attackPower
+ -Weapon weapon
+ -Container inv
+ -Container currentContainer
+ +attack(target)
+ +move(direction)
+ +pickup(thingShortDescription)
+ +drop(thingShortDescription)
+}
+
+Thing <|--- Bag
+Container <|--- Bag
+class Bag {
+
+}
+
+class Container {
+ -vector thingsInContainer
+}
+
+Container <|--- Room
+class Room {
+}
+
+class GameMap {
+ -map<string, pair<Room, Room>> exits
+}
+
+class Parser {
+ -vector<Player> players
+ -GameMap gmap
+ +readInput()
+}
+@enduml
