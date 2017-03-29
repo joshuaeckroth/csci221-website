@@ -3,6 +3,7 @@ class Thing {
  -vector shortNames
  -string longName
  -string description
+ -int type
 }
 
 LifeForm <|--- Player
@@ -51,8 +52,8 @@ class GameMap {
 }
 
 class Parser {
- -vector<Player> players
  -GameMap gmap
- +readInput()
+ +readInput(player)
 }
 @enduml
+
