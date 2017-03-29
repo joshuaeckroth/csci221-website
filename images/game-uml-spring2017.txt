@@ -48,7 +48,7 @@ class Room {
 }
 
 class GameMap {
- -map<string, pair<Room, Room>> exits
+ -map<Room*, map<string, Room*>> exits
 }
 
 class Parser {
