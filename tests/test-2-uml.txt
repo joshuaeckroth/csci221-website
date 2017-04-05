@@ -1,0 +1,31 @@
+@startuml
+Database *-- Track
+
+Track : Track(filename, genres[])
+Track : get_filename()
+Track : get_artist()
+Track : get_title()
+Track : get_album()
+Track : get_comment()
+Track : get_genre()
+Track : get_year()
+
+Database : Database(folder)
+Database : vector<Track> get_tracks()
+Database : vector<Track> search_title(query)
+Database : vector<Track> search_artist(query)
+Database : vector<Track> search_album(query)
+Database : vector<Track> search_year(query)
+Database : set get_albums()
+Database : set get_artists()
+Database : set get_genres()
+Database : set get_years()
+Database : map get_artist_counts()
+Database : map get_genre_counts()
+Database : map get_year_counts()
+Database : set_rating(track, rating)
+Database : map get_ratings()
+Database : size_t get_track_id(track)
+Database : Track get_track_by_id(id)
+@enduml
+

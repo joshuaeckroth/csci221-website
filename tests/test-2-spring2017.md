@@ -26,7 +26,7 @@ Notice that track.cpp is missing. This is intentional. Often you will need to wo
 
 Finish the code so that the user can list all unique artists, albums, and years; show some basic statistics; set ratings on individual tracks (1-5 ratings only); and search for tracks. Your updates must match the following UML diagram:
 
-(diagram)
+![Test 2 UML](/tests/test-2-uml.png)
 
 **Avoid all memory leaks.** Check with valgrind.
 
