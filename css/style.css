@@ -1,58 +1,65 @@
-html, * {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    color: #111;
+*, body, blockquote {
     font-size: 18px;
     font-family: "Maven Pro", sans-serif;
-    line-height: 1.5;
-    padding: 20px;
-    background: #fff;
 }
 
-#container-tight {
-    margin: 0 auto;
-    max-width: 850px;
+
+body, blockquote {
+    background: white;
 }
 
-h1 {
-    margin-bottom: 1em;
+header {
+    background: none !important;
 }
 
-h2, h3, h4, h5, h6 {
-    margin: 1em 0 0.5em 0;
+header .logo, header a.button, header a[role="button"] {
+    float: right;
+    background: rgba(220,220,220,0.75);
 }
 
-#index h2 {
-    margin-top: 0;
-    font-size: 28px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-}
-
-strong {
-    font-weight: bold;
+b, strong {
     text-decoration: underline;
 }
 
-p {
-    margin: 0.8em 0;
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+    font-family: "Suez One", serif;
 }
 
-ul, ol {
-    margin-left: 2em;
-}
-
-li {
-    margin: 0.5em 0;
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
 }
 
 ul.posts {
-    margin-left: 0;
+    padding-left: 0;
+}
+
+ul.posts li {
+    display: block;
+    margin: 0.75em 0;
+}
+
+.post-title a {
+    font-size: 125%;
+}
+
+pre, code, tt, code > span {
+    font-family: "Ubunto Mono", monospace;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+blockquote:after {
+    display: none;
+}
+
+code {
+    padding: 0;
 }
 
 a, a:visited, a:active, a:hover {
@@ -60,176 +67,4 @@ a, a:visited, a:active, a:hover {
     font-weight: bold;
     color: #26596A;
 }
-
-table#index {
-    margin: 0;
-    border: none;
-    width: 100%;
-}
-
-table#index td {
-    vertical-align: top;
-}
-
-td#posts {
-    width: 80%;
-}
-
-td#metabox {
-    width: 20%;
-}
-
-td#metabox a,
-td#metabox a:visited,
-td#metabox a:active,
-td#metabox a:hover {
-}
-
-td#metabox {
-    padding: 0 10px;
-}
-
-td#metabox div.classname {
-    font-size: 60px;
-    font-weight: bold;
-}
-
-td#metabox div.semester {
-    font-size: 26px;
-    margin-top: 20px;
-}
-
-td#metabox div.email {
-    margin: 20px 0;
-}
-
-td#metabox div.officehours {
-    margin: 20px 0;
-    font-size: 18px;
-}
-
-.right {
-    float: right;
-    margin-left: 10px;
-}
-
-img {
-    background: white;
-    padding: 5px;
-    -moz-box-shadow: 0px 0px 5px #c7c7c7;
-    -webkit-box-shadow: 0px 0px 5px #c7c7c7;
-    box-shadow: 0px 0px 5px #c7c7c7;
-}
-
-.post-title {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.post-categories {
-    color: #616161;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.post-date {
-    color: #e0e0e0;
-    margin-right: 10px;
-}
-
-.post-due {
-    color: #616161;
-}
-
-ul.posts li {
-    margin: 0.5em 0;
-    display: block;
-}
-
-div.license {
-    font-size: 12px;
-    clear: both;
-    padding-top: 20px;
-}
-
-div.metatop {
-    width: 5em;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    float: right;
-    text-align: right;
-}
-
-div.metatop span.homelink {
-    margin-right: 10px;
-}
-
-@media only screen and (max-width: 480px) {
-    div.metabox {
-        float: none;
-    }
-}
-
-table {
-    margin: 0 auto;
-    border-collapse: separate;
-    border: 1px solid #26596A;
-    border-spacing: 0 5px;
-}
-
-td {
-    padding: 5px;
-    vertical-align: top;
-}
-
-thead tr th {
-    border-bottom: 1px solid #26596A;
-}
-
-thead th {
-    padding: 10px 5px;
-    font-weight: bold;
-}
-
-table#toc {
-    margin: 0;
-}
-
-pre {
-    border-left: 4px solid #297C46;
-    padding-left: 15px;
-    margin: 2em 0;
-}
-
-pre, code, tt {
-    font-family: "Ubunto Mono", monospace;
-    font-size: 14px;
-}
-
-code {
-    border: 1px dotted #297C46;
-    padding: 2px;
-}
-
-pre code {
-    border: none;
-    padding: 0;
-}
-
-blockquote {
-    border-left: 4px solid #297C46;
-    padding-left: 15px;
-    margin: 2em 0;
-    padding-left: 30px;
-}
-
-img {
-    display: block;
-    margin: 0 auto;
-}
-
-img.emoji {
-    display: inline;
-}
-
 

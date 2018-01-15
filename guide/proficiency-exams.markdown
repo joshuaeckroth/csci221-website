@@ -11,8 +11,6 @@ the major topics that make up your individual examination on each exam
 day. Due to time, you will be asked to perform a random subset of
 actions. You cannot use notes while being examined.
 
-Exam dates: Fri Feb 24, Fri Mar 31
-
 ## Linux
 
 All tasks must be completed with a single command line.

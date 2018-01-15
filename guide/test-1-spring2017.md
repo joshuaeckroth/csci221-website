@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Test 1 for Spring 2017
-due: "Fri Mar 17, 11:59pm"
-categories: [tests]
+title: Test 1 from Spring 2017
+categories: [studyguides]
 ---
 
-# Test 1 for Spring 2017
+# Test 1 from Spring 2017
 
 Create a bitbucket repo called `csci221-test1`. There is only one task. **Do not work with anyone else on this test. Evidence of cheating will result in a zero.**
 

@@ -5,11 +5,11 @@ layout: default
 
 # Syllabus
 
-CSCI 221 - 01, Spring 2017 --- Software Development I
+CSCI 221 - 01, Spring 2018 --- Software Development I
 
-MWF 1:30-2:20p Eliz Hall 205; pre-reqs: CSCI 142
+MWF 10-11a Eliz Hall 205; pre-reqs: CSCI 142
 
-This course introduces the C++ language and contemporary software development methodologies. By the end of the course, you should feel comfortable developing software with C++ inside a Linux environment while working in teams in an "agile" development style.
+Implementation of the Object Oriented paradigm using C++ and the Unified Modeling Language (UML). An introduction to the components of the C++ compiler, and the software development life cycle.
 
 ## About me
 
@@ -17,7 +17,7 @@ This course introduces the C++ language and contemporary software development me
 
 - Eliz Hall 214, 386-740-2519
 
-- Office hours: Mon 2:30-4; Wed 12-1, 2:30-4
+- Office hours: TBD
 
 ## Textbook
 
@@ -25,17 +25,15 @@ There is no textbook for this class.
 
 ## Grading
 
-- Attendance on work days (Fridays, plus all class days Apr 3 - May 5): 5%
+- Attendance on work days (Fridays, plus all classes days Apr 2 - May 8): 10%
 - Homeworks (6 of them): 30%
 - Proficiency exam 1: 2.5%
 - Proficiency exam 2: 2.5%
-- Test 1: 20%
+- Test 1: 15%
 - Test 2: 20%
 - Group project: 20%
 
-Late work is penalized 20% for each day that it is late. Submissions
-more than 3 days late receive no credit. Tests cannot be made up
-unless a doctor's note is provided.
+Late work is penalized 20% for each day that it is late. Submissions more than 3 days late receive no credit. Tests cannot be made up unless a doctor's note is provided.
 
 ### Homework
 
@@ -65,45 +63,46 @@ The grading rubric for attendance is as follows, out of 3 points:
 
 In the last five weeks of the course, all students will be working on a single group project. I will define the project requirements and assign each student to a subgroup with a specific set of tasks. We will collaborate as a class to decide the deliverables after I have explained the project goals.
 
-Grades for the group project will be determined primarily on whether or not the class meets its deliverables. 20% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
+Grades for the group project will be determined primarily on whether or not the class meets its deliverables. 25% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
 
-The group project grading rubric is as follows, out of 10 points:
+The group project grading rubric is as follows, out of 20 points:
 
-- +2 pts: meets deliverable 1
-- +2 pts: meets deliverable 2
-- +2 pts: meets deliverable 3
-- +2 pts: meets deliverable 4
-- remaining 2 pts: average of your group member's individual private ratings of your performance
+- 1 pt: meets deliverable 1
+- 2 pts: meets deliverable 2
+- 3 pts: meets deliverable 3
+- 4 pts: meets deliverable 4
+- 5 pts: meets deliverable 5
+- 5 pts: average of your group member's individual private ratings of your performance
 
 ## Calendar
 
 ### Proficiency exam dates
 
-- Proficiency exam 1: Fri Feb 24
-- Proficiency exam 2: Fri Mar 31
+- Proficiency exam 1: Wed Jan 31
+- Proficiency exam 2: Wed Feb 21
 
 ### Test dates
 
-Both tests are take-home. Tests will be made available at these dates, and will be due a few days later:
+Both tests are take-home. Tests will be made available a few days before these due dates:
 
-- Test 1: available Mon Mar 13, due Fri Mar 17 11:59pm
-- Test 2: available Wed Apr 4, due Wed Apr 12 11:59pm
+- Test 1: available Wed Mar 14, due Mon Mar 19, 11:59pm
+- Test 2: available Wed Apr 11, due Mon Apr 16, 11:59pm
 
 ### Group project deliverables
 
 Requirements for the group project will be established later. The project will have five deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
-- Deliverable 1: Mon Apr 10
-- Deliverable 2: Mon Apr 17
-- Deliverable 3: Mon Apr 24
-- Deliverable 4: Mon May 1
-- Deliverable 5: Fri May 5
+- Deliverable 1: Mon Apr 9
+- Deliverable 2: Mon Apr 16
+- Deliverable 3: Mon Apr 23
+- Deliverable 4: Mon Apr 30
+- Deliverable 5: Tue May 8, 2pm
 
 ### Topics
 
-- Week 1: Basics of C++
+- Week 1: Basics of C++, Linux, git
 - Week 2: Makefiles
-- Week 3: Pointers, memory management
+- Week 3: Debugging
 - Week 4: Pointers, memory management, references
 - Week 5: Structs, classes, operator overloading
 - Week 6: Linked lists
@@ -117,6 +116,7 @@ Requirements for the group project will be established later. The project will h
 - Week 14: Group project deliverable (presentation)
 - Week 15: Group project deliverable (presentation)
 - Week 16: Group project deliverable (presentation)
+- Final exam time: Group project deliverable and retrospective
 
 Homework due dates:
 

@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Test 2 for Spring 2017
-due: "Wed Apr 12, 11:59pm"
-categories: [tests]
+title: Test 2 from Spring 2017
+categories: [studyguides]
 ---
 
-# Test 2 for Spring 2017
+# Test 2 from Spring 2017
 
 Create a bitbucket repo called `csci221-test2`. There is only one task. **Do not work with anyone else on this test. Evidence of cheating will result in a zero.**
 
@@ -26,7 +25,7 @@ Notice that track.cpp is missing. This is intentional. Often you will need to wo
 
 Finish the code so that the user can list all unique artists, albums, and years; show some basic statistics; set ratings on individual tracks (1-5 ratings only); and search for tracks. Your updates must match the following UML diagram:
 
-![Test 2 UML](/tests/test-2-uml.png)
+![Test 2 UML](/guide/test-2-uml-spring2017.png)
 
 **Avoid all memory leaks.** Check with valgrind.
 

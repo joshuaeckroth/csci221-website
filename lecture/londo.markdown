@@ -7,8 +7,7 @@ layout: default
 
 You are free to use a server on Stetson campus known as "londo" for writing and submitting code. I will test your code on this server; if your code does not compile and run on londo, it will receive no credit.
 
-You can access londo from anywhere but to do so you must use a tool like Putty or
-SSH. Instructions are shown below for Windows and Mac systems.
+You can access londo on-campus using just Putty or SSH, or off-campus using a VPN and Putty or SSH. Instructions are shown below for Windows and Mac systems.
 
 For future reference, londo's address is `londo.stetson.edu`
 
@@ -24,7 +23,7 @@ Launch Putty:
 
 ![Putty](/images/putty-1.png)
 
-Type in londo's address (**use `londo.stetson.edu`, not what is shown in the screenshot**):
+Type in londo's address:
 
 ![Putty](/images/putty-2.png)
 
@@ -95,6 +94,14 @@ sftp://jeckroth@londo.stetson.edu
 The window will show londo files. Find your files in the window and drag/drop with the Finder on your Mac:
 
 ![Cyberduck](/images/cyberduck-2.png)
+
+## Off-campus VPN
+
+If you are off campus, you cannot use Putty/SSH until you first connect to the VPN.
+
+Download [FortiClient](http://www.forticlient.com/downloads). Configure it as an SSL VPN, IP address 147.253.200.11, port 443, and your Stetson username (e.g., jeckroth or dplante) and Stetson password (not londo password!).
+
+![FortiClient VPN](/images/forticlient.png)
 
 ## tmux
 
