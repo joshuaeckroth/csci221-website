@@ -97,7 +97,7 @@ The window will show londo files. Find your files in the window and drag/drop wi
 
 ## Off-campus VPN
 
-If you are off campus, you cannot use Putty/SSH until you first connect to the VPN.
+If you are off campus, you cannot connect to londo with Putty/SSH until you first connect to the VPN.
 
 Download [FortiClient](http://www.forticlient.com/downloads). Configure it as an SSL VPN, IP address 147.253.200.11, port 443, and your Stetson username (e.g., jeckroth or dplante) and Stetson password (not londo password!).
 
