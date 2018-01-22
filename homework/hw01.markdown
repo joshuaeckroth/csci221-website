@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW01: Numberwang"
-due: "Wed Jan 24, 11:59pm"
+due: "Fri Jan 26, 11:59pm"
 categories: [assignments]
 ---
 
