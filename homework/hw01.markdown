@@ -32,8 +32,7 @@ Be sure to create a repository on BitBucket and add me (your instructor) as a vi
 ## Example execution
 
 ```
-Hello, and welcome to Numberwang, the maths quiz
-that simply everyone is talking about!
+Hello, and welcome to Numberwang, the maths quiz that simply everyone is talking about!
 
 What is player 1's name? Tracy
 
@@ -61,8 +60,7 @@ Josh: 87
 
 That's Numberwang!
 
-Final scores: Tracy pulls ahead with 32,
-and Josh finishes with 13.
+Final scores: Tracy pulls ahead with 32, and Josh finishes with 13.
 ```
 
 
