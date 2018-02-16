@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW03: Single-variable Bubblesort"
-due: "Fri Feb 16, 11:59pm"
+due: "Mon Feb 19, 11:59pm"
 categories: [assignments]
 ---
 
