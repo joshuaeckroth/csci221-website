@@ -80,9 +80,16 @@ int main() {
     b += 3;
 
     // == means same values in same order, and both cur's pointing to same starting val
+    // e.g., consider these lists, where cur is indicated by *
+    // x = {1, 5*, 7, 9}
+    // y = {1, 5*, 7, 9}  -  these are == (and >=)
     assert(a == b);
     assert(!(a != b));
+
     // >= means same values in same order, but cur's may have different starting vals
+    // e.g., consider these lists, where cur is indicated by *
+    // x = {1, 5, 7, 9*}
+    // y = {1, 5*, 7, 9}  -  these are >= (but not ==)
     assert(a >= b);
 
     ++b;
