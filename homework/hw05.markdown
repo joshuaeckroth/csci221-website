@@ -26,3 +26,8 @@ We'll figure out an object-oriented design in class, and those details will be p
 - Somehow list the monsters that are in the same room as the player (perhaps the player has to type a command to see this list)
 - Support basic combat, e.g., use an item to attack a monster and reduce hit points
 
+## UML from whiteboard
+
+![](/images/game-uml-spring2018-2.jpeg)
+![](/images/game-uml-spring2018-1.jpeg)
+
