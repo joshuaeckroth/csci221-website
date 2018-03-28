@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW05: Text Adventure"
-due: "Mon Apr 2, 11:59pm"
+due: "Wed Apr 4, 11:59pm"
 categories: [assignments]
 ---
 
