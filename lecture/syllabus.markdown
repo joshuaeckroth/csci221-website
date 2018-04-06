@@ -92,7 +92,7 @@ Both tests are take-home. Tests will be made available a few days before these d
 
 Requirements for the group project will be established later. The project will have five deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
-- Deliverable 1: Mon Apr 9
+- Deliverable 1: Wed Apr 11
 - Deliverable 2: Mon Apr 16
 - Deliverable 3: Mon Apr 23
 - Deliverable 4: Mon Apr 30
