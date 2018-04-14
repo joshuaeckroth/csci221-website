@@ -118,12 +118,12 @@ int main() {
 
 ```
 $ valgrind ./main
-==53180== Memcheck, a memory error detector
-==53180== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
-==53180== Using Valgrind-3.9.0 and LibVEX; rerun with -h for copyright info
-==53180== Command: ./main
-==53180==
-Size: 8
+==3250== Memcheck, a memory error detector
+==3250== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==3250== Using Valgrind-3.9.0 and LibVEX; rerun with -h for copyright info
+==3250== Command: ./main
+==3250==
+Size: 7
 Query "bob ? jane", result:
 bob knows jane
 bob loves jane
@@ -148,21 +148,20 @@ bob works_at lowes
 jane works_at homedepot
 lowes isa store
 homedepot isa store
-homedepot isa store
 
-Size: 7
+Size: 6
 Query "bob ? jane", result:
 bob knows jane
 
-==53180==
-==53180== HEAP SUMMARY:
-==53180==     in use at exit: 0 bytes in 0 blocks
-==53180==   total heap usage: 178 allocs, 178 frees, 6,243 bytes allocated
-==53180==
-==53180== All heap blocks were freed -- no leaks are possible
-==53180==
-==53180== For counts of detected and suppressed errors, rerun with: -v
-==53180== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+==3250==
+==3250== HEAP SUMMARY:
+==3250==     in use at exit: 0 bytes in 0 blocks
+==3250==   total heap usage: 171 allocs, 171 frees, 5,963 bytes allocated
+==3250==
+==3250== All heap blocks were freed -- no leaks are possible
+==3250==
+==3250== For counts of detected and suppressed errors, rerun with: -v
+==3250== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
 ```
 
 
