@@ -5,6 +5,20 @@ layout: default
 
 # Group project deliverables
 
+## Wed, April 25, in class
+
+- Abdullah: Finalize the students table design, tell Kyle what it is; ask Heyley what “SELECT” queries she needs for the logic, and write those queries (in C++)
+- Mohammed: Same as what Abdullah but with the events table
+- Kyle: Implement Abdullah’s and Mohammed’s insert statements for students & events
+- Heyley: Update logic to compute # of semesters left and use that value rather than year
+- Michael: Create an email template; find example email templates online; notice that you cannot include external CSS in an email; create a nice-looking example email message that says “You should consider this cultural event: … (cultural event details)”
+- Greg: Use Kyle’s database class to actually save student data into the database (it doesn’t have to have all the right fields yet, just needs to work)
+- Isabel: Update your curl post code so that it is inside a function with arguments: email, subject, and body (all strings), and creates a post request in JSON format, just like explained here: `https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/index.html`
+- Yazeed: create c++ code for the RSS downloader and show it running
+- Mikhail: update your rss parser to use Kyle’s database class and actually save event data into the database
+- Nick: Using this sendgrid API key, send an example email to me and yourself: (hidden) see: `https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/index.html` - it is not necessary to do this in code if you can find a easier way (for demonstration purposes)
+- Jacob: Write notes about how “cron jobs” are created and used in Linux.
+
 ## Wed, April 18, in class
 
 - Abdullah: Create the students table with C++/SQLite code. Insert example data with C++ code. Select example data as well.
