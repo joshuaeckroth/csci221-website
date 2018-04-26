@@ -5,6 +5,16 @@ layout: default
 
 # Group project deliverables
 
+## Wed, May 2, in class
+
+- Abdullah, Mohammed, Heyley, Kyle, Mikhail, Greg: Finish integration of all database functions into database.cpp and database.h - the web form, the rss parser, and Heyley's logic should all be functional (save and read all required data)
+- Heyley: logic should work correctly in C++ code; it is not necessary yet that an email is actually sent
+- Michael, Greg: the form and the page that loads after submission should be finalized and aesthetically pleasing; delete all other code (no "demo" or "testing" code)
+- Yazeed: finish the RSS downloader; it should download the RSS file when the program is run. Research how to create a "cron" job that runs your program once per day.
+- Nick, Isabel: write a function in C++ with inputs: email address, subject, body; that sends an email using sendgrid and the C++ "curl" library; create a testing program that shows that it works
+
+To receive full credit, all work should ultimately be pushed to the "master" branch on github. You will be graded based on the master branch, not your own branch.
+
 ## Wed, April 25, in class
 
 - Abdullah: Finalize the students table design, tell Kyle what it is; ask Heyley what “SELECT” queries she needs for the logic, and write those queries (in C++)
