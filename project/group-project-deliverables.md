@@ -5,6 +5,19 @@ layout: default
 
 # Group project deliverables
 
+## Tue, May 8, 2pm (in class)
+
+- Abdullah, Mohammed, Kyle, Mikhail: Fix sql-injection issues, do not convert intgers into strings before using prepared queries (e.g., student id's), delete all commented-out code and broken code, delete all Vim .swp files from git repo and add to .gitignore, make sure duplicate events or students are not added (do this in the insert functions), write one Makefile in the main directory that compiles everything (including cgi program, emaildaemon, rssdaemon, but keep the output programs in those respective directories), eliminate Makefiles in other directories, eliminate sqlite.c and sqlite.o and compile with the system `-lsqlite3`
+- Michael: make sure your email template can be used by a function, and make sure Heyley's code actually calls that function to generate an email (as a string)
+- Heyley: finish your code so an email is actually sent
+- Nick & Isabel: finish the code that sends the email; make sure it is in the git repository (on the master branch), possibly in the student.cpp file
+- Yazeed: make the cron job work for both downloading the rss file every day and running the emaildaemon to send emails every day; make sure it works on the Amazon server; in other words, make sure the whole system is completely automated and running, so if a user types their info in the webpage, eventually (tomorrow, next week, whenever) they are emailed about cultural events; you may need to work with other people to make sure they finish their code before you can complete your task
+- Greg: eliminate all commented-out and broken code from the cgi program, and eliminate all demo/testing programs; name your program "index.cgi" (I will make sure it loads when the user goes to http://mycultural.events), make a proper "thank you" message (do not redirect the user), create a semester drop down selection (Spring/Fall), give a meaningful error message if they provide wrong or missing data (e.g., "Please type your name"), remove the Nevermind button
+
+Everyone: make sure your changes are on the master branch AND working on the Amazon server.
+
+You won't have much time in class on Tuesday to finish your tasks. We also need to grade each other and talk about what worked and what did not work (a "retrospective").
+
 ## Wed, May 2, in class
 
 - Abdullah, Mohammed, Heyley, Kyle, Mikhail, Greg: Finish integration of all database functions into database.cpp and database.h - the web form, the rss parser, and Heyley's logic should all be functional (save and read all required data); use prepared queries to prevent sql injections
