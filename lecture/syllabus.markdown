@@ -5,9 +5,9 @@ layout: default
 
 # Syllabus
 
-CSCI 221 - 01, Spring 2018 --- Software Development I
+CSCI 221 - 01, Spring 2019 --- Software Development I
 
-MWF 10-11a Eliz Hall 205; pre-reqs: CSCI 142
+MWF 2:30-3:30p LBC 322; pre-reqs: CSCI 142
 
 Implementation of the Object Oriented paradigm using C++ and the Unified Modeling Language (UML). An introduction to the components of the C++ compiler, and the software development life cycle.
 
@@ -17,7 +17,7 @@ Implementation of the Object Oriented paradigm using C++ and the Unified Modelin
 
 - Eliz Hall 214, 386-740-2519
 
-- Office hours: Mon 11a-12p, 3:30-4:30p; Wed 1:30-2:30p, 3:30-4:30p
+- Office hours: MW 1:30-2:30p, Tue 12-2p
 
 ## Textbook
 
@@ -25,7 +25,7 @@ There is no textbook for this class.
 
 ## Grading
 
-- Attendance on work days (Fridays, plus all classes days Apr 2 - May 8): 10%
+- Attendance on work days (Fridays, plus all class days Apr 1 - May 6): 10%
 - Homeworks (6 of them): 30%
 - Proficiency exam 1: 2.5%
 - Proficiency exam 2: 2.5%
@@ -37,7 +37,7 @@ Late work is penalized 20% for each day that it is late. Submissions more than 3
 
 ### Homework
 
-Homework will be submitted via Bitbucket. Create an account on Bitbucket and, for every assignment, create a new repository and add me (username 'joshuaeckroth') as a reader. Always name the repository `csci221-HW01` or similar.
+Homework will be submitted via Bitbucket. Create an account on Bitbucket and, for every assignment, create a new repository and add me (username 'joshuaeckroth') as a reader. Always name the repository `csci221-HW01` (homework \# changes).
 
 See the individual assignments for the grading rubric. Homeworks are always out of 5 points.
 
@@ -78,25 +78,25 @@ The group project grading rubric is as follows, out of 20 points:
 
 ### Proficiency exam dates
 
-- Proficiency exam 1: Wed Feb 14
-- Proficiency exam 2: Wed Feb 28
+- Proficiency exam 1: Wed Feb 13
+- Proficiency exam 2: Wed Feb 27
 
 ### Test dates
 
 Both tests are take-home. Tests will be made available a few days before these due dates:
 
-- Test 1: available Wed Mar 14, due Mon Mar 19, 11:59pm
-- Test 2: available Wed Apr 11, due Mon Apr 16, 11:59pm
+- Test 1: available Wed Mar 13, due Mon Mar 18, 11:59pm
+- Test 2: available Wed Apr 10, due Mon Apr 15, 11:59pm
 
 ### Group project deliverables
 
 Requirements for the group project will be established later. The project will have five deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
-- Deliverable 1: Wed Apr 11
-- Deliverable 2: Mon Apr 16
-- Deliverable 3: Mon Apr 23
-- Deliverable 4: Mon Apr 30
-- Deliverable 5: Tue May 8, 2pm
+- Deliverable 1: Wed Apr 10
+- Deliverable 2: Wed Apr 17
+- Deliverable 3: Wed Apr 24
+- Deliverable 4: Wed May 1 
+- Deliverable 5: Mon May 6, 5pm
 
 ### Topics
 
@@ -110,14 +110,16 @@ Requirements for the group project will be established later. The project will h
 - Week 8: no class (break)
 - Week 9: Polymorphism, inheritance, destructors
 - Week 10: Templates, Standard Template Library
-- Week 11: Qt library
+- Week 11: Boost library
 - Week 12: Group project start
 - Week 13: Group project deliverable (presentation)
 - Week 14: Group project deliverable (presentation)
 - Week 15: Group project deliverable (presentation)
 - Week 16: Group project deliverable (presentation)
-- Final exam time: Group project deliverable and retrospective
+- Final exam time (May 6, 5-7pm): Group project deliverable and retrospective
 
+
+{% comment %}
 Homework due dates:
 
 <ul>
@@ -129,6 +131,8 @@ Homework due dates:
 {% endif %}
 {% endfor %}
 </ul>
+{% endcomment %}
+
 
 ## Honor code
 

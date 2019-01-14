@@ -49,6 +49,8 @@ When you are done, just close the Putty window.
 
 Start the Terminal app and run `ssh username@londo.stetson.edu` where "username" is your username.
 
+![Terminal](/images/ssh-1.png)
+
 The first time you connect, you will be asked if you trust the machine you are connecting to. Type "yes", and then type your password.
 
 ![Terminal](/images/ssh-2.png)
@@ -99,7 +101,7 @@ The window will show londo files. Find your files in the window and drag/drop wi
 
 If you are off campus, you cannot connect to londo with Putty/SSH until you first connect to the VPN.
 
-Download [FortiClient](http://www.forticlient.com/downloads). Configure it as an SSL VPN, IP address 147.253.200.11, port 443, and your Stetson username (e.g., jeckroth or dplante) and Stetson password (not londo password!).
+Download [FortiClient](http://www.forticlient.com/downloads). Configure it as an SSL VPN, IP address 147.253.200.11, port 443, and your Stetson username (e.g., jeckroth) and Stetson password (not londo password!).
 
 ![FortiClient VPN](/images/forticlient.png)
 

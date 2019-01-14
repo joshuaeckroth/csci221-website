@@ -8,8 +8,8 @@ categories: [studyguides]
 
 Exams will take place twice in the semester. You can choose which of
 the major topics that make up your individual examination on each exam
-day. Due to time, you will be asked to perform a random subset of
-actions. You cannot use notes while being examined.
+day. You will be asked to perform operations similar to but not identical to the ones below.
+You cannot use notes while being examined.
 
 ## Linux
 
@@ -109,6 +109,7 @@ Note: all actions must be performed without using arrow keys or the mouse; and e
 - turn on/off line numbers (along the left margin)
 - reindent a section of code
 
+{% comment %}
 ## Emacs
 
 Note: all actions must be performed without using arrow keys or the mouse.
@@ -134,4 +135,5 @@ Note: all actions must be performed without using arrow keys or the mouse.
 - open the "customize" feature and show how to permanently change a variable
 - turn on/off line numbers (along the left margin)
 - reindent a section of code
+{% endcomment %}
 
