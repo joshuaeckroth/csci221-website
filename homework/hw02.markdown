@@ -1,0 +1,95 @@
+---
+layout: default
+title: "HW02: Makefile and Code Repair"
+due: "Fri Feb 1, 11:59pm"
+categories: [assignments]
+---
+
+# HW02: Makefile and Code Repair
+
+Create a Makefile for existing code, and fix broken code.
+
+Name your BitBucket repository exactly `csci221-HW02`. Test with the script `/home/jeckroth/csci221/homework/HW02/grader.pl [bitbucketusername]`
+
+## Task 1: Makefile
+
+Create a Makefile. Put the solution to this task in a folder called `rational`.
+
+### Requirements
+
+Copy the contents of the folder (on Londo) `/home/jeckroth/csci221/homework/HW02/rational`. It contains three files: `main.cpp`, `rational.cpp`, and `rational.h`.
+
+Create a Makefile so that one could easily build a binary file out of these sources.
+
+- main.o depends on main.cpp and rational.h
+- rational.o depends on rational.h and rational.cpp
+- ratdemo depends on main.o and rational.o
+
+The Makefile must have the following "targets":
+
+- all, which depends on ratdemo target and otherwise does nothing
+- ratdemo, which links main.o and rational.o, creating the binary ratdemo
+- main.o, which compiles main.cpp
+- rational.o, which compiles rational.cpp
+- clean, which removes (rm -f) the generated files main.o, rational.o, and ratdemo
+
+Your Makefile should enable the following sequence of events. Note that the `touch` command simply updates a file’s last-modified timestamp, thus causing the make program to belief the file has changed (and so dependent files are out of date). Notice that, in each case, only necessary actions are taken to update the binary. (This makes a huge difference when you have thousands of files and build times that are measured in hours.)
+
+```
+$ make
+g++ -c main.cpp
+g++ -c rational.cpp
+g++ -o ratdemo main.o rational.o
+$ touch main.cpp
+$ make
+g++ -c main.cpp
+g++ -o ratdemo main.o rational.o
+$ touch rational.cpp
+$ make
+g++ -c rational.cpp
+g++ -o ratdemo main.o rational.o
+$ touch rational.h
+$ make
+g++ -c main.cpp
+g++ -c rational.cpp
+g++ -o ratdemo main.o rational.o
+$ make clean
+rm -f main.o rational.o ratdemo
+$ make
+g++ -c main.cpp
+g++ -c rational.cpp
+g++ -o ratdemo main.o rational.o
+```
+
+## Task 2: Fix a broken program
+
+Create a folder for this task called `collatz`.
+
+Name your solution `longest-collatz-sequence.cpp`
+
+I wrote two programs. One is broken. They are intended to solve the "Longest Collatz Sequence" problem, described at [Project Euler, Problem 14](https://projecteuler.net/problem=14). Read and understand the problem. One of my programs works correctly, and gives the answer. The other does not. I compiled the working program without debug symbols, and I am not giving you the code. So, you won’t be able to see how it works. The second, broken program was compiled with debug symbols, so you can inspect it and fix it.
+
+Your task is to fix the broken code, and give me the fixed source code. Of course, fix the code I wrote; don’t give me completely new code. The point of this assignment is to learn how to use GDB for debugging.
+
+### Requirements
+
+Copy the contents of the folder (on Londo) `/home/jeckroth/csci221/homework/HW02/collatz`.
+
+Try running `longest-collatz-sequence`. You should get the correct answer (check that it is correct on the Project Euler website). Try running the second program `longest-collatz-sequence-broken`. Something is wrong. You need to produce bug-free source code.
+
+### Hints
+
+So, you have a broken binary file. How do you fix it, and produce working source code?
+
+Run the program in GDB to possibly identify any crashes.
+
+If it crashes, fix the crash in the code, and recompile with debug-symbols using the `-g` option.
+
+Try running the program again in GDB. If it seems to get into an infinite loop, press Ctrl-C to stop it, and figure out where it stopped. Type `l` to list the code near where it stopped. Use `p` (print) to print current values of various variables. Does anything seem wonky?
+
+If it's useful to you, set a breakpoint on the `collatz_length` function or `collatz_next` function with the GDB command `b collatz_length` or `b collatz_next`. Or, set a breakpoint at a certain line number, e.g., line 15, with `b 15`. Then run the program again with `r`. It will stop when it reaches this function. You can now inspect variables, list code, etc. Type `c` to continue running. Type `d 1` to delete breakpoint #1.
+
+Your fixed code and my longest-collatz-sequence program should give the same answers (and take about the same amount of time to compute).
+
+
+
