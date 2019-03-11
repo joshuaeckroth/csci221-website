@@ -136,6 +136,7 @@
                 <div class="post-title"><a href="/project/group-project-deliverables.html">Group project deliverables</a></div>
               </li>
             </ul>
+            {% endcomment %}
             <h2 style="margin-top: 20px;">Tests</h2>
             <ul class="posts">
               {% for p in site.pages sort_by:title order:ascending %}
@@ -147,7 +148,6 @@
               {% endif %}
               {% endfor %}
             </ul>
-            {% endcomment %}
             <h2 style="margin-top: 20px;">Study guides</h2>
             <ul class="posts">
               {% for p in site.pages sort_by:title order:ascending %}

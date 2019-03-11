@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Test 1
-categories: [tests]
-due: "Mon Mar 19, 11:59pm"
+title: Test 1 from Spring 2018
+categories: [studyguides]
 ---
 
 # Test 1
