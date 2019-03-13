@@ -56,8 +56,7 @@ and how they work in the Circle class is somewhat counter-intuitive
 (and must be documented somewhere).
 
 The C++ FAQ has a good response to this problem, full of details and
-examples, and the following interesting quote (which begins the answer
-to [question 21.8](http://www.graphics.cornell.edu/~martin/docs/c++-faq/proper-inheritance.html#[21.8])):
+examples, and the following interesting quote ([from here](https://isocpp.org/wiki/faq/proper-inheritance#circle-ellipse-nonintuitive)):
 
 > *Question:* But I have a Ph.D. in Mathematics, and I'm sure a Circle
 > is a kind of an Ellipse! Does this mean Marshall Cline is stupid? Or
@@ -174,6 +173,6 @@ wouldn't know *anything* about the subclasses by just looking at the
 superclass!
 
 Read the article
-["I Lied About the Trees, Or, Defaults and Definitions in Knowledge Representation"](https://www.aaai.org/ojs/index.php/aimagazine/article/viewArticle/490)
+["I Lied About the Trees, Or, Defaults and Definitions in Knowledge Representation"](https://aaai.org/ojs/index.php/aimagazine/article/view/490/426)
 by Ronald J. Brachman for an academic take on this issue.
 
