@@ -1,0 +1,52 @@
+---
+layout: default
+title: "HW06: Elevator"
+due: "Fri Mar 29, 11:59pm"
+categories: [assignments]
+---
+
+# HW06: Elevator
+
+Implement a subclass of ElevatorLogic such that all passengers are served and, ideally, average passenger wait times are lower than the provided implementation.  
+
+Start with my code on londo after making your own directory:
+
+```
+cp -R /home/jeckroth/csci221/elevator/* .
+```
+
+[Read some auto-generated documentation.](/homework/elevator/docs/html/annotated.html)
+
+Commit just the `*.cpp`, `*.h`, `*.R` files, and `Makefile` to git. **Do not commit anything else!**
+
+**Avoid all memory leaks.** Check with valgrind.
+
+You can test your implementation by running the `test_elevator` binary that you build with the `Makefile`, followed by this command:
+
+```
+Rscript test_elevator.R
+```
+
+You should see `Total passengers: 369 Total satisfied passengers: 369 (these should be equal)` and your average wait times.
+
+## Some notes about the elevator simulator
+
+- Multiple elevators are simulated at once, like in a skyscraper.
+- Random passengers are generated on random floors, and they request an elevator up or down.
+- When an elevator passes by their floor, they get in (you can't prevent this).
+- When a passenger enters an elevator, they request their desired floor number.
+- When a passenger is in an elevator and it passes by their desired floor, they get out.
+
+## About the generated statistics
+
+- After multiple random simulations, several statistics are computed. Note, everyone will be subjected to the same random simulation (same random seed).
+- Average call time is how long a passenger waits to get in.
+- Average in elevator time is how long a passenger stands in the elevator.
+- Average satisfaction time is a sum of the other two statistics, per passenger.
+
+## Grading
+
+Full credit requires: your code compiles & runs, the simulator finishes (i.e., no infinite loops), there are no memory leaks, and all passengers are satisfied (according to the `Rscript` output).
+
+Try to get the lowest possible average satisfaction time, but this is not graded.
+
