@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW06: Elevator"
-due: "Fri Mar 29, 11:59pm"
+due: "Mon Apr 1, 11:59pm"
 categories: [assignments]
 ---
 
@@ -49,4 +49,12 @@ You should see `Total passengers: 369 Total satisfied passengers: 369 (these sho
 Full credit requires: your code compiles & runs, the simulator finishes (i.e., no infinite loops), there are no memory leaks, and all passengers are satisfied (according to the `Rscript` output).
 
 Try to get the lowest possible average satisfaction time, but this is not graded.
+
+## Hints
+
+- Start by making a simple, blank subclass of ElevatorLogic. You'll need a constructor that calls the parent constructor, passing the same arguments, as done in the MoneyMarketAccount example on [these notes](http://csci221.artifice.cc/lecture/constructors-and-inheritance.html). Create the required methods (the ones that are "pure virtual", i.e., `=0`; note you do not need to say "virtual" in the subclass). Notice that the `es` and `ecount` variables are `protected` in the parent class so your subclass has access to them.
+- Notice when the logic methods get called. `call` is when a person wants to get in an elevator on a certain floor. `selectFloor` is when a passenger presses a button inside. `notifyFloorChanged` is when one of the elevator moves (because your logic told it to).
+- Look at `common_defs.h` to see the variables (enums, actually) used for up/down directions when a person asks for an elevator and up/down/halt for elevator motion commands, and the `MAX_FLOORS` define.
+- Your elevator logic `notifyFloorChanged` method should check if the elevator that moved reached the ground floor or top floor; if so, make sure you halt it.
+- For simplicity, start by just moving one elevator in the array up/down to where the passengers are and want to go, before trying to move several.
 
