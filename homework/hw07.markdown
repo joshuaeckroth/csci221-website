@@ -1,0 +1,38 @@
+---
+layout: default
+title: "HW07: Text Adventure"
+due: "Wed Apr 10, 11:59pm"
+categories: [assignments]
+---
+
+# HW07: Text Adventure
+
+Create a text adventure in which the player can move around the rooms and pick up / drop items. The player should be able to see the items in the room and list items in his/her inventory.
+
+## UML
+
+Here is a class diagram for the design:
+
+![Class diagram](/images/game-sp2019.png)
+
+## Strategy
+
+Create a main file that contains the `main` function, in addition to the class files. In this `main` function, do this:
+
+1. create room objects
+2. link the rooms
+3. create the player
+4. put the player in the starting room
+5. create items
+6. put items in the rooms/player
+
+Then the game loop should basically be: `while(p->handleInput())` where `p` is the player.
+
+## Requirements
+
+You must have at least:
+
+- 10 rooms, each with a title and a description, and all rooms must be connected somehow
+- 1 player
+- 5 items, which can be picked up and dropped in rooms
+
