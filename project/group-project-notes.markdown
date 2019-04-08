@@ -5,66 +5,36 @@ layout: default
 
 # Group project notes
 
-Get Cultured! @ [http://mycultural.events](http://mycultural.events/)
+## S.P.A.M.M. Space/Pirates/Aliens Mad Max
 
-Git repo: [https://github.com/StetsonMathCS/MyCultural.Events](https://github.com/StetsonMathCS/MyCultural.Events)
+## Goals
 
-## Grading
+Multiplayer text adventure with defined goal & progress; players can talk to each other and create rooms & items in-game. Predefined rooms/items and logic dictate game goals & progress. Backend db stores room/item/player data.
 
-- from now to end, I will take attendance (10% of overall grade)
-- each person will have a specific task
-  - so each person is responsible and graded on something
-- 3 pts per deliverable (=15 pts), plus 5 pts group evals, adds up to 20pts (20% of overall grade)
+## Milestone 1: 4/17
 
+Derrek:
 
-## Service description
+- Update [telnet](https://github.com/seanmiddleditch/libtelnet/tree/develop/util) examples to hook into example C++ code for server (client is just telnet/putty)
+- Write C++ file that has example functions for: when a line is entered by the client, call this C++ function; and if the line matches certain pattern/word, use a C++ function to send a message to a certain client (by id #). In other words, make the C++ file usable by everyone to process inputs and send outputs, without calling the C code. Write a Makefile that compiles it all together.
 
-- frontend:
-  - website, probably single page, with a form:
-    - first name
-    - email
-    - expected graduation (semester, year)
-    - \# of cultural events needed now
-    - preference for events (keywords)
-  - shows page, responds to form
-  - saves form input into sqlite database
-  
-- backend cultural events crawler:
-  - finds cultural events notices, saves in db
-  
-- backend periodic emailer:
-  - reads db for events and people who need events
-  - generates periodic emails and sends them
+Nicola + Stephen:
 
+- Write example C++ code for reading/writing data to a Redis server; use the hiredis library. Make example C++ functions that hide the library details.
 
-## Groups & tasks
+Kassaundra + Mike:
 
-- frontend:
-  - HTML/CSS & C++ code to generate it (like with Cgicc library)
-  - save into sqlite database (insert)
-  - Mikhail, Nick, Mohammed, Greg
-  - Michael, Greg: Cgicc
-  - http://54.173.103.237/completedemo.cgi
-- backend cultural events crawler:
-  - RSS crawler
-  - consider https://pugixml.org
-  - saves to database (insert)
-  - Mikhail, Mohammed, Michael, Heyley
-  - Mikhail: RSS library
-  - https://github.com/zeux/pugixml/tree/master/docs/samples
-- backend periodic mailer:
-  - checks database for anyone who needs an email
-  - logic for choosing who needs an email:
-    - Heyley
-  - sends an email
-    - sendgrid, HTTP requests
-    - consider http://www.curlpp.org/
-  - Yazeed, Isabel, Mikhail
+- Write example parser for game actions: go direction, get item, drop item, look at item, inventory, open item, close item; write C++ code that checks what they type (item/direction could be anything), and prints a message
 
-## Server access
+Charles + Oliver:
 
-We'll run everything on http://54.173.103.237/ (aka, http://mycultural.events/)
+- Classes for rooms/items/players; for player, add last login IP, last login time, password, username, description, build permission (boolean); write getters/setters for everything; for item, create an owner (username), and an enum for item type: UNIQUE, PERPLAYER
 
-You will each have a user account, same as your londo username. You can write code on that server. All required C++ libraries are already installed, and example working code and Makefiles may be found in the directory `/home/ubuntu/examples`. A Cgicc example is running here: [http://mycultural.events/completedemo.cgi](http://mycultural.events/completedemo.cgi). Note that Cgicc programs should be named "foobar.cgi" rather than just "foobar".
+Noah + Ruby:
 
+- Write parser for game building & speaking commands: “say”, “tell user XYZ”, “create room called X and described by Y”, “connect room X to Y via DIR”, “create item called X and described by Y”, “put item X in room Y”
+
+Ben:
+
+- Write parser for room creation: “set first description for room X to Y”, “require item X to enter room Y”, “when player enters X and [has/has not] item Y, teleport player to room Z”, “when player enters X, with random Y% chance, teleport player to room Z”
 

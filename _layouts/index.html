@@ -126,17 +126,12 @@
               {% endif %}
               {% endfor %}
             </ul>
-            {% comment %}
             <h2 style="margin-top: 20px;">Group project</h2>
             <ul class="posts">
               <li>
                 <div class="post-title"><a href="/project/group-project-notes.html">Group project notes</a></div>
               </li>
-              <li>
-                <div class="post-title"><a href="/project/group-project-deliverables.html">Group project deliverables</a></div>
-              </li>
             </ul>
-            {% endcomment %}
             <h2 style="margin-top: 20px;">Tests</h2>
             <ul class="posts">
               {% for p in site.pages sort_by:title order:ascending %}
