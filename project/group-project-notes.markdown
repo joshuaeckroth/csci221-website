@@ -11,7 +11,7 @@ layout: default
 
 Multiplayer text adventure with defined goal & progress; players can talk to each other and create rooms & items in-game. Predefined rooms/items and logic dictate game goals & progress. Backend db stores room/item/player data.
 
-## Milestone 1: 4/17
+## Milestone 1: 4/19
 
 Derrek:
 
