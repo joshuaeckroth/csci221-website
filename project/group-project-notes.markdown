@@ -11,6 +11,40 @@ layout: default
 
 Multiplayer text adventure with defined goal & progress; players can talk to each other and create rooms & items in-game. Predefined rooms/items and logic dictate game goals & progress. Backend db stores room/item/player data.
 
+## Milestone 2: 4/22
+
+Derrek:
+
+- add broadcast messaging
+- add print to multiple users (given by ids)
+- update README for how to connect
+- add a user account creation mechanism (dummy code, no account creation)
+
+Charles + Oliver:
+
+- add logo to README
+- update Player class to have an integer id, and bool connected
+- create example Players (`new Player(...)`)
+- then update `main.cpp` to check if the user types the right username and password for some existing player
+
+Nicola + Stephen:
+
+- Rename RedisDemo to Database
+- Create an "lastid" variable for redis, and create a function to read last id and increment last id
+- Update Item class to have an integer id, make a method called `save()` that saves item to redis, and demo code that loads an item with a certain id
+
+Mike + Kassaundra:
+
+- Make your code work with the existing Item and Player and Room classes; create one player, one item, and two rooms to demonstrate.
+
+Ruby + Noah:
+
+- Make your code actually create items and rooms and connect them appropriately. Create an example main function to demonstrate. 
+
+Ben:
+
+- Update Room class so item requirements (for entering room) work, and update room names, and write example main function to demonstrate.
+
 ## Milestone 1: 4/19
 
 Derrek:
