@@ -65,14 +65,13 @@ In the last five weeks of the course, all students will be working on a single g
 
 Grades for the group project will be determined primarily on whether or not the class meets its deliverables. 25% of your group project grade will be determined by an average of your team members' and your own ratings of your performance. These ratings will be private and anonymous.
 
-The group project grading rubric is as follows, out of 20 points:
+The group project grading rubric is as follows, totalling 20 points (for 20% of final grade):
 
-- 1 pt: meets deliverable 1
-- 2 pts: meets deliverable 2
-- 3 pts: meets deliverable 3
-- 4 pts: meets deliverable 4
-- 5 pts: meets deliverable 5
-- 5 pts: average of your group member's individual private ratings of your performance
+- Deliverable 1: 4 pts
+- Deliverable 2: 4 pts
+- Deliverable 3: 4 pts
+- Deliverable 4: 4 pts
+- Average peer rating: 4pts
 
 ## Calendar
 
@@ -92,11 +91,10 @@ Both tests are take-home. Tests will be made available a few days before these d
 
 Requirements for the group project will be established later. The project will have five deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
-- Deliverable 1: Wed Apr 10
-- Deliverable 2: Wed Apr 17
-- Deliverable 3: Wed Apr 24
-- Deliverable 4: Wed May 1 
-- Deliverable 5: Mon May 6, 5pm
+- Deliverable 1: Wed Apr 19
+- Deliverable 2: Wed Apr 26
+- Deliverable 3: Wed May 3
+- Deliverable 4: Mon May 6, 5pm
 
 ### Topics
 
