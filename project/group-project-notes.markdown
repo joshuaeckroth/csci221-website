@@ -11,6 +11,40 @@ layout: default
 
 Multiplayer text adventure with defined goal & progress; players can talk to each other and create rooms & items in-game. Predefined rooms/items and logic dictate game goals & progress. Backend db stores room/item/player data.
 
+## Milestone 3: 5/3
+
+Derrek:
+
+- create starting room ("Living Room" or whatever) that exists by default and every player starts in
+- print extensive logging messages
+- research how to save redis data to disk and restore
+
+Ben:
+
+- implement players speaking to each other
+- finish room constraints (needing certain items) and letting the player set these constraints
+
+Charles + Oliver:
+
+- check if user exists
+- write scripts for creating games (making rooms, etc.)
+- effectively, write test cases for creating rooms/etc. and moving around
+
+Nicola + Stephen:
+
+- finish item/player/room saving & load all in constructor
+- finish searchbyname functions
+- make id variable for room/player/item, keep it -1 in constructor, save action sets the id to last id if it's -1
+
+Mike + Kassaundra:
+
+- finish player actions, so player is walking around and picking up/dropping items
+
+Ruby:
+
+- finish room building & linking, and creating items
+
+
 ## Milestone 2: 4/26
 
 Derrek:
