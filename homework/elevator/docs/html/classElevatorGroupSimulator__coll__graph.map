@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classElevator.html" title="{Elevator\n|&#45; name\l&#45; currentFloor\l&#45; motorDirection\l&#45; log\l|+ Elevator()\l+ getName()\l+ getLog()\l+ getCurrentFloor()\l+ getMotorDirection()\l+ setMotorDirection()\l+ isHalted()\l&#45; step()\l&#45; reset()\l}" alt="" coords="48,305,195,599"/>
-<area shape="rect" id="node10" href="$classElevatorLogic.html" title="{ElevatorLogic\n|# es\l# ecount\l|+ ElevatorLogic()\l+ call()\l+ selectFloor()\l+ notifyFloorChanged()\l+ ~ElevatorLogic()\l}" alt="" coords="41,1081,201,1263"/>
-<area shape="rect" id="node15" href="$classPassenger.html" title="{Passenger\n|&#45; startingFloor\l&#45; desiredFloor\l&#45; callTime\l&#45; selectTime\l&#45; leaveTime\l&#45; e\l&#45; satisfied\l|+ Passenger()\l+ getStartingFloor()\l+ getDesiredFloor()\l+ getCallTime()\l+ getSelectTime()\l+ getLeaveTime()\l+ getId()\l+ isSatisfied()\l+ getElevator()\l+ enterElevator()\l+ leaveElevator()\l}" alt="" coords="160,667,299,1055"/>
-<area shape="rect" id="node6" title="STL class." alt="" coords="155,147,235,237"/>
-<area shape="rect" id="node8" title="STL class." alt="" coords="111,6,279,95"/>
-</map>

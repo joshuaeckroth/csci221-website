@@ -5,9 +5,9 @@ layout: default
 
 # Syllabus
 
-CSCI 221 - 01, Spring 2019 --- Software Development I
+CSCI 221 - 01, Spring 2020 --- Software Development I
 
-MWF 2:30-3:30p LBC 322; pre-reqs: CSCI 142
+MWF 2:30-3:30p Eliz Hall 308; pre-reqs: CSCI 142
 
 Implementation of the Object Oriented paradigm using C++ and the Unified Modeling Language (UML). An introduction to the components of the C++ compiler, and the software development life cycle.
 
@@ -17,7 +17,7 @@ Implementation of the Object Oriented paradigm using C++ and the Unified Modelin
 
 - Eliz Hall 214, 386-740-2519
 
-- Office hours: MW 1:30-2:30p, Tue 12-2p
+- Office hours: TBD
 
 ## Textbook
 
@@ -25,15 +25,14 @@ There is no textbook for this class.
 
 ## Grading
 
-- Attendance on work days (Fridays, plus all class days Apr 1 - May 6): 10%
-- Homeworks (6 of them): 30%
-- Proficiency exam 1: 2.5%
-- Proficiency exam 2: 2.5%
-- Test 1: 15%
+- Homeworks: 30%
+- Proficiency exam 1: 5%
+- Proficiency exam 2: 5%
+- Test 1: 20%
 - Test 2: 20%
 - Group project: 20%
 
-Late work is penalized 20% for each day that it is late. Submissions more than 3 days late receive no credit. Tests cannot be made up unless a doctor's note is provided.
+Attendance is expected but not graded.
 
 ### Homework
 
@@ -41,23 +40,16 @@ Homework will be submitted via Bitbucket. Create an account on Bitbucket and, fo
 
 See the individual assignments for the grading rubric. Homeworks are always out of 5 points.
 
+Late work is not accepted. The modified time on the files submitted to bitbucket will verify if homework was turned in on-time.
+
 ### Proficiency exams
 
-You are required to learn a wide variety of techniques for Linux, git, vim, emacs, etc. I will not lecture about these techniques. See the [list of techniques](/guide/proficiency-exams.html). You cannot use notes while being examined. The grading rubric is as follows, out of 3 points:
+You are required to learn a wide variety of techniques for Linux, git, vim, emacs, etc. I will not lecture about these techniques. See the [list of techniques](/guide/proficiency-exams.html). You cannot use notes while being examined. The tasks you will be asked to perform will differ slightly from those shown in the notes. The grading rubric is as follows, out of 3 points:
 
 - answer at least 75% of the questions: 3 pts
 - answer at least 50% of the questions: 2 pts
 - answer at least 25% of the questions: 1 pt
 - answer fewer than 25% of the questions: 0 pts
-
-### Attendance
-
-The grading rubric for attendance is as follows, out of 3 points:
-
-- attended at least 75% of work days: 3 pts
-- attended at least 50% of work days: 2 pts
-- attended at least 25% of work days: 1 pt
-- attended fewer than 25% of work days: 0 pts
 
 ### Group project
 
@@ -77,24 +69,24 @@ The group project grading rubric is as follows, totalling 20 points (for 20% of 
 
 ### Proficiency exam dates
 
-- Proficiency exam 1: Wed Feb 13
-- Proficiency exam 2: Wed Feb 27
+- Proficiency exam 1: Wed Feb 12
+- Proficiency exam 2: Wed Mar 11
 
 ### Test dates
 
-Both tests are take-home. Tests will be made available a few days before these due dates:
+Both tests are in-class and on-paper.
 
-- Test 1: available Wed Mar 13, due Mon Mar 18, 11:59pm
-- Test 2: available Wed Apr 10, due Mon Apr 15, 11:59pm
+- Test 1: Wed Feb 19
+- Test 2: Wed Apr 8
 
 ### Group project deliverables
 
 Requirements for the group project will be established later. The project will have five deliverables. Each deliverable is a set of features (to be decided when the project begins), plus a presentation (~10 minutes).
 
-- Deliverable 1: Wed Apr 19
-- Deliverable 2: Wed Apr 26
-- Deliverable 3: Wed May 3
-- Deliverable 4: Mon May 6, 5pm
+- Deliverable 1: Wed Apr 15
+- Deliverable 2: Wed Apr 22
+- Deliverable 3: Wed Apr 29
+- Deliverable 4: Mon May 4, 5pm
 
 ### Topics
 
@@ -114,7 +106,7 @@ Requirements for the group project will be established later. The project will h
 - Week 14: Group project deliverable (presentation)
 - Week 15: Group project deliverable (presentation)
 - Week 16: Group project deliverable (presentation)
-- Final exam time (May 6, 5-7pm): Group project deliverable and retrospective
+- Final exam time (May 4, 5-7pm): Group project deliverable and retrospective
 
 
 {% comment %}
