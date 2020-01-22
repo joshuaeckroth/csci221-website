@@ -9,7 +9,7 @@ categories: [assignments]
 
 Fill in the code below. The code comments describe what to do.
 
-Name your bitbucket repository exactly `csci221-hw01`. Make sure to add me ('joshuaeckroth') as a "reader" to your repository.
+Name your bitbucket repository exactly `csci221-hw01`. Make sure to add me ('eckroth@cse.ohio-state.edu') as a "reader" to your repository.
 
 ## Template code
 
