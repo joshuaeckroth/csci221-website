@@ -17,7 +17,7 @@ Implementation of the Object Oriented paradigm using C++ and the Unified Modelin
 
 - Eliz Hall 214, 386-740-2519
 
-- Office hours: TBD
+- Office hours: Tue 1-2, Wed 1-2, Thur 12-1, Fri 1:30-2:30
 
 ## Textbook
 
