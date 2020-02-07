@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW03: Tables"
-due: "Fri Feb 7, 11:59pm"
+due: "Mon Feb 10, 11:59pm"
 categories: [assignments]
 ---
 
