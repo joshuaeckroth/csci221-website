@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW04: Cyclic Bidirectional Linked List"
-due: "Mon Feb 24, 11:59pm"
+due: "Wed Feb 26, 11:59pm"
 categories: [assignments]
 ---
 
