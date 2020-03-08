@@ -70,7 +70,7 @@ The group project grading rubric is as follows, totalling 20 points (for 20% of 
 ### Proficiency exam dates
 
 - Proficiency exam 1: Fri Feb 28
-- Proficiency exam 2: Wed Mar 11
+- Proficiency exam 2: Wed Mar 25
 
 ### Test dates
 
