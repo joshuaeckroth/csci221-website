@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "HW05: Happy Arrays"
-due: "Mon Mar 16, 11:59pm"
+due: "Wed Mar 18, 11:59pm"
 categories: [assignments]
 ---
 
