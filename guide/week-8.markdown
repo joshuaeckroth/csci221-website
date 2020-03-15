@@ -6,6 +6,81 @@ categories: [studyguides]
 
 # Week 8 notes
 
+## Vector class
+
+`vector.h`
+
+```
+class vector {
+    public:
+        vector();
+        ~vector();
+        double at(int) const;
+        int size() const;
+        void set(int, double);
+        void remove(int);
+        int push(double);
+
+    private:
+        int max_size;
+        int cur_size;
+        double *vals;
+};
+```
+
+`vector.cpp`
+
+```
+#include "vector.h"
+
+vector::vector() {
+    vals = new double[10];
+    max_size = 10;
+    cur_size = 0;
+}
+
+vector::~vector() {
+    delete[] vals;
+}
+
+double vector::at(int i) const {
+    return vals[i];
+}
+
+int vector::size() const {
+    return cur_size;
+}
+
+void vector::set(int i, double v) {
+    vals[i] = v;
+}
+
+void vector::remove(int i) {
+    for(int j = i; j < cur_size-1; j++) {
+        vals[j] = vals[j+1];
+    }
+    cur_size--;
+}
+
+int vector::push(double v) {
+    if(cur_size == max_size) {
+        // grow
+        max_size *= 2;
+        double *newvals = new double[max_size];
+        for(int i = 0; i < cur_size; i++) {
+            newvals[i] = vals[i];
+        }
+        delete vals;
+        vals = newvals;
+    }
+    vals[cur_size] = v;
+    cur_size++;
+    return cur_size - 1;
+}
+```
+
+
+
 ## Pair class
 
 `pair.h`
