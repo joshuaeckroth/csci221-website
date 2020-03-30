@@ -17,7 +17,7 @@ Implementation of the Object Oriented paradigm using C++ and the Unified Modelin
 
 - Eliz Hall 214, 386-740-2519
 
-- Office hours: Tue 1-2, Wed 1-2, Thur 12-1, Fri 1:30-2:30
+- Office hours (online): Tu 12-2, W 10-12, Th 10-12
 
 ## Textbook
 
@@ -26,8 +26,7 @@ There is no textbook for this class.
 ## Grading
 
 - Homeworks: 30%
-- Proficiency exam 1: 5%
-- Proficiency exam 2: 5%
+- Proficiency exam: 10%
 - Test 1: 20%
 - Test 2: 20%
 - Group project: 20%
