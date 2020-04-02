@@ -76,7 +76,7 @@ The group project grading rubric is as follows, totalling 20 points (for 20% of 
 Both tests are in-class and on-paper.
 
 - Test 1: Wed Feb 19
-- Test 2: Wed Apr 8
+- Test 2: Wed Apr 15
 
 ### Group project deliverables
 
