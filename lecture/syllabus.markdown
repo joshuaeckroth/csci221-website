@@ -83,7 +83,7 @@ Both tests are in-class and on-paper.
 Requirements for the group project will be established later. The project will have five milestones. Each milestone is a set of features (to be decided when the project begins), plus related documentation (to be described in each milestone).
 
 - Milestone 1: Fri Apr 24
-- Milestone 2: Wed Apr 29
+- Milestone 2: Fri May 1
 - Milestone 3: Tue May 5, 5pm
 
 ### Topics
